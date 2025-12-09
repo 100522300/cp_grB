@@ -90,10 +90,14 @@ main {
   margin-right: 3rem;
 }
 
-footer {
-  margin-top: 3rem;
-  margin-left: 3rem;
-  margin-right: 3rem;
+.footer {
+  background-color: #4a4a4a;
+  color: white;
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, sans-serif;
 }
 
 .main-perfil {
@@ -207,4 +211,48 @@ footer {
   font-weight: 450;
   font-size: 1rem;
   line-height: 1.5;
+}
+/* Contenedor Izquierdo */
+.footer-izquierda {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.img-logo-footer {
+  height: 3rem;
+}
+
+.footer-copyright {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Contenedor Derecho */
+.footer-derecha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-texto {
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.logos-redes-sociales {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Estilos para las imágenes de redes sociales */
+.footer-derecha a img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  vertical-align: middle;
 }
