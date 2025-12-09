@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PackUrBag</title>
+    <link rel="stylesheet" href="style/style_compra.css">
+    <link rel="icon" href="/images/logo_recortado.PNG">
+</head>
+
+<body>
+    <header>
+        <div class="caja-logo">
+            <p class="logo-titulo">PackUrBag</p>
+            <img class="img-logo" src="images/logo_recortado.PNG" alt="Logo de la web">
+        </div>
+        <div class="enlaces-header">
+            <a>Otros rincones</a>
+            <a>Sobre nosotros</a>
+            <a>Newsletter</a>
+        </div>
+        <div class="opciones-header">
+            <button class="btn-seleccionar-moneda">EUR </button>
+            <button class="btn-seleccionar-idioma">
+                <img src="images/spain-flag-circular.png" alt="Bandera">
+            </button>
+            <button class="btn-faq">
+                <img src="images/question-mark.png" alt="FAQ">
+            </button>
+            <button class="btn iniciar-sesion">Iniciar sesi&oacute;n</button>
+        </div>
+    </header>
+
+    <main class="compra-main">
+        <section class="compra-cabecera">
+            <h1 class="titulo-principal">Comprar Billetes</h1>
+            <h2 class="subtitulo-destino">Destino: Marrakesh, Marruecos</h2>
+        </section>
+
+        <form class="form-compra" novalidate>
+            <div class="fila-doble">
+                <div class="campo-compra">
+                    <label for="fecha-salida">Fecha Salida</label>
+                    <input type="text" id="fecha-salida" name="fecha-salida" placeholder="Salida">
+                </div>
+                <div class="campo-compra">
+                    <label for="fecha-regreso">Fecha regreso</label>
+                    <input type="text" id="fecha-regreso" name="fecha-regreso" placeholder="Regreso">
+                </div>
+            </div>
+
+            <div class="campo-compra">
+                <label for="correo">Direcci&oacute;n de correo electr&oacute;nico</label>
+                <input type="email" id="correo" name="correo" placeholder="email@janesfakedomain.net">
+            </div>
+
+            <button type="button" class="boton-secundario">+ A&ntilde;adir acompa&ntilde;ante</button>
+
+            <div class="fila-doble">
+                <div class="campo-compra">
+                    <label for="acompanante-nombre">Acompa&ntilde;antes</label>
+                    <input type="text" id="acompanante-nombre" name="acompanante-nombre" placeholder="Nombre">
+                </div>
+                <div class="campo-compra">
+                    <label for="acompanante-email">&nbsp;</label>
+                    <input type="email" id="acompanante-email" name="acompanante-email" placeholder="Email">
+                </div>
+            </div>
+
+            <div class="campo-compra campo-mascota">
+                <label>Mascota</label>
+                <div class="fila-botones-mascota">
+                    <button type="button" class="boton-opcion activo">S&iacute;</button>
+                    <button type="button" class="boton-opcion">No</button>
+                </div>
+            </div>
+
+            <div class="fila-doble">
+                <div class="campo-compra">
+                    <label for="tipo-mascota">&nbsp;</label>
+                    <input type="text" id="tipo-mascota" name="tipo-mascota" placeholder="Tipo de mascota">
+                </div>
+                <div class="campo-compra">
+                    <label for="tamano-mascota">&nbsp;</label>
+                    <input type="text" id="tamano-mascota" name="tamano-mascota" placeholder="Tama&ntilde;o">
+                </div>
+            </div>
+
+            <div class="campo-compra">
+                <label for="alergias">Alergias / Intolerancias</label>
+                <input type="text" id="alergias" name="alergias" placeholder="Alergias / Intolerancias">
+            </div>
+
+            <div class="campo-compra">
+                <label for="metodo-pago">M&eacute;todo de pago</label>
+            </div>
+
+            <div class="campo-compra">
+                <label for="titular">&nbsp;</label>
+                <input type="text" id="titular" name="titular" placeholder="Titular">
+            </div>
+
+            <div class="campo-compra">
+                <label for="numero-tarjeta">&nbsp;</label>
+                <input type="text" id="numero-tarjeta" name="numero-tarjeta" placeholder="N&uacute;mero de tarjeta">
+            </div>
+
+            <div class="fila-doble">
+                <div class="campo-compra">
+                    <label for="caducidad">&nbsp;</label>
+                    <input type="text" id="caducidad" name="caducidad" placeholder="Caducidad">
+                </div>
+                <div class="campo-compra">
+                    <label for="cvv">&nbsp;</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="CVV">
+                </div>
+            </div>
+
+            <button type="submit" class="boton-principal-form">Confirmar Compra</button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-izquierda">
+            <p class="footer-copyright">
+                &copy; 2025 PackUrBag. Todos los derechos reservados.
+            </p>
+            <img class="img-logo-footer" src="images/logo_recortado.PNG" alt="Logo de la web">
+        </div>
+
+        <div class="footer-derecha">
+            <p class="footer-texto">&iexcl;S&iacute;guenos!</p>
+            <div class="logos_redes_sociales">
+                <a href="#">
+                    <img src="images/logo_facebook.png" alt="Facebook">
+                </a>
+                <a href="#">
+                    <img src="images/logo_twitter.webp" alt="Twitter">
+                </a>
+                <a href="#">
+                    <img src="images/logo_youtube.png" alt="YouTube">
+                </a>
+                <a href="#">
+                    <img src="images/logo_instagram.webp" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
