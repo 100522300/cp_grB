@@ -1,4 +1,4 @@
-* {
+﻿* {
   margin: 0;
   padding: 0;
   box-sizing: border-box; /* Todos los paddings, margins... por defecto eliminados*/
@@ -88,8 +88,8 @@ main {
 }
 
 .footer {
-  background-color: #4a4a4a;
-  color: white;
+  background-color: #c4c4c4;
+  color: rgb(0, 0, 0);
   padding: 1.5rem 2.5rem;
   display: flex;
   justify-content: space-between;
