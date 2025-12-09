@@ -9,13 +9,16 @@
   font-style: normal;
 }
 
+body {
+  margin-top: 3rem;
+  margin-left: 4rem;
+  margin-right: 6rem;
+}
+
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 3rem;
-  margin-left: 4rem;
-  margin-right: 6rem;
   gap: 8%;
 }
 
@@ -91,4 +94,117 @@ footer {
   margin-top: 3rem;
   margin-left: 3rem;
   margin-right: 3rem;
+}
+
+.main-perfil {
+  display: flex;
+  flex-direction: column;
+  gap: 25vh;
+}
+
+.caja-mi-perfil-y-foto {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.caja-texto-mi-perfil {
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo-mi-perfil {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.nombre-correo-mi-perfil {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+.pfp {
+  background-image: url("../images/hustle_hard_persona_2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 20%;
+  aspect-ratio: 1/1;
+  border-radius: 1rem;
+}
+
+.favoritos-vistos-recientes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.caja-favoritos {
+  display: flex;
+  flex-direction: column;
+}
+
+.caja-vistos-recientes {
+  display: flex;
+  flex-direction: column;
+}
+
+.encabezado-mi-perfil {
+  font-weight: 550;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.caja-lugares {
+  background-color: rgb(219, 219, 219);
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.texto-lugares-favoritos {
+  text-decoration: underline;
+  line-height: 2;
+}
+
+.caja-lupa {
+  background-color: rgb(219, 219, 219);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.foto-lupa {
+  aspect-ratio: 1/1;
+  width: 5rem;
+}
+
+.caja-mis-reservas {
+  display: flex;
+  flex-direction: column;
+}
+
+.grupo-reservas {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reserva {
+  background-color: rgb(219, 219, 219);
+  border-radius: 1rem;
+  padding: 0.8rem;
+  padding-bottom: 4rem;
+}
+
+.encabezado-reserva {
+  font-weight: 550;
+  font-size: 1.25rem;
+  margin-bottom: 0.6rem;
+}
+
+.subtitulo-reserva {
+  font-weight: 450;
+  font-size: 1rem;
+  line-height: 1.5;
 }
