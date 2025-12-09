@@ -9,17 +9,14 @@
   font-style: normal;
 }
 
-body {
-  margin-top: 3rem;
-  margin-left: 4rem;
-  margin-right: 6rem;
-}
-
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 8%;
+  margin-top: 3rem;
+  margin-left: 4rem;
+  margin-right: 6rem;
 }
 
 .caja-logo {
@@ -86,8 +83,8 @@ button {
 
 main {
   margin-top: 3rem;
-  margin-left: 3rem;
-  margin-right: 3rem;
+  margin-left: 4rem;
+  margin-right: 6rem;
 }
 
 .footer {
