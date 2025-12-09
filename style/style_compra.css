@@ -1,0 +1,255 @@
+﻿* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  color: #111;
+  background: #fff;
+}
+
+/* Cabecera */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3rem 6rem 0 4rem;
+  gap: 8%;
+}
+
+.caja-logo {
+  display: flex;
+  align-items: center;
+  flex: 2.5;
+}
+
+.img-logo {
+  height: 6.7rem;
+}
+
+.logo-titulo {
+  font-weight: 650;
+  font-size: xx-large;
+}
+
+.enlaces-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 4;
+  gap: 1.5rem;
+}
+
+.enlaces-header a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+
+.opciones-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 3;
+  gap: 1rem;
+}
+
+.btn-seleccionar-idioma {
+  display: flex;
+  height: 3rem;
+  aspect-ratio: 1/1;
+}
+
+.btn-seleccionar-moneda {
+  font-weight: 550;
+  font-size: 2rem;
+}
+
+.btn-faq {
+  display: flex;
+  height: 3rem;
+  aspect-ratio: 1/1;
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+/* Contenido principal */
+.compra-main {
+  margin: 2.5rem auto 4rem;
+  max-width: 50rem;
+  padding: 0 1.5rem;
+}
+
+.compra-cabecera {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.titulo-principal {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+}
+
+.subtitulo-destino {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.form-compra {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.fila-doble {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.campo-compra {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.campo-compra label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.campo-compra input {
+  height: 2.6rem;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid #dedede;
+  border-radius: 0.35rem;
+  background: #fcfcfc;
+  font-size: 0.9rem;
+  color: #111;
+}
+
+.campo-compra input::placeholder {
+  color: #b3b3b3;
+}
+
+.boton-secundario {
+  align-self: flex-start;
+  padding: 0.45rem 0.75rem;
+  background: #d0d0d0;
+  color: #333;
+  border-radius: 0.35rem;
+  border: 1px solid #c2c2c2;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.fila-botones-mascota {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.campo-mascota {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.boton-opcion {
+  padding: 0.45rem 0.9rem;
+  border-radius: 0.35rem;
+  border: 1px solid #d9d9d9;
+  background: #f2f2f2;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.boton-opcion.activo {
+  background: #f2f2f2;
+}
+
+.boton-principal-form {
+  width: 100%;
+  padding: 0.9rem;
+  border-radius: 0.4rem;
+  background: #000;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+/*Footer*/
+.footer {
+  background-color: #bfbfbf;      
+  color: #000;
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+/* Lado izquierdo */
+.footer-izquierda {
+  display: flex;
+  flex-direction: column;     
+  align-items: flex-start;
+  gap: 0.5rem;          
+}
+
+.footer-copyright {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.img-logo-footer {
+  height: 3rem;
+  width: auto;
+  filter: brightness(0) contrast(1);
+}
+
+/* Lado derecho */
+.footer-derecha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-texto {
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+/* Redes sociales */
+.logos_redes_sociales {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.logos_redes_sociales img {
+  width: 2.1rem;
+  height: 2.1rem;
+  object-fit: contain;
+}
