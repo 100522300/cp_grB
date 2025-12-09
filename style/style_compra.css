@@ -135,6 +135,11 @@ button {
   color: #333;
 }
 
+.label-espaciador {
+  display: block;
+  min-height: 1.1rem;
+}
+
 .campo-compra input {
   height: 2.6rem;
   padding: 0.65rem 0.8rem;
