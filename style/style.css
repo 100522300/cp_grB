@@ -2,4 +2,93 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box; /* Todos los paddings, margins... por defecto eliminados*/
+
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal; /* Use a value from 100 to 900 */
+  font-style: normal;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3rem;
+  margin-left: 4rem;
+  margin-right: 6rem;
+  gap: 8%;
+}
+
+.caja-logo {
+  display: flex;
+  align-items: center;
+  flex: 2.5;
+}
+
+.img-logo {
+  height: 6.7rem;
+}
+
+.logo-titulo {
+  font-weight: 650;
+  font-size: xx-large;
+}
+
+.enlaces-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 4;
+}
+
+.opciones-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 3;
+}
+
+.btn-seleccionar-idioma {
+  display: flex;
+  height: 3rem;
+  aspect-ratio: 1/1;
+}
+
+.btn-seleccionar-moneda {
+  font-weight: 550;
+  font-size: 2rem;
+}
+
+.btn-faq {
+  display: flex;
+  height: 3rem;
+  aspect-ratio: 1/1;
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+.iniciar-sesion {
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+main {
+  margin-top: 3rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+footer {
+  margin-top: 3rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
