@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PackUrBag | Registro</title>
+  <link rel="stylesheet" href="style/style_registro.css">
+  <link rel="icon" type="image/png" href="images/logo_recortado_blanco.PNG">
+</head>
+
+<body class="registro-body">
+  <header class="cabecera_registro">
+    <div class="cabecera-izquierda">
+      <h1 class="titulo-marca">PackUrBag</h1>
+      <img src="images/logo_recortado_blanco.PNG" alt="Logo PackUrBag" class="logo-marca">
+    </div>
+    <div class="cabecera-derecha">
+      <a href="index.html" class="boton-enlace">Página principal</a>
+    </div>
+  </header>
+
+  <main class="cuerpo-formulario">
+    <div class="contenedor-formulario">
+      <div class="caja-formulario">
+        <h2 class="titulo-formulario">Registro</h2>
+
+        <form class="form-registro" novalidate>
+          <fieldset class="fila-doble">
+            <div class="campo-form">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+            </div>
+            <div class="campo-form">
+              <label for="apellidos">Apellidos</label>
+              <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos">
+            </div>
+          </fieldset>
+
+          <fieldset class="bloque-vertical">
+            <div class="campo-form">
+              <label for="correo">Dirección de correo electrónico</label>
+              <input type="email" id="correo" name="correo" placeholder="email@janesfakedomain.net">
+            </div>
+            <div class="campo-form">
+              <label for="correo2">Confirmar correo electrónico</label>
+              <input type="email" id="correo2" name="correo2" placeholder="email@janesfakedomain.net">
+            </div>
+          </fieldset>
+
+          <fieldset class="fila-doble">
+            <div class="campo-form">
+              <label for="password">Contrasña</label>
+              <input type="password" id="password" name="password" placeholder="Contraseña">
+            </div>
+            <div class="campo-form">
+              <label for="password2">Repetir contraseña</label>
+              <input type="password" id="password2" name="password2" placeholder="Confirmar contraseña">
+            </div>
+          </fieldset>
+
+          <fieldset class="fila-doble">
+            <div class="campo-form">
+              <label for="fecha">Fecha de nacimiento</label>
+              <input type="date" id="fecha" name="fecha" placeholder="dd/mm/yyyy">
+            </div>
+            <div class="campo-form">
+              <label for="login">Nombre usuario</label>
+              <input type="text" id="login" name="login" placeholder="Usuario">
+            </div>
+          </fieldset>
+
+          <div class="campo-form campo-archivo">
+            <label for="imagen">Subir foto perfil</label>
+            <label for="imagen" class="boton-subir">Examinar...</label>
+            <input type="file" id="imagen" name="imagen" class="oculto">
+          </div>
+
+          <p class="texto-legal">
+            Al iniciar sesión o al crear una cuenta, aceptas nuestros
+            <a href="#">términos y condiciones</a> y la
+            <a href="#">política de privacidad</a>.
+          </p>
+
+          <button type="submit" class="boton-principal">Registrarse</button>
+          <a href="#" class="enlace-sesion">¿Ya tienes una cuenta?</a>
+        </form>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
