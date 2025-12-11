@@ -12,7 +12,7 @@ body {
 }
 
 /* Cabecera */
-header {
+.cabecera-compra {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -52,8 +52,6 @@ header {
 .opciones-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex: 3;
   gap: 1rem;
 }
 
@@ -85,6 +83,19 @@ header {
 button {
   background-color: transparent;
   border: none;
+}
+
+/*Menu de tres rayas*/
+.menu-icon {
+  display: none;
+  padding: 0.25rem;
+}
+
+.icono-menu-img {
+  display: block;
+  width: 1.75rem;
+  height: 1.75rem;
+  object-fit: contain;
 }
 
 /* Contenido principal */
@@ -210,6 +221,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   font-family: Arial, sans-serif;
+  flex-wrap: nowrap;
 }
 
 /* Contenedor Izquierdo */
@@ -255,4 +267,93 @@ footer {
   height: 2rem;
   border-radius: 50%;
   vertical-align: middle;
+}
+
+
+
+@media (max-width: 768px) {
+.cabecera-compra {
+  margin: 1.5rem 1.5rem 0 1.5rem;
+  gap: 1rem;
+}
+
+  .enlaces-header {
+    display: none;
+  }
+
+  .opciones-header {
+    gap: 0.75rem;
+  }
+
+  .btn-seleccionar-moneda,
+  .btn-seleccionar-idioma,
+  .btn-faq {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .compra-main {
+    margin: 2rem auto 3rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .fila-doble {
+    grid-template-columns: 1fr;
+  }
+
+  .compra-main {
+    margin: 1.5rem auto 2.5rem;
+  }
+
+  .cabecera-compra {
+    margin: 1rem 1rem 0 1rem;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .img-logo {
+    height: 3.75rem;
+  }
+
+  .btn {
+    padding: 0.6rem 0.9rem;
+  }
+
+  .opciones-header {
+    gap: 0.6rem;
+  }
+
+  .boton-principal-form {
+    margin-top: 0.5rem;
+  }
+
+  footer {
+    padding: 1.2rem 1.4rem;
+  }
+
+  .footer-izquierda {
+    gap: 0.7rem;
+  }
+
+  .img-logo-footer {
+    height: 2.4rem;
+  }
+
+  .footer-derecha {
+    gap: 0.4rem;
+  }
+
+  .logos-redes-sociales {
+    gap: 0.7rem;
+  }
+
+  .footer-derecha a img {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
 }
