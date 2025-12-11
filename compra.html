@@ -8,7 +8,7 @@
   <link rel="icon" href="/images/logo_recortado.PNG">
 </head>
 <body>
-  <header>
+  <header class="cabecera-compra">
     <div class="caja-logo">
       <p class="logo-titulo">PackUrBag</p>
       <img class="img-logo" src="images/logo_recortado.PNG" alt="Logo de la web">
@@ -19,14 +19,17 @@
       <a>Newsletter</a>
     </div>
     <div class="opciones-header">
-      <button class="btn-seleccionar-moneda">EUR </button>
+      <button class="btn-seleccionar-moneda">EUR</button>
       <button class="btn-seleccionar-idioma">
         <img src="images/spain-flag-circular.png" alt="Bandera">
       </button>
       <button class="btn-faq">
         <img src="images/question-mark.png" alt="FAQ">
       </button>
-      <button class="btn iniciar-sesion">Iniciar sesión</button>
+      <button class="btn iniciar-sesion">Cerrar sesión</button>
+      <button class="menu-icon" aria-label="Abrir menú">
+        <img src="images/tres_rayas.png" alt="Menú" class="icono-menu-img">
+      </button>
     </div>
   </header>
 
@@ -40,11 +43,11 @@
       <div class="fila-doble">
         <div class="campo-compra">
           <label for="fecha-salida">Fecha Salida</label>
-          <input type="text" id="fecha-salida" name="fecha-salida" placeholder="Salida">
+          <input type="text" id="fecha-salida" name="fecha-salida" placeholder="dd/mm/yyyy">
         </div>
         <div class="campo-compra">
           <label for="fecha-regreso">Fecha regreso</label>
-          <input type="text" id="fecha-regreso" name="fecha-regreso" placeholder="Regreso">
+          <input type="text" id="fecha-regreso" name="fecha-regreso" placeholder="dd/mm/yyyy">
         </div>
       </div>
 
