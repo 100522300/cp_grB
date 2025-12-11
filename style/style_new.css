@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.newsletter-body {
+  background: #fff;
+  color: #111;
+}
+
+/* Cabecera */
+.cabecera-newsletter {
+  background: #000;
+  color: #fff;
+  padding: 1.125rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bloque-marca {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nombre-marca {
+  margin: 0;
+  font-size: 1.375rem; 
+  font-weight: 700;
+  color: #fff;
+}
+
+.logo-marca {
+  height: 2.625rem; 
+  width: auto;
+}
+
+.boton-enlace {
+  background: #fff;
+  color: #000;
+  padding: 0.625rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  border: 1px solid #000;
+}
+
+
+/* Contenido principal */
+.cuerpo-newsletter {
+  max-width: 50rem;
+  margin: 3rem auto 4.5rem;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.texto-newsletter {
+  margin-bottom: 2.5rem;
+}
+
+.titulo-newsletter {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.1rem;
+}
+
+.subtitulo-newsletter {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.form-newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.campo-newsletter {
+  text-align: left;
+}
+
+.campo-newsletter label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+.campo-newsletter input {
+  width: 100%;
+  height: 2.8rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.4rem;
+  font-size: 0.9rem;
+  background: #f7f7f7;
+  color: #111;
+}
+
+.campo-newsletter input::placeholder {
+  color: #b0b0b0;
+}
+
+.checkbox-politica {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  color: #222;
+  text-align: left;
+}
+
+.checkbox-politica input {
+  width: 1rem;
+  height: 1rem;
+}
+
+.texto-legal-newsletter {
+  font-size: 0.9rem;
+  color: #222;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.boton-principal-form {
+  background: #000;
+  color: #fff;
+  padding: 0.9rem;
+  border-radius: 0.4rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
