@@ -1,0 +1,143 @@
+<html >
+    <head>
+        <title>Resultados de búsqueda</title>
+        <link rel="stylesheet" href="style/style_resultados.css">
+        <!-- Aquí ira el javascript-->
+    </head>
+
+    
+    <body class="resultados-body">
+        <header class="cabecera_registro">
+          <div class="cabecera-izquierda">
+            <h1 class="titulo-marca">PackUrBag</h1>
+            <img src="images/logo_recortado_blanco.PNG" alt="Logo PackUrBag" class="logo-marca">
+          </div>
+          <div class="cabecera-derecha">
+            <a href="index.html" class="boton-enlace">Página principal</a>
+          </div>
+        </header>
+
+        <main class="cuerpo-resultados">
+            <h2 class="titulo-seccion">Mejor valorado</h2>
+            <div class="mejor-valorado">
+
+                <div class="imagen-favoritos">
+                    <img class="imagen-tokyo" src="images/tokyo.jpg" alt="Imagen de tokyo">
+                    <span class="añadir-a-favoritos">⭐</span> <span>Añadir a favoritos</span>
+                </div>
+
+                <div class="informacion-busqueda">
+                    <h3>Tokyo</h3>
+                    <p class="informacion-destino">Vuelo y hotel incluidos para la ciudad más avanzada del mundo.</p>
+                    <p class="precio">2150€</p> 
+                    <!-- Todo implementar esta parte de comprar que lleve al formulario adecuado -->
+                    <button class="comprar" type="button" a="#">Comprar</button>
+                    <p class="no-reembolso">La web no admite reembolsos</p>
+                </div>
+
+            </div>
+
+            <div class="opiniones-contenedor">
+                <div class="opiniones-flechas">
+                    <h2 class="titulo-seccion">Opiniones de otros usuarios</h2>
+                    <div class="flechas">
+                        <button class="carrusel-flecha"id="flechaIzquierda">&leftarrow;</button>
+                        <button class="carrusel-flecha" id="flechaDerecha">&rightarrow;</button>        
+                    </div> 
+                </div>
+
+                <div class="opiniones-usuarios">
+                    <!-- EJEMPLO TEMPORAL SOLO PARA MAQUETAR -->
+                    <article class="opinion-card">
+                        <div class="opinion-usuario">
+                            
+                            <img class="avatar" src="images/hustle_hard_persona_2.jpg" alt="Foto de perfil">
+                            <span class="nombre-usuario">María López</span>
+                        </div>
+                        <p class="texto-opinion">
+                            Me encantó el viaje, superó mis expectativas ❤️
+                        </p>
+                    </article>
+                </div>
+                <!-- Esto quedara oculto y lo usara js para reutilizarlo-->
+                <template id="opinion-template">
+                    <article class="opinion-card">
+                        <div class="opinion-usuario">
+                            <div class="avatar"></div>
+                            <span class="nombre-usuario"></span>
+                        </div>
+                        <p class="texto-opinion"></p>
+                    </article>
+                </template>
+
+            </div>
+
+
+            <div class="mas-resultados-contenedor">
+                <h2 class="titulo-seccion">Más resultados</h2>
+                <section class="mas-resultados-ejemplos">
+
+                    <article class="resultado-card">
+                        <div class="imagen-comprar">
+                            <img class="imagen-1-busqueda" src="images/imagen1busqueda.jpg">
+                            <button class="comprar-mas-resultados">Comprar</button>
+                        </div>
+                        <h3>Tokyo</h3>
+                        <p class="precio-mas">1850€</p>
+                        <p class="tipo-hotel">Hotel 7 noches</p>
+                    </article>
+                
+                    <article class="resultado-card">
+                        <div class="imagen-comprar">
+                            <img class="imagen-1-busqueda" src="images/imagen2busqueda.jpg">
+                            <button class="comprar-mas-resultados">Comprar</button>
+                        </div>
+                        <h3>Tokyo</h3>
+                        <p class="precio-mas">590€</p>
+                        <p class="tipo-hotel">Hotel más visita guiada</p>
+                    </article>
+                
+                    <article class="resultado-card">
+                        <div class="imagen-comprar">
+                            <img class="imagen-1-busqueda" src="images/imagen3busqueda.jpg">
+                            <button class="comprar-mas-resultados">Comprar</button>
+                        </div>
+                        <h3>Tokyo</h3>
+                        <p class="precio-mas">3400€</p>
+                        <p class="tipo-hotel">Hotel lujo + vuelo + tour</p>
+                    </article>
+                
+                </section>
+
+            </div>
+
+        </main>
+
+        <footer>
+            <div class="footer-izquierda">
+                <p class="footer-copyright">
+                    © 2025 PackUrBag. Todos los derechos reservados.
+                </p>
+                <img class="img-logo-footer" src="images/logo_recortado.PNG" alt="Logo de la web">
+            </div>
+
+            <div class="footer-derecha">
+                <p class="footer-texto">¡Síguenos!</p>
+                <div class="logos_redes_sociales">
+                    <a href="#">
+                        <img src="images/logo_facebook.png" alt="Facebook">
+                    </a>
+                    <a href="#">
+                        <img src="images/logo_twitter.webp" alt="Twitter">
+                    </a>
+                    <a href="#">
+                        <img src="images/logo_youtube.png" alt="YouTube">
+                    </a>
+                    <a href="#">
+                        <img src="images/logo_instagram.webp" alt="Instagram">
+                    </a>
+                </div>
+            </div>  
+        </footer>
+    </body>
+</html>
