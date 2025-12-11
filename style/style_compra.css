@@ -1,4 +1,5 @@
-﻿* {
+﻿@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -269,13 +270,11 @@ footer {
   vertical-align: middle;
 }
 
-
-
 @media (max-width: 768px) {
-.cabecera-compra {
-  margin: 1.5rem 1.5rem 0 1.5rem;
-  gap: 1rem;
-}
+  .cabecera-compra {
+    margin: 1.5rem 1.5rem 0 1.5rem;
+    gap: 1rem;
+  }
 
   .enlaces-header {
     display: none;
