@@ -6,6 +6,7 @@
   <title>PackUrBag | Perfil</title>
   <link rel="stylesheet" href="style/style_perfil.css">
   <link rel="icon" href="/images/logo_recortado.PNG">
+  <script type="module" src="script/script_perfil.js" defer></script>
 </head>
 <body>
   <header>
@@ -37,7 +38,10 @@
     <section class="perfil-top">
       <div class="perfil-info">
         <h1 class="titulo-perfil">Mi perfil</h1>
-        <p class="dato-perfil">Nombre: Hustle Hard<br>Correo: hustlehard@email.com</p>
+        <p class="dato-perfil">
+          Nombre: <span id="perfil-nombre"></span><br>
+          Correo: <span id="perfil-correo"></span>
+        </p>
       </div>
       <div class="perfil-foto-contenedor">
         <div class="perfil-foto" role="img" aria-label="Foto de perfil"></div>

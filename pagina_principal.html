@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PackUrBag</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="/images/logo_recortado.PNG">
+    <script type="module" src="script/script_principal.js" defer></script>
+</head>
+
+<body>
+<header>
+  <div class="caja-logo">
+    <p class="logo-titulo">PackUrBag</p>
+    <img class="img-logo" src="images/logo_recortado.PNG" alt="Logo de la web">
+  </div>
+
+  <div class="enlaces-header">
+    <a>Otros rincones</a>
+    <a>Sobre nosotros</a>
+    <a>Newsletter</a>
+  </div>
+
+  <div class="opciones-header">
+    <button class="btn-seleccionar-moneda">EUR</button>
+
+    <button class="btn-seleccionar-idioma">
+      <img src="images/spain-flag-circular.png" alt="Idioma">
+    </button>
+
+    <button class="btn-faq">
+      <img src="images/question-mark.png" alt="FAQ">
+    </button>
+
+    <button type="button" class="btn-faq boton-perfil">
+        <img class="imagen-perfil-usuario" alt="Usuario">
+    </button>
+
+  </div>
+</header>
+
+
+    <main>
+        <div class="caja-busqueda">
+            <p class="fuente-encabezado-1">Encuentra el destino con el que siempre has soñado</p>
+            <div class="barra-busqueda">
+                <div class="apartado-busqueda">¿Adónde vas?</div>
+                <div class="apartado-busqueda">
+                    <img src="images/calendario.png" class="img-busqueda">
+                    <p class="parrafo-busqueda">Fecha de salida</p>
+                </div>
+                <div class="apartado-busqueda">Cantidad de viajeros</div>
+                <div class="apartado-busqueda busqueda-lupa">
+                    <img src="images/lupa.png" class="img-busqueda">
+                </div>
+            </div>
+        </div>
+
+        <div class="caja-viajar-esta-vez">
+            <p class="fuente-titulo titulo-viajar-esta-vez">¿A dónde vas a viajar esta vez?
+            </p>
+            <p class="parrafo-viajar-esta-vez">Queremos ofrecerte nuestras mejores experiencias, porque sabemos que los
+                mejores recuerdos se consiguen
+                explorando sin preocupaciones. Echa un vistazo a nuestros entrañables paisajes.</p>
+            <div class="imagen-viajar-esta-vez"></div>
+        </div>
+
+        <div class="caja-mas-premium">
+            <p class="fuente-encabezado-1 titulo-viajes-premium">O date un capricho con nuestros viajes más premium</p>
+            <div class="caja-viajes-premium">
+                <div class="viaje-premium">
+                    <div class="imagen-viaje-premium imagen-premium-1">
+                        <button class="btn btn-comprar-viaje-premium">Comprar</button>
+                    </div>
+                    <p class="titulo-parrafo-viaje-premium">Islas Maldivas</p>
+                    <p class="parrafo-viaje-premium">Disfruta uno de los mejores atardeceres del planeta a la vez que de
+                        playas impresionantes</p>
+                </div>
+                <div class="viaje-premium">
+                    <div class="imagen-viaje-premium imagen-premium-2">
+                        <button class="btn btn-comprar-viaje-premium">Comprar</button>
+                    </div>
+                    <p class="titulo-parrafo-viaje-premium">Islas Maldivas</p>
+                    <p class="parrafo-viaje-premium">Disfruta uno de los mejores atardeceres del planeta a la vez que de
+                        playas impresionantes</p>
+                </div>
+                <div class="viaje-premium">
+                    <div class="imagen-viaje-premium imagen-premium-3">
+                        <button class="btn btn-comprar-viaje-premium">Comprar</button>
+                    </div>
+                    <p class="titulo-parrafo-viaje-premium">Islas Maldivas</p>
+                    <p class="parrafo-viaje-premium">Disfruta uno de los mejores atardeceres del planeta a la vez que de
+                        playas impresionantes</p>
+                </div>
+            </div>
+        </div>
+        <div class="caja-otros-rincones">
+            <p class="fuente-encabezado-1">También te ayudamos a decidirte con otros rincones</p>
+            <div class="caja-display-continentes">
+
+
+
+                <!-- PARTE DEL CÓDIGO QUE MODELA EUROPA --> 
+                <div class="caja-continente">
+                    <div class="nombre-continente-flechas">
+                        <p class="fuente-encabezado-1">Europa</p>
+                        <div class="caja-flechas">
+                            <button class="btn-flecha-izq">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6"
+                                        stroke="#bfbfbf" stroke-width="1" />
+
+                                    <!-- Flecha centrada -->
+                                    <g transform="translate(15, 15)">
+                                        <path
+                                            d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                            stroke="#BFBFBF" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </g>
+                                </svg>
+                            </button>
+                            <button class="btn-flecha-der">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9" />
+
+                                    <!-- Flecha centrada -->
+                                    <g transform="translate(15, 15)">
+                                        <g transform="rotate(180, 10, 10)">
+                                            <path
+                                                d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                                stroke="#1E1E1E" stroke-width="3" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="caja-viajes-premium">
+                        <div class="viaje-premium"  id="Viena">
+                            <div class="imagen-viaje-premium imagen-viena">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Viena, Austria</p>
+                            <p class="parrafo-viaje-premium">Ciudad imperial con museos y música clásica a cada paso. El Palacio de Schönbrunn y la Ringstrasse condensan el barroco y el historicismo, mientras cafés como Demel mantienen la tradición pastelera. Ideal para caminar entre parques y teatros de ópera</p>
+                        </div>
+                        <div class="viaje-premium" id="Brujas">
+                            <div class="imagen-viaje-premium imagen-brujas">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Brujas, Bélgica</p>
+                            <p class="parrafo-viaje-premium">Centro medieval perfectamente conservado, canales bordeados de árboles y plazas adoquinadas como el Markt. Campanarios, casas gremiales y chocolaterías crean un ambiente de cuento que invita a perderse sin prisa</p>
+                        </div>
+                        <div class="viaje-premium" id="Copenhague">
+                            <div class="imagen-viaje-premium imagen-copenhague">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Copenhague, Dinamarca</p>
+                            <p class="parrafo-viaje-premium">Equilibrio entre diseño contemporáneo y tradición nórdica. Nyhavn, Tívoli y barrios ciclistas muestran una ciudad humana y acogedora; gastronomía de vanguardia y respeto por el espacio público</p>
+                        </div>
+                        <div class="viaje-premium" id="Liubliana">
+                            <div class="imagen-viaje-premium imagen-liubliana">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Liubliana, Eslovenia</p>
+                            <p class="parrafo-viaje-premium">Capital pequeña y escénica, con casco peatonal, cafés junto al río y el castillo en lo alto. Base ideal para excursiones al lago Bled y los Alpes Julianos</p>
+                        </div>
+                        <div class="viaje-premium" id="Barcelona">
+                            <div class="imagen-viaje-premium imagen-barcelona">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Barcelona, España</p>
+                            <p class="parrafo-viaje-premium">Modernismo de Gaudí, mar y montaña en un mismo plano. La Sagrada Familia, Park Güell y la vida de barrio conviven con mercados y museos; paseos desde Montjuïc a las playas</p>
+                        </div>
+                        <div class="viaje-premium" id="Sevilla">
+                            <div class="imagen-viaje-premium imagen-sevilla">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Sevilla, España</p>
+                            <p class="parrafo-viaje-premium">Casco histórico monumental, patios y azulejos. El Alcázar, la Catedral y el barrio de Santa Cruz se suman a una potente cultura de tapas y al flamenco</p>
+                        </div>
+                        <div class="viaje-premium" id="Tallin">
+                            <div class="imagen-viaje-premium imagen-tallin">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Tallin, Estonia</p>
+                            <p class="parrafo-viaje-premium">Ciudad vieja medieval amurallada, torres y tejados de colores con vistas al Báltico. Invierno frío, pero fotogénico desde Toompea</p>
+                        </div>
+                        <div class="viaje-premium" id="París">
+                            <div class="imagen-viaje-premium imagen-paris">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">París, Francia</p>
+                            <p class="parrafo-viaje-premium">Romance urbano: Sena, bulevares y museos icónicos. Barrios con identidad propia y cafés a pie de calle; Notre Dame, Sacré-Coeur y la Torre Eiffel como hitos imprescindibles</p>
+                        </div>
+                        <div class="viaje-premium" id="Budapest">
+                            <div class="imagen-viaje-premium imagen-budapest">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Budapest, Hungría</p>
+                            <p class="parrafo-viaje-premium">Arquitectura Art Nouveau, baños termales y paseos nocturnos sobre el Danubio. El Parlamento brilla al caer la tarde desde el Puente de las Cadenas</p>
+                        </div>
+                        <div class="viaje-premium" id="Florencia">
+                            <div class="imagen-viaje-premium imagen-florencia">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Florencia, Italia</p>
+                            <p class="parrafo-viaje-premium">Cuna del Renacimiento: Duomo, Uffizi y artesanías en el Oltrarno. Una ciudad-museo viva donde cada calle guarda esculturas, palacios y talleres</p>
+                        </div>
+                        <div class="viaje-premium" id="Roma">
+                            <div class="imagen-viaje-premium imagen-roma">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Roma, Italia</p>
+                            <p class="parrafo-viaje-premium">La “Ciudad Eterna” combina ruinas clásicas, plazas barrocas y vida de barrio. Del Panteón a la Fontana di Trevi, la historia convive con trattorias y terrazas</p>
+                        </div>
+                        <div class="viaje-premium" id="Venecia">
+                            <div class="imagen-viaje-premium imagen-venecia">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Venecia, Italia</p>
+                            <p class="parrafo-viaje-premium">Sin coches y con un trazado acuático único. Canales, palacios y puentes conectan islas; desde San Marcos a los barrios más tranquilos, es pura contemplación</p>
+                        </div>
+                        <div class="viaje-premium" id="LaValeta">
+                            <div class="imagen-viaje-premium imagen-lavaleta">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">La Valeta, Malta</p>
+                            <p class="parrafo-viaje-premium">Fortificada y barroca, con miradores al Gran Puerto. Palacios, iglesias y museos concentrados en un casco compacto y caminable</p>
+                        </div>
+                        <div class="viaje-premium" id="Bergen">
+                            <div class="imagen-viaje-premium imagen-bergen">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Bergen, Noruega</p>
+                            <p class="parrafo-viaje-premium">Casas de madera en Bryggen, puerto vivo y montañas que caen a fiordos. Punto de partida perfecto para rutas escénicas</p>
+                        </div>
+                        <div class="viaje-premium" id="Amsterdam">
+                            <div class="imagen-viaje-premium imagen-amsterdam">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Ámsterdam, Países Bajos</p>
+                            <p class="parrafo-viaje-premium">Canales Patrimonio de la UNESCO, gables estrechos y cultura ciclista. Museos de primer nivel y barrios verdes conectados por puentes</p>
+                        </div>
+                        <div class="viaje-premium" id="Oporto">
+                            <div class="imagen-viaje-premium imagen-oporto">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Oporto, Portugal</p>
+                            <p class="parrafo-viaje-premium">Azulejos, puentes sobre el Duero y bodegas de vino de Oporto. Librería Lello y piscinas de Leça como iconos contemporáneos</p>
+                        </div>
+                        <div class="viaje-premium" id="Londres">
+                            <div class="imagen-viaje-premium imagen-londres">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Londres, Reino Unido</p>
+                            <p class="parrafo-viaje-premium">Historia y vanguardia a orillas del Támesis. Museos gratuitos, parques inmensos y una escena cultural y gastronómica inagotable</p>
+                        </div>
+                        <div class="viaje-premium" id="Edimburgo">
+                            <div class="imagen-viaje-premium imagen-edimburgo">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Edimburgo, Reino Unido</p>
+                            <p class="parrafo-viaje-premium">Royal Mile, castillo y colinas verdes. La roca volcánica de Arthur’s Seat regala una panorámica excepcional sobre la ciudad de piedra</p>
+                        </div>
+                        <div class="viaje-premium" id="Praga">
+                            <div class="imagen-viaje-premium imagen-praga">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Praga, República Checa</p>
+                            <p class="parrafo-viaje-premium">Cúpulas y torres góticas sobre un casco antiguo fotogénico. Puente de Carlos al amanecer y cafés históricos con música y literatura</p>
+                        </div>
+                        <div class="viaje-premium" id="Lucerna">
+                            <div class="imagen-viaje-premium imagen-lucerna">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Lucerna, Suiza</p>
+                            <p class="parrafo-viaje-premium">Lago, montes cercanos y el Kapellbrücke como postal. Tejados medievales y aire alpino a pocos minutos de rutas de montaña</p>
+                        </div>
+                        <div class="viaje-premium" id="Zurich">
+                            <div class="imagen-viaje-premium imagen-zurich">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Zúrich, Suiza</p>
+                            <p class="parrafo-viaje-premium">Casco antiguo elegante junto al lago, museos, galerías y vida junto al agua. Veranos vibrantes y eficiencia suiza en cada detalle</p>
+                        </div>
+                        <div class="viaje-premium" id="Reikiavik">
+                            <div class="imagen-viaje-premium imagen-reikiavik">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Reikiavik, Islandia</p>
+                            <p class="parrafo-viaje-premium">Arquitectura moderna como Harpa y Hallgrímskirkja entre paisajes volcánicos. Base para auroras y baños termales cercanos</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- PARTE DEL CÓDIGO QUE MODELA ASIA --> 
+                <div class="caja-continente">
+                    <div class="nombre-continente-flechas">
+                        <p class="fuente-encabezado-1">Asia</p>
+                        <div class="caja-flechas">
+                            <button class="btn-flecha-izq">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6"
+                                        stroke="#bfbfbf" stroke-width="1" />
+
+                                    <!-- Flecha centrada -->
+                                    <g transform="translate(15, 15)">
+                                        <path
+                                            d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                            stroke="#BFBFBF" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </g>
+                                </svg>
+                            </button>
+                            <button class="btn-flecha-der">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9" />
+
+                                    <!-- Flecha centrada -->
+                                    <g transform="translate(15, 15)">
+                                        <g transform="rotate(180, 10, 10)">
+                                            <path
+                                                d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                                stroke="#1E1E1E" stroke-width="3" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="caja-viajes-premium">
+                        <div class="viaje-premium" id="Beijing">
+                            <div class="imagen-viaje-premium imagen-beijing">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Beijing, China</p>
+                            <p class="parrafo-viaje-premium">Capital imperial con la Ciudad Prohibida, hutongs y avenidas amplias. Puerta a tramos cercanos de la Gran Muralla y a una cocina regional riquísima</p>
+                        </div>
+                        <div class="viaje-premium" id="HongKong">
+                            <div class="imagen-viaje-premium imagen-hongkong">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Hong Kong, China</p>
+                            <p class="parrafo-viaje-premium">Horizonte denso en torno a un puerto lleno de ferris. Montañas, islas y reservas naturales a minutos del centro financiero</p>
+                        </div>
+                        <div class="viaje-premium" id="Seul">
+                            <div class="imagen-viaje-premium imagen-seul">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Seúl, Corea del Sur</p>
+                            <p class="parrafo-viaje-premium">Rascacielos y palacios, mercados nocturnos y una red de metro impecable. Distritos como Bukchon y Myeongdong muestran tradición y moda</p>
+                        </div>
+                        <div class="viaje-premium" id="Jaipur">
+                            <div class="imagen-viaje-premium imagen-jaipur">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Jaipur, India</p>
+                            <p class="parrafo-viaje-premium">La “Ciudad Rosa”: Hawa Mahal, fuertes y bazares color salmón. Artesanías, joyería y gastronomía del Rajastán en palacios y calles</p>
+                        </div>
+                        <div class="viaje-premium" id="Kioto">
+                            <div class="imagen-viaje-premium imagen-kioto">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Kioto, Japón</p>
+                            <p class="parrafo-viaje-premium">Templos, santuarios y jardines clásicos. Hanami en primavera, rutas arboladas y posibilidad de cruzarse con geishas en Gion</p>
+                        </div>
+                        <div class="viaje-premium" id="LuangPrabang">
+                            <div class="imagen-viaje-premium imagen-luangprabang">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Luang Prabang, Laos</p>
+                            <p class="parrafo-viaje-premium">Patrimonio UNESCO junto a la confluencia de ríos. Procesiones de monjes al amanecer, cascadas cercanas y arquitectura colonial-budista</p>
+                        </div>
+                        <div class="viaje-premium" id="Beirut">
+                            <div class="imagen-viaje-premium imagen-beirut">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Beirut, Líbano</p>
+                            <p class="parrafo-viaje-premium">Playas, clubes y azoteas frente a mezquitas y zocos históricos. Gastronomía y vida nocturna con aire mediterráneo y levantino</p>
+                        </div>
+                        <div class="viaje-premium" id="Mascate">
+                            <div class="imagen-viaje-premium imagen-mascate">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Mascate, Omán</p>
+                            <p class="parrafo-viaje-premium">Bahías y montañas enmarcando mezquitas, zocos y fuertes portugueses. Paseos costeros y arquitectura blanca junto al Golfo de Omán</p>
+                        </div>
+                        <div class="viaje-premium" id="Doha">
+                            <div class="imagen-viaje-premium imagen-doha">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Doha, Qatar</p>
+                            <p class="parrafo-viaje-premium">Corniche con skyline futurista, Souq Waqif y el Museo de Arte Islámico de I. M. Pei. Mezcla de tradición y nuevas áreas culturales</p>
+                        </div>
+                        <div class="viaje-premium" id="ChiangMai">
+                            <div class="imagen-viaje-premium imagen-chiangmai">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Chiang Mai, Tailandia</p>
+                            <p class="parrafo-viaje-premium">Templos en la ladera, cafés y mercados creativos. Punto de partida para naturaleza del norte y experiencias culinarias intensas</p>
+                        </div>
+                        <div class="viaje-premium" id="Hanoi">
+                            <div class="imagen-viaje-premium imagen-hanoi">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Hanoi, Tailandia</p>
+                            <p class="parrafo-viaje-premium">Lagos, templos y barrio francés con aire romántico. Calles angostas con cafés tradicionales y mercados vibrantes</p>
+                        </div>
+                        <div class="viaje-premium" id="Singapur">
+                            <div class="imagen-viaje-premium imagen-singapur">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Singapur, Singapur</p>
+                            <p class="parrafo-viaje-premium">Ciudad-jardín con selva urbana, Jardín Botánico y Gardens by the Bay. Templos, casas patrimoniales y una logística impecable para moverse</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- PARTE DEL CÓDIGO QUE MODELA ÁFRICA --> 
+                <div class="caja-continente">
+                    <div class="nombre-continente-flechas">
+                        <p class="fuente-encabezado-1">África</p>
+                        <div class="caja-flechas">
+                            <button class="btn-flecha-izq">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6"
+                                        stroke="#bfbfbf" stroke-width="1" />
+
+                                    <!-- Flecha centrada -->
+                                    <g transform="translate(15, 15)">
+                                        <path
+                                            d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                            stroke="#BFBFBF" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </g>
+                                </svg>
+                            </button>
+                            <button class="btn-flecha-der">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9" />
+
+                                    <!-- Flecha centrada -->
+                                    <g transform="translate(15, 15)">
+                                        <g transform="rotate(180, 10, 10)">
+                                            <path
+                                                d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                                stroke="#1E1E1E" stroke-width="3" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="caja-viajes-premium">
+                        <div class="viaje-premium" id="Chefchaouen">
+                            <div class="imagen-viaje-premium imagen-chefchaouen">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Chefchaouen, Marruecos</p>
+                            <p class="parrafo-viaje-premium">Medina azul entre montañas del Rif. Callejuelas pintadas, puertas artesanales y miradores cercanos para ver el conjunto desde arriba</p>
+                        </div>
+                        <div class="viaje-premium" id="CiudadDelCabo">
+                            <div class="imagen-viaje-premium imagen-ciudaddelcabo">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Ciudad del Cabo, Sudáfrica</p>
+                            <p class="parrafo-viaje-premium">Table Mountain, playas con pingüinos y barrios coloridos como Bo-Kaap. Jardines, viñedos cercanos y rutas panorámicas costeras</p>
+                        </div>
+                        <div class="viaje-premium" id="ElCairo">
+                            <div class="imagen-viaje-premium imagen-elcairo">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">El Cairo, Egipto</p>
+                            <p class="parrafo-viaje-premium">Ciudad vibrante junto al Nilo, donde lo antiguo y lo moderno coexisten. Una mezcla de historia, bullicio urbano y cultura milenaria</p>
+                        </div>
+                        <div class="viaje-premium" id="ElSerengueti">
+                            <div class="imagen-viaje-premium imagen-elserengueti">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">El Serengueti, Tanzania</p>
+                            <p class="parrafo-viaje-premium">Sabana infinita y vida salvaje en estado puro. Safaris fotográficos permiten sentir la inmensidad y el ritmo natural de África oriental</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- PARTE DEL CÓDIGO QUE MODELA OCEANÍA --> 
+                <div class="caja-continente">
+                    <div class="nombre-continente-flechas">
+                        <p class="fuente-encabezado-1">OCEANÍA</p>
+                        <div class="caja-flechas">
+                            <button class="btn-flecha-izq">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6"
+                                        stroke="#bfbfbf" stroke-width="1" />
+
+                                    <!-- Flecha centrada -->
+                                    <g transform="translate(15, 15)">
+                                        <path
+                                            d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                            stroke="#BFBFBF" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </g>
+                                </svg>
+                            </button>
+                            <button class="btn-flecha-der">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9" />
+
+                                    <!-- Flecha centrada -->
+                                    <g transform="translate(15, 15)">
+                                        <g transform="rotate(180, 10, 10)">
+                                            <path
+                                                d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                                stroke="#1E1E1E" stroke-width="3" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="caja-viajes-premium">
+                        <div class="viaje-premium" id="Sidney">
+                            <div class="imagen-viaje-premium imagen-sidney">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Sídney, Australia</p>
+                            <p class="parrafo-viaje-premium">Ópera icónica, bahía navegable y playas urbanas como Bondi. Ferris cotidianos y parques frente al agua</p>
+                        </div>
+                        <div class="viaje-premium" id="Queenstown">
+                            <div class="imagen-viaje-premium imagen-queenstown">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Queenstown, Nueva Zelanda</p>
+                            <p class="parrafo-viaje-premium">Capital de la adrenalina entre lago y montañas. Miradores naturales, aventuras y paisajes cinematográficos</p>
+                        </div>
+                        <div class="viaje-premium" id="TarawaSur">
+                            <div class="imagen-viaje-premium imagen-tarawasur">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Tarawa Sur, Kiribati</p>
+                            <p class="parrafo-viaje-premium">Corazón de Kiribati, con playas de arena blanca y lagunas turquesa. Ideal para quienes buscan cultura insular y paisajes marítimos vírgenes</p>
+                        </div>
+                        <div class="viaje-premium" id="PortVila">
+                            <div class="imagen-viaje-premium imagen-portvila">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Port Vila, Vanuatu</p>
+                            <p class="parrafo-viaje-premium">Capital de Vanuatu entre lagunas y colinas verdes. Ideal para explorar arrecifes de coral, gastronomía tropical y cultura insular</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- PARTE DEL CÓDIGO QUE MODELA AMÉRICA DEL NORTE --> 
+                <div class="caja-continente">
+                    <div class="nombre-continente-flechas">
+                        <p class="fuente-encabezado-1">AMÉRICA DEL NORTE</p>
+                        <div class="caja-flechas">
+                            <button class="btn-flecha-izq">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6"
+                                        stroke="#bfbfbf" stroke-width="1" />
+
+                                    <!-- Flecha centrada -->
+                                    <g transform="translate(15, 15)">
+                                        <path
+                                            d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                            stroke="#BFBFBF" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </g>
+                                </svg>
+                            </button>
+                            <button class="btn-flecha-der">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9" />
+
+                                    <!-- Flecha centrada -->
+                                    <g transform="translate(15, 15)">
+                                        <g transform="rotate(180, 10, 10)">
+                                            <path
+                                                d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                                stroke="#1E1E1E" stroke-width="3" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="caja-viajes-premium">
+                        <div class="viaje-premium">
+                            <div class="imagen-viaje-premium imagen-ciudaddequebec" id="CiudadDeQuebec">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Ciudad de Quebec, Canadá</p>
+                            <p class="parrafo-viaje-premium">Casco amurallado en altura con vistas al San Lorenzo. Ambiente europeo, tejados empinados y puestas de sol rosadas</p>
+                        </div>
+                        <div class="viaje-premium" id="LaHabana">
+                            <div class="imagen-viaje-premium imagen-lahabana">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">La Habana, Cuba</p>
+                            <p class="parrafo-viaje-premium">Arquitectura colonial de tonos pastel, música en cada esquina y paseos marítimos. La Habana Vieja y el Malecón marcan el ritmo</p>
+                        </div>
+                        <div class="viaje-premium" id="NuevaYork">
+                            <div class="imagen-viaje-premium imagen-nuevayork">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Nueva York, Estados Unidos</p>
+                            <p class="parrafo-viaje-premium">Arquitectura icónica, parques como Central Park y una escena artística incomparable. Energía urbana que no se apaga</p>
+                        </div>
+                        <div class="viaje-premium" id="SanFrancisco">
+                            <div class="imagen-viaje-premium imagen-sanfrancisco">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">San Francisco, Estados Unidos</p>
+                            <p class="parrafo-viaje-premium">Puente Golden Gate, colinas y casas victorianas. Museos de talla mundial y barrios con carácter propio</p>
+                        </div>
+                        <div class="viaje-premium" id="SanMiguelDeAllende">
+                            <div class="imagen-viaje-premium imagen-sanmigueldeallende">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">San Miguel de Allende, México</p>
+                            <p class="parrafo-viaje-premium">Centro colonial con parroquia neogótica rosada. Calles adoquinadas, patios y arte en galerías y talleres</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- PARTE DEL CÓDIGO QUE MODELA AMÉRICA DEL SUR --> 
+                <div class="caja-continente">
+                    <div class="nombre-continente-flechas">
+                        <p class="fuente-encabezado-1">AMÉRICA DEL SUR</p>
+                        <div class="caja-flechas">
+                            <button class="btn-flecha-izq">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6"
+                                        stroke="#bfbfbf" stroke-width="1" />
+
+                                    <!-- Flecha centrada -->
+                                    <g transform="translate(15, 15)">
+                                        <path
+                                            d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                            stroke="#BFBFBF" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </g>
+                                </svg>
+                            </button>
+                            <button class="btn-flecha-der">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9" />
+
+                                    <!-- Flecha centrada -->
+                                    <g transform="translate(15, 15)">
+                                        <g transform="rotate(180, 10, 10)">
+                                            <path
+                                                d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                                stroke="#1E1E1E" stroke-width="3" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="caja-viajes-premium">
+                        <div class="viaje-premium" id="BuenosAires">
+                            <div class="imagen-viaje-premium imagen-buenosaires">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Buenos Aires, Argentina</p>
+                            <p class="parrafo-viaje-premium">Barrios con identidad (Recoleta, San Telmo, La Boca), arquitectura variada y vida cultural intensa. Tango, parrillas y librerías en edificios emblemáticos</p>
+                        </div>
+                        <div class="viaje-premium" id="RioDeJaneiro">
+                            <div class="imagen-viaje-premium imagen-riodejaneiro">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Río de Janeiro, Brasil</p>
+                            <p class="parrafo-viaje-premium">Playas míticas, selva urbana y el Cristo Redentor vigilando bahías y morros. Ritmo de samba en calles y plazas</p>
+                        </div>
+                        <div class="viaje-premium" id="Cartagena">
+                            <div class="imagen-viaje-premium imagen-cartagena">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Cartagena, Colombia</p>
+                            <p class="parrafo-viaje-premium">Murallas, plazas y casonas coloniales cubiertas de buganvillas. Getsemaní y Bocagrande muestran sus caras creativa y moderna</p>
+                        </div>
+                        <div class="viaje-premium" id="Quito">
+                            <div class="imagen-viaje-premium imagen-quito">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Quito, Ecuador</p>
+                            <p class="parrafo-viaje-premium">Casco histórico dorado bajo volcanes andinos. Vistas desde la Basílica del Voto Nacional y mercados tradicionales</p>
+                        </div>
+                        <div class="viaje-premium" id="Cuzco">
+                            <div class="imagen-viaje-premium imagen-cuzco">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Cuzco, Perú</p>
+                            <p class="parrafo-viaje-premium">Antigua capital inca con plazas, conventos y calles empedradas. Punto de partida a Machu Picchu y miradores como el Cristo Blanco</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- PARTE DEL CÓDIGO QUE MODELA SOBRE NOSOTROS --> 
+        <div class="caja-sobre-nosotros">
+            <p class=fuente-encabezado-1>Sobre nosotros</p>
+            <p>PackUrBag nació en 2021 con una idea sencilla: hacer que viajar sea más fácil, accesible y emocionante
+                para todos. Lo que comenzó como un proyecto entre amantes de los viajes, se ha convertido en una
+                plataforma global que ayuda a millones de personas a descubrir nuevos destinos, experiencias auténticas
+                y alojamientos únicos en todo el mundo.
+                Nuestra misión es inspirarte a empacar tu maleta y salir a explorar el planeta sin complicaciones.
+                Creemos que viajar no solo se trata de moverse de un lugar a otro, sino de conectar con culturas,
+                personas y momentos que te transforman.
+                <br><br>
+                En PackUrBag apostamos por la tecnología para simplificar cada paso del viaje. Te conectamos con miles
+                de opciones de alojamiento, transporte y actividades adaptadas a tu estilo: desde escapadas rurales
+                hasta aventuras urbanas, desde casas acogedoras hasta hoteles de lujo.
+                Como una de las plataformas de viajes de más rápido crecimiento, reunimos a viajeros curiosos y a
+                anfitriones de todo el mundo. Ayudamos a que los negocios locales lleguen a nuevos públicos y a que cada
+                viaje sea una experiencia auténtica y sin estrés.
+                <br><br>
+                PackUrBag está disponible en varios idiomas y ofrece miles de opciones cuidadosamente seleccionadas para
+                que encuentres el destino perfecto. No importa si viajas solo, en pareja o con amigos, con PackUrBag tu
+                próxima aventura está a un clic de distancia.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-izquierda">
+            <p class="footer-copyright">
+                © 2025 PackUrBag. Todos los derechos reservados.
+            </p>
+            <img class="img-logo-footer" src="images/logo_recortado.PNG" alt="Logo de la web">
+        </div>
+
+        <div class="footer-derecha">
+            <p class="footer-texto">¡Síguenos!</p>
+            <div class="logos-redes-sociales">
+                <a href="#">
+                    <img src="images/logo_facebook.png" alt="Facebook">
+                </a>
+                <a href="#">
+                    <img src="images/logo_twitter.webp" alt="Twitter">
+                </a>
+                <a href="#">
+                    <img src="images/logo_youtube.png" alt="YouTube">
+                </a>
+                <a href="#">
+                    <img src="images/logo_instagram.webp" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
