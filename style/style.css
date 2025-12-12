@@ -83,6 +83,28 @@ header {
   transform: translateY(-2px);
 }
 
+/* Avatar usuario en cabecera */
+.imagen-perfil-usuario {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.boton-perfil {
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.boton-perfil:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
+
+
 .iniciar-sesion {
   /* Por ahora la clase btn se basa en este botón, pero si luego hay que hacerle modificaciones concretas se puede cambiar aquí*/
 }
