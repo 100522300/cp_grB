@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PackUrBag</title>
+    <script src="script/carrusel.js"></script>
     <link rel="stylesheet" href="style/style.css">
     <link rel="icon" href="/images/logo_recortado.PNG">
 </head>
@@ -97,7 +98,7 @@
                     <div class="nombre-continente-flechas">
                         <p class="fuente-encabezado-1">Europa</p>
                         <div class="caja-flechas">
-                            <button class="btn-flecha-izq">
+                            <button class="btn-flecha-izq" id="flechaIzquierdaEuropa">
                                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6"
@@ -112,7 +113,7 @@
                                     </g>
                                 </svg>
                             </button>
-                            <button class="btn-flecha-der">
+                            <button class="btn-flecha-der" id="flechaDerechaEuropa">
                                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9" />
@@ -174,7 +175,7 @@
                             <p class="titulo-parrafo-viaje-premium">Tallin, Estonia</p>
                             <p class="parrafo-viaje-premium">Ciudad vieja medieval amurallada, torres y tejados de colores con vistas al Báltico. Invierno frío, pero fotogénico desde Toompea</p>
                         </div>
-                        <div class="viaje-premium" id="París">
+                        <div class="viaje-premium" id="Paris">
                             <div class="imagen-viaje-premium imagen-paris">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">París, Francia</p>
@@ -264,6 +265,18 @@
                             <p class="titulo-parrafo-viaje-premium">Reikiavik, Islandia</p>
                             <p class="parrafo-viaje-premium">Arquitectura moderna como Harpa y Hallgrímskirkja entre paisajes volcánicos. Base para auroras y baños termales cercanos</p>
                         </div>
+                        <div class="viaje-premium" id="Santorini">
+                            <div class="imagen-viaje-premium imagen-santorini">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Santorini, Grecia</p>
+                            <p class="parrafo-viaje-premium">Islas blancas con cúpulas azules sobre el mar Egeo. Atardeceres únicos, calderas volcánicas y playas de arena negra que crean un paisaje de postal</p>
+                        </div>
+                        <div class="viaje-premium" id="Monaco">
+                            <div class="imagen-viaje-premium imagen-monaco">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Ciudad de Monáco, Monáco</p>
+                            <p class="parrafo-viaje-premium">Lujo mediterráneo: yates en el puerto, casinos históricos y palacios reales. Una vida cosmopolita que mezcla glamour y tradición</p>
+                        </div>
                     </div>
                 </div>
 
@@ -274,7 +287,7 @@
                     <div class="nombre-continente-flechas">
                         <p class="fuente-encabezado-1">Asia</p>
                         <div class="caja-flechas">
-                            <button class="btn-flecha-izq">
+                            <button class="btn-flecha-izq" id="flechaIzquierdaAsia">
                                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6"
@@ -289,7 +302,7 @@
                                     </g>
                                 </svg>
                             </button>
-                            <button class="btn-flecha-der">
+                            <button class="btn-flecha-der" id="flechaDerechaAsia">
                                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9" />
@@ -391,7 +404,7 @@
                     <div class="nombre-continente-flechas">
                         <p class="fuente-encabezado-1">África</p>
                         <div class="caja-flechas">
-                            <button class="btn-flecha-izq">
+                            <button class="btn-flecha-izq" id="flechaIzquierdaAfrica">
                                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6"
@@ -406,7 +419,7 @@
                                     </g>
                                 </svg>
                             </button>
-                            <button class="btn-flecha-der">
+                            <button class="btn-flecha-der" id="flechaDerechaAfrica">
                                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9" />
@@ -450,6 +463,18 @@
                             <p class="titulo-parrafo-viaje-premium">El Serengueti, Tanzania</p>
                             <p class="parrafo-viaje-premium">Sabana infinita y vida salvaje en estado puro. Safaris fotográficos permiten sentir la inmensidad y el ritmo natural de África oriental</p>
                         </div>
+                        <div class="viaje-premium" id="Zanzibar">
+                            <div class="imagen-viaje-premium imagen-zanzibar">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Zanzíbar, Tanzania</p>
+                            <p class="parrafo-viaje-premium">Playas de arena blanca y aguas turquesa y palacios de especias. Una isla de historia, cultura y relax, con atardeceres de postal</p>
+                        </div>
+                        <div class="viaje-premium" id="Nairobi">
+                            <div class="imagen-viaje-premium imagen-nairobi">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Nairobi, Kenya</p>
+                            <p class="parrafo-viaje-premium">Capital vibrante entre rascacielos y naturaleza salvaje. Safaris cercanos, combinando vida moderna con fauna africana única</p>
+                        </div>
                     </div>
                 </div>
 
@@ -460,7 +485,7 @@
                     <div class="nombre-continente-flechas">
                         <p class="fuente-encabezado-1">OCEANÍA</p>
                         <div class="caja-flechas">
-                            <button class="btn-flecha-izq">
+                            <button class="btn-flecha-izq" id="flechaIzquierdaOceania">
                                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6"
@@ -475,7 +500,7 @@
                                     </g>
                                 </svg>
                             </button>
-                            <button class="btn-flecha-der">
+                            <button class="btn-flecha-der" id="flechaDerechaOceania">
                                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9" />
@@ -519,6 +544,18 @@
                             <p class="titulo-parrafo-viaje-premium">Port Vila, Vanuatu</p>
                             <p class="parrafo-viaje-premium">Capital de Vanuatu entre lagunas y colinas verdes. Ideal para explorar arrecifes de coral, gastronomía tropical y cultura insular</p>
                         </div>
+                        <div class="viaje-premium" id="Yaren">
+                            <div class="imagen-viaje-premium imagen-yaren">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Yaren, Nauru</p>
+                            <p class="parrafo-viaje-premium">Capital con playas tranquilas y paisajes coralinos. Un destino íntimo y poco explorado donde la vida isleña se percibe en calma</p>
+                        </div>
+                        <div class="viaje-premium" id="Samoia">
+                            <div class="imagen-viaje-premium imagen-samoia">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Samoia, Apia</p>
+                            <p class="parrafo-viaje-premium">Puerto rodeado de playas de arena blanca y palmeras. Templos históricos y cascadas cercanas crean un ambiente tropical y relajante</p>
+                        </div>
                     </div>
                 </div>
 
@@ -529,7 +566,7 @@
                     <div class="nombre-continente-flechas">
                         <p class="fuente-encabezado-1">AMÉRICA DEL NORTE</p>
                         <div class="caja-flechas">
-                            <button class="btn-flecha-izq">
+                            <button class="btn-flecha-izq" id="flechaIzquierdaAmericaDelNorte">
                                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6"
@@ -544,7 +581,7 @@
                                     </g>
                                 </svg>
                             </button>
-                            <button class="btn-flecha-der">
+                            <button class="btn-flecha-der" id="flechasDerechaAmericaDelSur">
                                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9" />
@@ -564,8 +601,8 @@
 
                     </div>
                     <div class="caja-viajes-premium">
-                        <div class="viaje-premium">
-                            <div class="imagen-viaje-premium imagen-ciudaddequebec" id="CiudadDeQuebec">
+                        <div class="viaje-premium"  id="CiudadDeQuebec">
+                            <div class="imagen-viaje-premium imagen-ciudaddequebec">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Ciudad de Quebec, Canadá</p>
                             <p class="parrafo-viaje-premium">Casco amurallado en altura con vistas al San Lorenzo. Ambiente europeo, tejados empinados y puestas de sol rosadas</p>
@@ -575,6 +612,12 @@
                             </div>
                             <p class="titulo-parrafo-viaje-premium">La Habana, Cuba</p>
                             <p class="parrafo-viaje-premium">Arquitectura colonial de tonos pastel, música en cada esquina y paseos marítimos. La Habana Vieja y el Malecón marcan el ritmo</p>
+                        </div>
+                        <div class="viaje-premium" id="SanMiguelDeAllende">
+                            <div class="imagen-viaje-premium imagen-sanmigueldeallende">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">San Miguel de Allende, México</p>
+                            <p class="parrafo-viaje-premium">Centro colonial con parroquia neogótica rosada. Calles adoquinadas, patios y arte en galerías y talleres</p>
                         </div>
                         <div class="viaje-premium" id="NuevaYork">
                             <div class="imagen-viaje-premium imagen-nuevayork">
@@ -588,11 +631,11 @@
                             <p class="titulo-parrafo-viaje-premium">San Francisco, Estados Unidos</p>
                             <p class="parrafo-viaje-premium">Puente Golden Gate, colinas y casas victorianas. Museos de talla mundial y barrios con carácter propio</p>
                         </div>
-                        <div class="viaje-premium" id="SanMiguelDeAllende">
-                            <div class="imagen-viaje-premium imagen-sanmigueldeallende">
+                        <div class="viaje-premium" id="Chicago">
+                            <div class="imagen-viaje-premium imagen-chicago">
                             </div>
-                            <p class="titulo-parrafo-viaje-premium">San Miguel de Allende, México</p>
-                            <p class="parrafo-viaje-premium">Centro colonial con parroquia neogótica rosada. Calles adoquinadas, patios y arte en galerías y talleres</p>
+                            <p class="titulo-parrafo-viaje-premium">Chicago, Estados Unidos</p>
+                            <p class="parrafo-viaje-premium">Ciudad de rascacielos icónicos y arquitectura impresionante. Los atardeceres sobre el lago Michigan son inolvidables</p>
                         </div>
                     </div>
                 </div>
@@ -604,7 +647,7 @@
                     <div class="nombre-continente-flechas">
                         <p class="fuente-encabezado-1">AMÉRICA DEL SUR</p>
                         <div class="caja-flechas">
-                            <button class="btn-flecha-izq">
+                            <button class="btn-flecha-izq" id="flechaIzquierdaAmericaDelSur">
                                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6"
@@ -619,7 +662,7 @@
                                     </g>
                                 </svg>
                             </button>
-                            <button class="btn-flecha-der">
+                            <button class="btn-flecha-der" id="flechaDerechaAmericaDelSur">
                                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9" />
@@ -668,6 +711,12 @@
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Cuzco, Perú</p>
                             <p class="parrafo-viaje-premium">Antigua capital inca con plazas, conventos y calles empedradas. Punto de partida a Machu Picchu y miradores como el Cristo Blanco</p>
+                        </div>
+                        <div class="viaje-premium" id="Patagonia">
+                            <div class="imagen-viaje-premium imagen-patagonia">
+                            </div>
+                            <p class="titulo-parrafo-viaje-premium">Patagonia, Chile</p>
+                            <p class="parrafo-viaje-premium">Paisajes extremos de montañas, glaciares y lagos turquesa. Naturaleza salvaje y silenciosa que ofrece aventuras únicas y vistas sobrecogedoras</p>
                         </div>
                     </div>
                 </div>
