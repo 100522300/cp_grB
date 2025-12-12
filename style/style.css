@@ -172,10 +172,10 @@ header {
   flex-direction: column;
   align-items: flex-start;
   gap: 0.625rem;
-  animation: slideIn 0.6s ease;
+  animation: entrada 0.6s ease;
 }
 
-@keyframes slideIn {
+@keyframes entrada {
     from {
         transform: translateX(80px);
         opacity: 0;
