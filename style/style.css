@@ -106,7 +106,7 @@ header {
 
 
 .iniciar-sesion {
-  /* Por ahora la clase btn se basa en este botón, pero si luego hay que hacerle modificaciones concretas se puede cambiar aquí*/
+  text-decoration: none;
 }
 
 .caja-busqueda {
