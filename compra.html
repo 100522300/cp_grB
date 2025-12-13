@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="style/currency-ui.css">
   <link rel="icon" href="/images/logo_recortado.PNG">
   <script src="script/currency.js" defer></script>
-    <script src="script/theme.js" defer></script>
+  <script src="script/theme.js" defer></script>
+  <script src="script/compra.js" defer></script>
 </head>
 <body>
   <header class="cabecera-compra">
@@ -25,11 +26,11 @@
     <div class="opciones-header">
       <select id="currency-select" class="btn-seleccionar-moneda">
 
-              <option value="EUR">EUR (€)</option>
+              <option value="EUR">EUR (â‚¬)</option>
 
               <option value="USD">USD ($)</option>
 
-              <option value="GBP">GBP (£)</option>
+              <option value="GBP">GBP (Â£)</option>
 
             </select>
             <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
@@ -39,9 +40,9 @@
       <button class="btn-faq">
         <img src="images/question-mark.png" alt="FAQ">
       </button>
-      <button class="btn iniciar-sesion" data-logout="true">Cerrar sesi?n</button>
-      <button class="menu-icon" aria-label="Abrir menú">
-        <img src="images/tres_rayas.png" alt="Menú" class="icono-menu-img">
+      <button class="btn iniciar-sesion" data-logout="true">Cerrar sesiÃ³n</button>
+      <button class="menu-icon" aria-label="Abrir menï¿½">
+        <img src="images/tres_rayas.png" alt="Menï¿½" class="icono-menu-img">
       </button>
     </div>
   </header>
@@ -56,36 +57,29 @@
       <div class="fila-doble">
         <div class="campo-compra">
           <label for="fecha-salida">Fecha Salida</label>
-          <input type="text" id="fecha-salida" name="fecha-salida" placeholder="dd/mm/yyyy">
+          <input type="date" id="fecha-salida" name="fecha-salida">
         </div>
         <div class="campo-compra">
           <label for="fecha-regreso">Fecha regreso</label>
-          <input type="text" id="fecha-regreso" name="fecha-regreso" placeholder="dd/mm/yyyy">
+          <input type="date" id="fecha-regreso" name="fecha-regreso">
         </div>
       </div>
 
       <div class="campo-compra">
-        <label for="correo">Dirección de correo electrónico</label>
+        <label for="correo">DirecciÃ³n de correo electrÃ³nico</label>
         <input type="email" id="correo" name="correo" placeholder="email@janesfakedomain.net">
       </div>
 
-      <button type="button" class="boton-secundario">+ Añadir acompañante</button>
+      <button type="button" class="boton-secundario" id="btn-acompanante">
+        + AÃ±adir acompaÃ±ante
+      </button>
 
-      <div class="fila-doble">
-        <div class="campo-compra">
-          <label for="acompanante-nombre">Acompañantes</label>
-          <input type="text" id="acompanante-nombre" name="acompanante-nombre" placeholder="Nombre">
-        </div>
-        <div class="campo-compra">
-          <label for="acompanante-email" class="label-espaciador"></label>
-          <input type="email" id="acompanante-email" name="acompanante-email" placeholder="Email">
-        </div>
-      </div>
+      <div id="contenedor-acompanantes"></div>
 
       <div class="campo-compra campo-mascota">
         <label>Mascota</label>
         <div class="fila-botones-mascota">
-          <button type="button" class="boton-opcion activo">Sí</button>
+          <button type="button" class="boton-opcion activo">Si</button>
           <button type="button" class="boton-opcion">No</button>
         </div>
       </div>
@@ -97,7 +91,7 @@
         </div>
         <div class="campo-compra">
           <label for="tamano-mascota" class="label-espaciador"></label>
-          <input type="text" id="tamano-mascota" name="tamano-mascota" placeholder="Tamaño">
+          <input type="text" id="tamano-mascota" name="tamano-mascota" placeholder="Tamaï¿½o">
         </div>
       </div>
 
@@ -107,7 +101,7 @@
       </div>
 
       <div class="campo-compra">
-        <label for="metodo-pago">Método de pago</label>
+        <label for="metodo-pago">MÃ©todo de pago</label>
       </div>
 
       <div class="campo-compra">
@@ -117,13 +111,13 @@
 
       <div class="campo-compra">
         <label for="numero-tarjeta" class="label-espaciador"></label>
-        <input type="text" id="numero-tarjeta" name="numero-tarjeta" placeholder="Número de tarjeta">
+        <input type="text" id="numero-tarjeta" name="numero-tarjeta" placeholder="Nï¿½mero de tarjeta">
       </div>
 
       <div class="fila-doble">
         <div class="campo-compra">
-          <label for="caducidad" class="label-espaciador"></label>
-          <input type="text" id="caducidad" name="caducidad" placeholder="Caducidad">
+          <label for="caducidad" class="label-espaciador">Caducidad</label>
+          <input type="month" id="caducidad" name="caducidad">
         </div>
         <div class="campo-compra">
           <label for="cvv" class="label-espaciador"></label>
@@ -138,13 +132,13 @@
   <footer class="footer">
     <div class="footer-izquierda">
       <p class="footer-copyright">
-        © 2025 PackUrBag. Todos los derechos reservados.
+        @ 2025 PackUrBag. Todos los derechos reservados.
       </p>
       <img class="img-logo-footer" src="images/logo_recortado.PNG" alt="Logo de la web">
     </div>
 
     <div class="footer-derecha">
-      <p class="footer-texto">¡Síguenos!</p>
+      <p class="footer-texto">Â¡SÃ­guenos!</p>
       <div class="logos_redes_sociales">
         <a href="#"><img src="images/logo_facebook.png" alt="Facebook"></a>
         <a href="#"><img src="images/logo_twitter.webp" alt="Twitter"></a>
