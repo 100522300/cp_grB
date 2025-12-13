@@ -1,143 +1,169 @@
-<html >
-    <head>
-        <title>Resultados de búsqueda</title>
-        <link rel="stylesheet" href="style/style_resultados.css">
-        <!-- Aquí ira el javascript-->
-    </head>
+<html>
 
-    
-    <body class="resultados-body">
-        <header class="cabecera_registro">
-          <div class="cabecera-izquierda">
-            <h1 class="titulo-marca">PackUrBag</h1>
-            <img src="images/logo_recortado_blanco.PNG" alt="Logo PackUrBag" class="logo-marca">
-          </div>
-          <div class="cabecera-derecha">
-            <a href="index.html" class="boton-enlace">Página principal</a>
-          </div>
-        </header>
+<head>
+    <title>Resultados de búsqueda</title>
+    <link rel="stylesheet" href="style/style_resultados.css">
+    <!-- Aquí ira el javascript-->
+</head>
 
-        <main class="cuerpo-resultados">
-            <h2 class="titulo-seccion">Mejor valorado</h2>
-            <div class="mejor-valorado">
 
-                <div class="imagen-favoritos">
-                    <img class="imagen-tokyo" src="images/tokyo.jpg" alt="Imagen de tokyo">
-                    <span class="añadir-a-favoritos">⭐</span> <span>Añadir a favoritos</span>
+<body class="resultados-body">
+    <header class="cabecera-sesion">
+        <div class="cabecera-izquierda">
+            <p class="titulo-marca">PackUrBag</p>
+            <img class="logo-marca" src="images/logo_recortado_blanco.PNG" alt="Logo PackUrBag">
+        </div>
+        <div class="cabecera-derecha">
+            <a class="boton-enlace btn" href="index.html">Página principal</a>
+        </div>
+    </header>
+
+    <main class="cuerpo-resultados">
+        <p class="titulo-perfil">Mejor valorado</p>
+        <div class="mejor-valorado">
+
+            <div class="imagen-favoritos">
+                <img class="imagen-tokyo" src="images/tokyo.jpg" alt="Imagen de tokyo">
+                <span class="añadir-a-favoritos">⭐</span> <span>Añadir a favoritos</span>
+            </div>
+
+            <div class="informacion-busqueda">
+                <h3>Tokyo</h3>
+                <p class="informacion-destino">Vuelo y hotel incluidos para la ciudad más avanzada del mundo.</p>
+                <p class="precio">2150€</p>
+                <!-- Todo implementar esta parte de comprar que lleve al formulario adecuado -->
+                <button class="comprar btn" type="button" a="#">Comprar</button>
+                <p class="no-reembolso">La web no admite reembolsos</p>
+            </div>
+
+        </div>
+
+        <div class="opiniones-contenedor">
+            <div class="opiniones-flechas">
+                <p class="titulo-perfil">Opiniones de otros usuarios</p>
+                <div class="flechas">
+                    <button class="btn-flecha-izq" id="flechaIzquierdaEuropa">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6" stroke="#bfbfbf"
+                                stroke-width="1" />
+
+                            <!-- Flecha centrada -->
+                            <g transform="translate(15, 15)">
+                                <path d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                    stroke="#BFBFBF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                        </svg>
+                    </button>
+                    <button class="btn-flecha-der" id="flechaDerechaEuropa">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9" />
+
+                            <!-- Flecha centrada -->
+                            <g transform="translate(15, 15)">
+                                <g transform="rotate(180, 10, 10)">
+                                    <path d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                        stroke="#1E1E1E" stroke-width="3" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
                 </div>
+            </div>
 
-                <div class="informacion-busqueda">
+            <div class="opiniones-usuarios">
+                <!-- EJEMPLO TEMPORAL SOLO PARA MAQUETAR -->
+                <article class="opinion-card">
+                    <div class="opinion-usuario">
+
+                        <img class="avatar" src="images/hustle_hard_persona_2.jpg" alt="Foto de perfil">
+                        <span class="nombre-usuario">María López</span>
+                    </div>
+                    <p class="texto-opinion">
+                        Me encantó el viaje, superó mis expectativas ❤️
+                    </p>
+                </article>
+            </div>
+            <!-- Esto quedara oculto y lo usara js para reutilizarlo-->
+            <template id="opinion-template">
+                <article class="opinion-card">
+                    <div class="opinion-usuario">
+                        <div class="avatar"></div>
+                        <span class="nombre-usuario"></span>
+                    </div>
+                    <p class="texto-opinion"></p>
+                </article>
+            </template>
+
+        </div>
+
+
+        <div class="mas-resultados-contenedor">
+            <p class="titulo-perfil">Más resultados</p>
+            <section class="mas-resultados-ejemplos">
+
+                <article class="resultado-card">
+                    <div class="imagen-comprar">
+                        <img class="imagen-1-busqueda" src="images/imagen1busqueda.jpg">
+                        <button class="comprar-mas-resultados btn">Comprar</button>
+                    </div>
                     <h3>Tokyo</h3>
-                    <p class="informacion-destino">Vuelo y hotel incluidos para la ciudad más avanzada del mundo.</p>
-                    <p class="precio">2150€</p> 
-                    <!-- Todo implementar esta parte de comprar que lleve al formulario adecuado -->
-                    <button class="comprar" type="button" a="#">Comprar</button>
-                    <p class="no-reembolso">La web no admite reembolsos</p>
-                </div>
+                    <p class="precio-mas">1850€</p>
+                    <p class="tipo-hotel">Hotel 7 noches</p>
+                </article>
 
+                <article class="resultado-card">
+                    <div class="imagen-comprar">
+                        <img class="imagen-1-busqueda" src="images/imagen2busqueda.jpg">
+                        <button class="comprar-mas-resultados btn">Comprar</button>
+                    </div>
+                    <h3>Tokyo</h3>
+                    <p class="precio-mas">590€</p>
+                    <p class="tipo-hotel">Hotel más visita guiada</p>
+                </article>
+
+                <article class="resultado-card">
+                    <div class="imagen-comprar">
+                        <img class="imagen-1-busqueda" src="images/imagen3busqueda.jpg">
+                        <button class="comprar-mas-resultados btn">Comprar</button>
+                    </div>
+                    <h3>Tokyo</h3>
+                    <p class="precio-mas">3400€</p>
+                    <p class="tipo-hotel">Hotel lujo + vuelo + tour</p>
+                </article>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-izquierda">
+            <p class="footer-copyright">
+                © 2025 PackUrBag. Todos los derechos reservados.
+            </p>
+            <img class="img-logo-footer" src="images/logo_recortado.PNG" alt="Logo de la web">
+        </div>
+
+        <div class="footer-derecha">
+            <p class="footer-texto">¡Síguenos!</p>
+            <div class="logos_redes_sociales">
+                <a href="#">
+                    <img src="images/logo_facebook.png" alt="Facebook">
+                </a>
+                <a href="#">
+                    <img src="images/logo_twitter.webp" alt="Twitter">
+                </a>
+                <a href="#">
+                    <img src="images/logo_youtube.png" alt="YouTube">
+                </a>
+                <a href="#">
+                    <img src="images/logo_instagram.webp" alt="Instagram">
+                </a>
             </div>
+        </div>
+    </footer>
+</body>
 
-            <div class="opiniones-contenedor">
-                <div class="opiniones-flechas">
-                    <h2 class="titulo-seccion">Opiniones de otros usuarios</h2>
-                    <div class="flechas">
-                        <button class="carrusel-flecha"id="flechaIzquierda">&leftarrow;</button>
-                        <button class="carrusel-flecha" id="flechaDerecha">&rightarrow;</button>        
-                    </div> 
-                </div>
-
-                <div class="opiniones-usuarios">
-                    <!-- EJEMPLO TEMPORAL SOLO PARA MAQUETAR -->
-                    <article class="opinion-card">
-                        <div class="opinion-usuario">
-                            
-                            <img class="avatar" src="images/hustle_hard_persona_2.jpg" alt="Foto de perfil">
-                            <span class="nombre-usuario">María López</span>
-                        </div>
-                        <p class="texto-opinion">
-                            Me encantó el viaje, superó mis expectativas ❤️
-                        </p>
-                    </article>
-                </div>
-                <!-- Esto quedara oculto y lo usara js para reutilizarlo-->
-                <template id="opinion-template">
-                    <article class="opinion-card">
-                        <div class="opinion-usuario">
-                            <div class="avatar"></div>
-                            <span class="nombre-usuario"></span>
-                        </div>
-                        <p class="texto-opinion"></p>
-                    </article>
-                </template>
-
-            </div>
-
-
-            <div class="mas-resultados-contenedor">
-                <h2 class="titulo-seccion">Más resultados</h2>
-                <section class="mas-resultados-ejemplos">
-
-                    <article class="resultado-card">
-                        <div class="imagen-comprar">
-                            <img class="imagen-1-busqueda" src="images/imagen1busqueda.jpg">
-                            <button class="comprar-mas-resultados">Comprar</button>
-                        </div>
-                        <h3>Tokyo</h3>
-                        <p class="precio-mas">1850€</p>
-                        <p class="tipo-hotel">Hotel 7 noches</p>
-                    </article>
-                
-                    <article class="resultado-card">
-                        <div class="imagen-comprar">
-                            <img class="imagen-1-busqueda" src="images/imagen2busqueda.jpg">
-                            <button class="comprar-mas-resultados">Comprar</button>
-                        </div>
-                        <h3>Tokyo</h3>
-                        <p class="precio-mas">590€</p>
-                        <p class="tipo-hotel">Hotel más visita guiada</p>
-                    </article>
-                
-                    <article class="resultado-card">
-                        <div class="imagen-comprar">
-                            <img class="imagen-1-busqueda" src="images/imagen3busqueda.jpg">
-                            <button class="comprar-mas-resultados">Comprar</button>
-                        </div>
-                        <h3>Tokyo</h3>
-                        <p class="precio-mas">3400€</p>
-                        <p class="tipo-hotel">Hotel lujo + vuelo + tour</p>
-                    </article>
-                
-                </section>
-
-            </div>
-
-        </main>
-
-        <footer>
-            <div class="footer-izquierda">
-                <p class="footer-copyright">
-                    © 2025 PackUrBag. Todos los derechos reservados.
-                </p>
-                <img class="img-logo-footer" src="images/logo_recortado.PNG" alt="Logo de la web">
-            </div>
-
-            <div class="footer-derecha">
-                <p class="footer-texto">¡Síguenos!</p>
-                <div class="logos_redes_sociales">
-                    <a href="#">
-                        <img src="images/logo_facebook.png" alt="Facebook">
-                    </a>
-                    <a href="#">
-                        <img src="images/logo_twitter.webp" alt="Twitter">
-                    </a>
-                    <a href="#">
-                        <img src="images/logo_youtube.png" alt="YouTube">
-                    </a>
-                    <a href="#">
-                        <img src="images/logo_instagram.webp" alt="Instagram">
-                    </a>
-                </div>
-            </div>  
-        </footer>
-    </body>
 </html>
