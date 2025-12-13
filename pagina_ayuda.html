@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PackUrBag | Inicio de sesión</title>
     <link rel="stylesheet" href="style/style_sesion.css">
+    <link rel="stylesheet" href="style/currency-ui.css">
     <link rel="icon" href="images/logo_recortado_blanco.PNG">
+    <script src="script/currency.js" defer></script>
 </head>
 
 <body>
@@ -16,7 +18,16 @@
             <img class="logo-marca" src="images/logo_recortado_blanco.PNG" alt="Logo PackUrBag">
         </div>
         <div class="cabecera-derecha">
-            <a class="boton-enlace btn" href="index.html">Página principal</a>
+            <select id="currency-select" class="btn-seleccionar-moneda">
+
+                    <option value="EUR">EUR (€)</option>
+
+                    <option value="USD">USD ($)</option>
+
+                    <option value="GBP">GBP (£)</option>
+
+                  </select>
+            <a class="boton-enlace btn" href="index.html">Pagina principal</a>
         </div>
     </header>
 

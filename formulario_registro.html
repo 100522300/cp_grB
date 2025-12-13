@@ -6,6 +6,8 @@
   <title>PackUrBag | Registro</title>
   <link rel="stylesheet" href="style/style_registro.css">
   <link rel="icon" type="image/png" href="images/logo_recortado_blanco.PNG">
+  <link rel="stylesheet" href="style/currency-ui.css">
+  <script src="script/currency.js" defer></script>
   <script type="module" src="script/registro.js" defer></script>
 </head>
 
@@ -16,7 +18,16 @@
       <img src="images/logo_recortado_blanco.PNG" alt="Logo PackUrBag" class="logo-marca">
     </div>
     <div class="cabecera-derecha">
-      <a href="index.html" class="boton-enlace">Página principal</a>
+      <select id="currency-select" class="btn-seleccionar-moneda">
+
+              <option value="EUR">EUR (€)</option>
+
+              <option value="USD">USD ($)</option>
+
+              <option value="GBP">GBP (£)</option>
+
+            </select>
+      <a href="index.html" class="boton-enlace">Pagina principal</a>
     </div>
   </header>
 

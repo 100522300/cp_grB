@@ -1,11 +1,13 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PackUrBag</title>
   <link rel="stylesheet" href="style/style_compra.css">
+  <link rel="stylesheet" href="style/currency-ui.css">
   <link rel="icon" href="/images/logo_recortado.PNG">
+  <script src="script/currency.js" defer></script>
 </head>
 <body>
   <header class="cabecera-compra">
@@ -19,16 +21,24 @@
       <a>Newsletter</a>
     </div>
     <div class="opciones-header">
-      <button class="btn-seleccionar-moneda">EUR</button>
+      <select id="currency-select" class="btn-seleccionar-moneda">
+
+              <option value="EUR">EUR (€)</option>
+
+              <option value="USD">USD ($)</option>
+
+              <option value="GBP">GBP (£)</option>
+
+            </select>
       <button class="btn-seleccionar-idioma">
         <img src="images/spain-flag-circular.png" alt="Bandera">
       </button>
       <button class="btn-faq">
         <img src="images/question-mark.png" alt="FAQ">
       </button>
-      <button class="btn iniciar-sesion">Cerrar sesiÃ³n</button>
-      <button class="menu-icon" aria-label="Abrir menÃº">
-        <img src="images/tres_rayas.png" alt="MenÃº" class="icono-menu-img">
+      <button class="btn iniciar-sesion">Cerrar sesión</button>
+      <button class="menu-icon" aria-label="Abrir menú">
+        <img src="images/tres_rayas.png" alt="Menú" class="icono-menu-img">
       </button>
     </div>
   </header>
@@ -52,15 +62,15 @@
       </div>
 
       <div class="campo-compra">
-        <label for="correo">DirecciÃ³n de correo electrÃ³nico</label>
+        <label for="correo">Dirección de correo electrónico</label>
         <input type="email" id="correo" name="correo" placeholder="email@janesfakedomain.net">
       </div>
 
-      <button type="button" class="boton-secundario">+ AÃ±adir acompaÃ±ante</button>
+      <button type="button" class="boton-secundario">+ Añadir acompañante</button>
 
       <div class="fila-doble">
         <div class="campo-compra">
-          <label for="acompanante-nombre">AcompaÃ±antes</label>
+          <label for="acompanante-nombre">Acompañantes</label>
           <input type="text" id="acompanante-nombre" name="acompanante-nombre" placeholder="Nombre">
         </div>
         <div class="campo-compra">
@@ -72,7 +82,7 @@
       <div class="campo-compra campo-mascota">
         <label>Mascota</label>
         <div class="fila-botones-mascota">
-          <button type="button" class="boton-opcion activo">SÃ­</button>
+          <button type="button" class="boton-opcion activo">Sí</button>
           <button type="button" class="boton-opcion">No</button>
         </div>
       </div>
@@ -84,7 +94,7 @@
         </div>
         <div class="campo-compra">
           <label for="tamano-mascota" class="label-espaciador"></label>
-          <input type="text" id="tamano-mascota" name="tamano-mascota" placeholder="TamaÃ±o">
+          <input type="text" id="tamano-mascota" name="tamano-mascota" placeholder="Tamaño">
         </div>
       </div>
 
@@ -94,7 +104,7 @@
       </div>
 
       <div class="campo-compra">
-        <label for="metodo-pago">MÃ©todo de pago</label>
+        <label for="metodo-pago">Método de pago</label>
       </div>
 
       <div class="campo-compra">
@@ -104,7 +114,7 @@
 
       <div class="campo-compra">
         <label for="numero-tarjeta" class="label-espaciador"></label>
-        <input type="text" id="numero-tarjeta" name="numero-tarjeta" placeholder="NÃºmero de tarjeta">
+        <input type="text" id="numero-tarjeta" name="numero-tarjeta" placeholder="Número de tarjeta">
       </div>
 
       <div class="fila-doble">
@@ -125,13 +135,13 @@
   <footer class="footer">
     <div class="footer-izquierda">
       <p class="footer-copyright">
-        Â© 2025 PackUrBag. Todos los derechos reservados.
+        © 2025 PackUrBag. Todos los derechos reservados.
       </p>
       <img class="img-logo-footer" src="images/logo_recortado.PNG" alt="Logo de la web">
     </div>
 
     <div class="footer-derecha">
-      <p class="footer-texto">Â¡SÃ­guenos!</p>
+      <p class="footer-texto">¡Síguenos!</p>
       <div class="logos_redes_sociales">
         <a href="#"><img src="images/logo_facebook.png" alt="Facebook"></a>
         <a href="#"><img src="images/logo_twitter.webp" alt="Twitter"></a>

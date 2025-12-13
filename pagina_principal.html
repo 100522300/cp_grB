@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PackUrBag</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/currency-ui.css">
     <link rel="icon" href="/images/logo_recortado.PNG">
+    <script src="script/currency.js" defer></script>
     <script type="module" src="script/script_principal.js" defer></script>
     <script src="script/carrusel.js" defer></script>
 </head>
@@ -25,7 +27,15 @@
   </div>
 
   <div class="opciones-header">
-    <button class="btn-seleccionar-moneda">EUR</button>
+    <select id="currency-select" class="btn-seleccionar-moneda">
+
+            <option value="EUR">EUR (€)</option>
+
+            <option value="USD">USD ($)</option>
+
+            <option value="GBP">GBP (£)</option>
+
+          </select>
 
     <button class="btn-seleccionar-idioma">
       <img src="images/spain-flag-circular.png" alt="Idioma">
@@ -789,6 +799,4 @@
 </body>
 
 </html>
-
-
 
