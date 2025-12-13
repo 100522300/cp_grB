@@ -1,4 +1,5 @@
 ﻿@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -8,8 +9,8 @@
 }
 
 body {
-  color: #111;
-  background: #fff;
+  color: var(--text, #111);
+  background: var(--bg, #fff);
 }
 
 /* Cabecera heredada */
@@ -129,7 +130,7 @@ button:hover {
   object-fit: contain;
 }
 
-/* Footer*/
+/* Footer */
 footer {
   background-color: #c4c4c4;
   color: rgb(0, 0, 0);
@@ -222,7 +223,7 @@ footer {
 
 .dato-perfil {
   font-size: 1.05rem;
-  color: #222;
+  color: var(--text, #222);
   line-height: 1.6;
 }
 
@@ -267,18 +268,20 @@ footer {
   flex-direction: column;
   gap: 0.4rem;
   padding: 0.6rem;
-  background: #f0f0f0;
+  background: var(--card, #f0f0f0);
+  border: 1px solid var(--border, transparent);
   border-radius: 0.75rem;
 }
 
 .lista-favoritos a {
   text-decoration: underline;
-  color: #000;
+  color: var(--text, #000);
 }
 
 .caja-vistos {
   height: 90px;
-  background: #f0f0f0;
+  background: var(--card, #f0f0f0);
+  border: 1px solid var(--border, transparent);
   border-radius: 0.75rem;
   display: flex;
   align-items: center;
@@ -294,7 +297,7 @@ footer {
 .estado-suscripcion {
   text-align: center;
   font-size: 0.95rem;
-  color: #333;
+  color: var(--muted, #333);
   margin: 0;
 }
 
@@ -338,7 +341,8 @@ footer {
 }
 
 .tarjeta-reserva {
-  background: #f0f0f0;
+  background: var(--card, #f0f0f0);
+  border: 1px solid var(--border, transparent);
   border-radius: 0.8rem;
   padding: 0.9rem;
   display: flex;
@@ -363,11 +367,12 @@ footer {
 
 .input-opinion {
   margin-top: 0.4rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border, #ccc);
   border-radius: 0.5rem;
   padding: 0.5rem 0.6rem;
   font-size: 0.95rem;
-  background: #fff;
+  background: var(--card, #fff);
+  color: var(--text, #111);
 }
 
 .icono-enviar {
@@ -395,7 +400,6 @@ footer {
     display: block;
   }
 
-  /* Perfil top */
   .perfil-top {
     flex-direction: row;
     align-items: flex-start;
@@ -408,14 +412,12 @@ footer {
     align-items: flex-start;
   }
 
-  /* Listas */
   .perfil-listas {
     grid-template-columns: repeat(2, minmax(240px, 1fr));
     align-items: start;
     justify-items: start;
   }
 
-  /* Reservas */
   .reservas-section {
     position: relative;
     width: 100%;
@@ -425,7 +427,6 @@ footer {
     margin-bottom: 1rem;
   }
 
-  /* Contenedor de la tarjeta: centrado */
   .grid-reservas,
   .grid-pasadas {
     display: flex;
@@ -433,7 +434,6 @@ footer {
     width: 100%;
   }
 
-  /* SOLO mostrar una tarjeta */
   .grid-reservas .tarjeta-reserva:not(:first-child),
   .grid-pasadas .tarjeta-reserva:not(:first-child) {
     display: none;
@@ -444,7 +444,6 @@ footer {
     max-width: 350px;
   }
 
-  /* FLECHAS A LOS LADOS */
   .controles-reservas {
     position: absolute;
     top: 50%;
@@ -455,11 +454,11 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 0 0.5rem;
-    pointer-events: none; 
+    pointer-events: none;
   }
 
   .controles-reservas .btn-circulo {
-    pointer-events: auto; 
+    pointer-events: auto;
     width: 2.6rem;
     height: 2.6rem;
     background: #e5e5e5;
@@ -470,9 +469,7 @@ footer {
   }
 }
 
-
 @media (max-width: 600px) {
-
   header {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -521,4 +518,65 @@ footer {
     width: 2.2rem;
     height: 2.2rem;
   }
+}
+
+
+/*Cerrar sesion */
+
+.modal-logout{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 320px;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: white;
+}
+
+
+/* Fondo oscuro detrás */
+.modal-logout::backdrop{
+  background: rgba(0,0,0,0.5);
+}
+
+/* Título y texto */
+.modal-logout__title{
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.modal-logout__text{
+  margin: 0 0 14px 0;
+  font-size: 14px;
+}
+
+/* Botones en fila */
+.modal-logout__actions{
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Botones */
+.modal-btn{
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #999;
+  cursor: pointer;
+}
+
+/* Cancelar */
+.modal-btn--ghost{
+  background: #eee;
+}
+
+/* Confirmar */
+.modal-btn--danger{
+  background: #ff4d4d;
+  border-color: #ff4d4d;
+  color: white;
 }

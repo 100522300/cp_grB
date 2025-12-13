@@ -113,3 +113,31 @@ a {
   color: var(--text);
   border: 1px solid var(--border);
 }
+
+/* Perfil: tarjetas y textos legibles en oscuro */
+.theme-dark .perfil-main {
+  color: var(--text);
+}
+.theme-dark .perfil-info .dato-perfil,
+.theme-dark .estado-suscripcion {
+  color: var(--text);
+}
+.theme-dark .lista-favoritos,
+.theme-dark .caja-vistos,
+.theme-dark .tarjeta-reserva {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+.theme-dark .lista-favoritos a {
+  color: var(--link);
+}
+.theme-dark .reserva-titulo,
+.theme-dark .reserva-detalle {
+  color: var(--text);
+}
+.theme-dark .input-opinion {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
