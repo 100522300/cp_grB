@@ -5,7 +5,7 @@ import {
   validar_email,
   validar_password,
   validar_apellido,
-  setMaxFecha
+  setMaxFecha,
 } from "./datos.js";
 
 /* ---- Selección exacta según tu HTML ---- */
@@ -57,7 +57,9 @@ function validarFormulario(e) {
   const pass2 = password2.value.trim();
 
   if (!validar_password(pass1)) {
-    alert("La contraseña no cumple los requisitos.");
+    alert(
+      "La contraseña debe tener 8 caracteres, al menos 2 números, 1 mayúscula, 1 minúscula y 1 símbolo."
+    );
     return;
   }
   if (pass1 !== pass2) {
@@ -67,7 +69,6 @@ function validarFormulario(e) {
 
   // Fecha de nacimiento
   const hoy = new Date().toISOString().slice(0, 10);
-
   if (!fecha.value || fecha.value > hoy) {
     alert("Fecha de nacimiento no válida.");
     return;
@@ -101,7 +102,7 @@ function validarFormulario(e) {
       correo: mail1,
       login: user,
       password: pass1,
-      imagen: imgBase64
+      imagen: imgBase64,
     };
 
     // Guardar usuario
@@ -109,8 +110,8 @@ function validarFormulario(e) {
     usuarios[user] = usuario;
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
-    // Guardar sesión
-    localStorage.setItem("sesion", JSON.stringify({ login: user }));
+    // Guardar sesión (incluye la imagen para evitar problemas al pintar)
+    localStorage.setItem("sesion", JSON.stringify({ login: user, imagen: imgBase64 }));
 
     // Redirigir
     window.location.href = "pagina_principal.html";
