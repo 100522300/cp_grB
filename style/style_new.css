@@ -137,3 +137,88 @@
   cursor: pointer;
   font-size: 1rem;
 }
+
+/* ===== MODAL NEWSLETTER ===== */
+
+.modal-newsletter {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  /* centrado */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-newsletter.modal-visible {
+  display: flex;
+}
+
+/* Caja blanca */
+.modal-newsletter .contenido {
+  background-color: #ffffff;
+  color: #000;
+  border-radius: 0.75rem;
+  padding: 2.5rem;
+  width: 32rem;
+  max-width: 90%;
+  text-align: center;
+  animation: aparecerModal 0.3s ease forwards;
+}
+
+/* Título */
+.modal-newsletter h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+/* Texto */
+.modal-newsletter p {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Lista */
+.modal-newsletter ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.modal-newsletter li {
+  text-align: left;
+  font-size: 0.95rem;
+  margin: 0.4rem 0;
+}
+
+/* Botón */
+.modal-newsletter .btn-confirmar {
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.modal-newsletter .btn-confirmar:hover {
+  opacity: 0.9;
+}
+
+/* Animación */
+@keyframes aparecerModal {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

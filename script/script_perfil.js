@@ -13,10 +13,14 @@ import {
   establecer_correo_usuario,
   establecer_imagen_usuario,
 } from "./usuario_view.js";
+import { 
+  tiene_suscripcion 
+} from "./newsletter_storage.js";
 
 /* ----Seleccionamos los elementos del DOM---- */
 const inputImagen = document.getElementById("imagen-perfil");
 const btnCambiarFoto = document.getElementById("btn-cambiar-foto");
+const estadoSuscripcion = document.querySelector(".estado-suscripcion");
 
 /* ----Funciones del programa---- */
 
@@ -72,6 +76,13 @@ document.addEventListener("DOMContentLoaded", function () {
   establecer_nombre_usuario(usuario.login);
   establecer_correo_usuario(usuario.correo);
   establecer_imagen_usuario(usuario.imagen);
+
+  /*Suscripcion pasa a activa si el usuario se suscribe*/
+  if (estadoSuscripcion && tiene_suscripcion()) {
+    estadoSuscripcion.textContent = "Suscripcion activa";
+    estadoSuscripcion.style.color = "#e6b800"; 
+    estadoSuscripcion.style.fontWeight = "700";
+  }
 
   if (btnCambiarFoto) {
     btnCambiarFoto.addEventListener("click", abrir_selector_imagen);

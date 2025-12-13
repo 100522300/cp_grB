@@ -6,6 +6,7 @@
   <title>PackUrBag | Newsletter</title>
   <link rel="stylesheet" href="style/style_new.css">
   <link rel="icon" href="images/logo_recortado.PNG">
+  <script type="module" src="script/script_newsletter.js" defer></script>
 </head>
 <body class="newsletter-body">
   <header class="cabecera-newsletter">
@@ -13,7 +14,7 @@
       <p class="nombre-marca">PackUrBag</p>
       <img class="logo-marca" src="images/logo_recortado_blanco.PNG" alt="Logo PackUrBag">
     </div>
-    <a class="boton-enlace" href="index.html">Página principal</a>
+    <a class="boton-enlace" href="pagina_principal.html">Página principal</a>
   </header>
 
   <main class="cuerpo-newsletter">
@@ -47,5 +48,19 @@
       <button type="submit" class="boton-principal-form">Suscribirse</button>
     </form>
   </main>
+  <div class="modal-confirmacion modal-newsletter">
+    <div class="contenido">
+      <h1>✓ Suscripción activa ✓</h1>
+      <p>Este será el contenido que recibirás en nuestra newsletter:</p>
+      <ul>
+        <li>✈️ Inspiración para próximos viajes</li>
+        <li>🌍 Recomendaciones de destinos según temporada</li>
+        <li>💡 Consejos para viajar mejor y ahorrar</li>
+        <li>🎁 Información sobre nuevas ofertas exclusivas</li>
+      </ul>
+      <button class="btn-confirmar btn-cerrar-newsletter">Cerrar</button>
+    </div>
+  </div>
+
 </body>
 </html>

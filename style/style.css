@@ -42,6 +42,11 @@ header {
   flex: 4;
 }
 
+.enlaces-header a {
+  text-decoration:none;
+  color:inherit
+}
+
 .opciones-header {
   display: flex;
   align-items: center;
