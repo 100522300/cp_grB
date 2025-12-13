@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="style/currency-ui.css">
   <link rel="icon" href="/images/logo_recortado.PNG">
   <script src="script/currency.js" defer></script>
+  <script src="script/logout.js" defer></script>
   <script src="script/theme.js" defer></script>
   <script src="script/compra.js" defer></script>
 </head>
@@ -40,7 +41,7 @@
       <button class="btn-faq">
         <img src="images/question-mark.png" alt="FAQ">
       </button>
-      <button class="btn iniciar-sesion" data-logout="true">Cerrar sesión</button>
+      <button class="btn iniciar-sesion" type="button" data-logout="true">Cerrar sesión</button>
       <button class="menu-icon" aria-label="Abrir men�">
         <img src="images/tres_rayas.png" alt="Men�" class="icono-menu-img">
       </button>
@@ -128,6 +129,16 @@
       <button type="submit" class="boton-principal-form">Confirmar Compra</button>
     </form>
   </main>
+
+  <dialog id="cerrar-sesion-ventana" class="modal-logout" aria-labelledby="cerrar-sesion-titulo">
+    <h2 id="cerrar-sesion-titulo" class="modal-logout__title">¿Quieres cerrar sesión?</h2>
+    <p class="modal-logout__text">Perderás el acceso a tu perfil hasta que vuelvas a iniciar sesión.</p>
+
+    <div class="modal-logout__actions">
+      <button type="button" id="cerrar-cancel" class="modal-btn modal-btn--ghost">Cancelar</button>
+      <button type="button" id="cerrar-confirm" class="modal-btn modal-btn--danger">Cerrar sesión</button>
+    </div>
+  </dialog>
 
   <footer class="footer">
     <div class="footer-izquierda">
