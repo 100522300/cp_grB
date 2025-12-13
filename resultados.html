@@ -3,7 +3,9 @@
 <head>
     <title>Resultados de búsqueda</title>
     <link rel="stylesheet" href="style/style_resultados.css">
+    <link rel="stylesheet" href="style/currency-ui.css">
     <!-- Aquí ira el javascript-->
+    <script src="script/currency.js" defer></script>
 </head>
 
 
@@ -14,7 +16,16 @@
             <img class="logo-marca" src="images/logo_recortado_blanco.PNG" alt="Logo PackUrBag">
         </div>
         <div class="cabecera-derecha">
-            <a class="boton-enlace" href="index.html">Página principal</a>
+            <select id="currency-select" class="btn-seleccionar-moneda">
+
+                    <option value="EUR">EUR (€)</option>
+
+                    <option value="USD">USD ($)</option>
+
+                    <option value="GBP">GBP (£)</option>
+
+                  </select>
+            <a class="boton-enlace" href="pagina_principal.html">Pagina principal</a>
         </div>
     </header>
 
@@ -30,9 +41,9 @@
             <div class="informacion-busqueda">
                 <h3>Tokyo</h3>
                 <p class="informacion-destino">Vuelo y hotel incluidos para la ciudad más avanzada del mundo.</p>
-                <p class="precio">2150€</p>
-                <!-- Todo implementar esta parte de comprar que lleve al formulario adecuado -->
-                <button class="comprar btn" type="button" a="#">Comprar</button>
+                <p class="precio"><span class="js-price" data-eur="2150"></span></p>
+               
+                <button class="comprar btn" type="button" onclick="location.href='compra.html'">Comprar</button>
                 <p class="no-reembolso">La web no admite reembolsos</p>
             </div>
 
@@ -105,30 +116,30 @@
                 <article class="resultado-card">
                     <div class="imagen-comprar">
                         <img class="imagen-1-busqueda" src="images/imagen1busqueda.jpg">
-                        <button class="comprar-mas-resultados btn">Comprar</button>
+                        <button class="comprar-mas-resultados btn" onclick="location.href='compra.html'">Comprar</button>
                     </div>
                     <h3>Tokyo</h3>
-                    <p class="precio-mas">1850€</p>
+                    <p class="precio-mas"><span class="js-price" data-eur="1850"></span></p>
                     <p class="tipo-hotel">Hotel 7 noches</p>
                 </article>
 
                 <article class="resultado-card">
                     <div class="imagen-comprar">
                         <img class="imagen-1-busqueda" src="images/imagen2busqueda.jpg">
-                        <button class="comprar-mas-resultados btn">Comprar</button>
+                        <button class="comprar-mas-resultados btn" onclick="location.href='compra.html'">Comprar</button>
                     </div>
                     <h3>Tokyo</h3>
-                    <p class="precio-mas">590€</p>
+                    <p class="precio-mas"><span class="js-price" data-eur="590"></span></p>
                     <p class="tipo-hotel">Hotel más visita guiada</p>
                 </article>
 
                 <article class="resultado-card">
                     <div class="imagen-comprar">
                         <img class="imagen-1-busqueda" src="images/imagen3busqueda.jpg">
-                        <button class="comprar-mas-resultados btn">Comprar</button>
+                        <button class="comprar-mas-resultados btn" onclick="location.href='compra.html'">Comprar</button>
                     </div>
                     <h3>Tokyo</h3>
-                    <p class="precio-mas">3400€</p>
+                    <p class="precio-mas"><span class="js-price" data-eur="3400"></span></p>
                     <p class="tipo-hotel">Hotel lujo + vuelo + tour</p>
                 </article>
 

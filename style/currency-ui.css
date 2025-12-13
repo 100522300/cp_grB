@@ -1,0 +1,31 @@
+.currency-wrap {
+  display: inline-flex;
+  align-items: center;
+}
+
+header .btn-seleccionar-moneda,
+.cabecera-sesion .btn-seleccionar-moneda,
+.cabecera_registro .btn-seleccionar-moneda,
+.cabecera-newsletter .btn-seleccionar-moneda {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #d0d0d0;
+  border-radius: 0.6rem;
+  background: #ffffff;
+  color: #1d1d1d;
+  min-width: 110px;
+  height: 2.6rem;
+  margin-right: 10px;
+}
+
+header .btn-seleccionar-moneda:focus,
+.cabecera-sesion .btn-seleccionar-moneda:focus,
+.cabecera_registro .btn-seleccionar-moneda:focus,
+.cabecera-newsletter .btn-seleccionar-moneda:focus {
+  outline: none;
+  border-color: #999;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08);
+}

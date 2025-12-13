@@ -1,4 +1,4 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -6,6 +6,8 @@
   <title>PackUrBag | Newsletter</title>
   <link rel="stylesheet" href="style/style_new.css">
   <link rel="icon" href="images/logo_recortado.PNG">
+  <link rel="stylesheet" href="style/currency-ui.css">
+  <script src="script/currency.js" defer></script>
   <script type="module" src="script/script_newsletter.js" defer></script>
 </head>
 <body class="newsletter-body">
@@ -14,21 +16,30 @@
       <p class="nombre-marca">PackUrBag</p>
       <img class="logo-marca" src="images/logo_recortado_blanco.PNG" alt="Logo PackUrBag">
     </div>
-    <a class="boton-enlace" href="pagina_principal.html">PÃ¡gina principal</a>
+    <select id="currency-select" class="btn-seleccionar-moneda">
+
+            <option value="EUR">EUR (€)</option>
+
+            <option value="USD">USD ($)</option>
+
+            <option value="GBP">GBP (£)</option>
+
+          </select>
+    <a class="boton-enlace" href="pagina_principal.html">Pagina principal</a>
   </header>
 
   <main class="cuerpo-newsletter">
     <section class="texto-newsletter">
-      <h1 class="titulo-newsletter">SuscrÃ­bete a nuestra<br>newsletter</h1>
+      <h1 class="titulo-newsletter">Suscríbete a nuestra<br>newsletter</h1>
       <p class="subtitulo-newsletter">
-        SuscrÃ­bete y recibe una vez al mes en tu correo electrÃ³nico todas las novedades,
-        informaciÃ³n sobre destinos, ofertas de viaje y mucho mÃ¡s
+        Suscríbete y recibe una vez al mes en tu correo electrónico todas las novedades,
+        información sobre destinos, ofertas de viaje y mucho más
       </p>
     </section>
 
     <form class="form-newsletter" novalidate>
       <div class="campo-newsletter">
-        <label for="correo">DirecciÃ³n de correo electrÃ³nico</label>
+        <label for="correo">Dirección de correo electrónico</label>
         <input type="email" id="correo" name="correo" placeholder="email@dominioejemplo.com">
       </div>
 
@@ -38,11 +49,11 @@
       </label>
 
       <p class="texto-legal-newsletter">
-        PACKURBAG S.L. tratarÃ¡ sus datos personales para gestionar la relaciÃ³n con Usted y para remitirle nuestra
+        PACKURBAG S.L. tratará sus datos personales para gestionar la relación con Usted y para remitirle nuestra
         newsletter con las novedades, encuestas, concursos, promociones y noticias sobre la web packurbag.com. Ud.
-        podrÃ¡ darse de baja en cualquier momento. Asimismo, cuando lo considere oportuno, podrÃ¡ presentar una
-        reclamaciÃ³n ante la Agencia EspaÃ±ola de ProtecciÃ³n de Datos. PodrÃ¡ ponerse en contacto con nuestro Delegado de
-        ProtecciÃ³n de Datos mediante escrito dirigido a packurbag@atencion.com
+        podrá darse de baja en cualquier momento. Asimismo, cuando lo considere oportuno, podrá presentar una
+        reclamación ante la Agencia Española de Protección de Datos. Podrá ponerse en contacto con nuestro Delegado de
+        Protección de Datos mediante escrito dirigido a packurbag@atencion.com
       </p>
 
       <button type="submit" class="boton-principal-form">Suscribirse</button>
@@ -50,13 +61,13 @@
   </main>
   <div class="modal-confirmacion modal-newsletter">
     <div class="contenido">
-      <h1>âœ“ SuscripciÃ³n activa âœ“</h1>
-      <p>Este serÃ¡ el contenido que recibirÃ¡s en nuestra newsletter:</p>
+      <h1>? Suscripción activa ?</h1>
+      <p>Este será el contenido que recibirás en nuestra newsletter:</p>
       <ul>
-        <li>âœˆï¸ InspiraciÃ³n para prÃ³ximos viajes</li>
-        <li>ğŸŒ Recomendaciones de destinos segÃºn temporada</li>
-        <li>ğŸ’¡ Consejos para viajar mejor y ahorrar</li>
-        <li>ğŸ InformaciÃ³n sobre nuevas ofertas exclusivas</li>
+        <li>?? Inspiración para próximos viajes</li>
+        <li>?? Recomendaciones de destinos según temporada</li>
+        <li>?? Consejos para viajar mejor y ahorrar</li>
+        <li>?? Información sobre nuevas ofertas exclusivas</li>
       </ul>
       <button class="btn-confirmar btn-cerrar-newsletter">Cerrar</button>
     </div>
