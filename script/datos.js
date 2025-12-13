@@ -15,6 +15,7 @@ export function validar_email(email) {
 }
 
 export function validar_password(pass) {
+  // Acepta cualquier símbolo (no alfanumérico), siempre que cumpla el resto de requisitos
   return /^(?=.*[a-z])(?=.*[A-Z])(?=(?:.*\d){2,})(?=.*[^A-Za-z0-9]).{8,}$/.test(pass);
 }
 
