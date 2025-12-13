@@ -1,0 +1,115 @@
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --card: #f6f6f6;
+  --border: #d0d0d0;
+  --muted: #555555;
+  --header-bg: #ffffff;
+  --link: #111111;
+}
+
+.theme-dark {
+  --bg: #0f0f0f;
+  --text: #f1f1f1;
+  --card: #171717;
+  --border: #333333;
+  --muted: #aaaaaa;
+  --header-bg: #111111;
+  --link: #f1f1f1;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+header,
+.cabecera-sesion,
+.cabecera_registro,
+.cabecera-newsletter {
+  background-color: var(--header-bg);
+  color: var(--text);
+}
+
+a {
+  color: var(--link);
+}
+
+.btn-theme {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+  background: var(--card);
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.btn-theme:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08);
+}
+
+.theme-dark .btn-theme:focus {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.15);
+}
+
+/* Ajustes de tarjetas de opiniones en oscuro */
+.theme-dark .opinion-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+.theme-dark .opinion-card .nombre-usuario,
+.theme-dark .opinion-card .texto-opinion {
+  color: var(--text);
+}
+
+/* Ajustes preguntas FAQ en oscuro */
+.theme-dark .caja-preguntas .pregunta {
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+.theme-dark .caja-preguntas .parrafo-pregunta,
+.theme-dark .caja-preguntas button {
+  color: var(--text);
+}
+
+/* Fondos básicos para páginas de sesión/registro en oscuro */
+.theme-dark.sesion-body,
+.theme-dark.registro-body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.theme-dark.sesion-body input,
+.theme-dark.sesion-body select,
+.theme-dark.sesion-body textarea,
+.theme-dark.registro-body input,
+.theme-dark.registro-body select,
+.theme-dark.registro-body textarea {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.theme-dark.sesion-body label,
+.theme-dark.sesion-body .texto-legal,
+.theme-dark.sesion-body .texto-legal a,
+.theme-dark.sesion-body .titulo-sesion {
+  color: var(--text);
+}
+
+.theme-dark.registro-body .campo-form label,
+.theme-dark.registro-body .titulo-formulario,
+.theme-dark.registro-body .texto-legal,
+.theme-dark.registro-body .texto-legal a {
+  color: var(--text);
+}
+
+.theme-dark.registro-body .boton-subir {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
