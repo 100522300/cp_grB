@@ -42,14 +42,14 @@ a {
 }
 
 .btn-theme {
-  padding: 0.4rem 0.8rem;
+  padding: 0.2rem 0.6rem;
   border: 1px solid var(--border);
   border-radius: 0.6rem;
   background: var(--card);
   color: var(--text);
   font-weight: 600;
   cursor: pointer;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 .btn-theme:focus {
