@@ -599,11 +599,9 @@ select {
   display: flex;
 }
 
-.btn-flecha-izq {
-}
+.btn-flecha-izq {}
 
-.btn-flecha-der {
-}
+.btn-flecha-der {}
 
 .caja-sobre-nosotros {
   margin-bottom: 10vh;
@@ -898,8 +896,7 @@ footer {
     font-size: medium;
   }
 
-  .titulo-parrafo-viaje-premium {
-  }
+  .titulo-parrafo-viaje-premium {}
 
   .parrafo-viaje-premium {
     font-size: small;
@@ -994,7 +991,27 @@ footer {
   }
 
   /* Ajuste para que los elementos dentro de opciones-header se centren o se comporten bien */
-  .opciones-header > * {
+  .opciones-header>* {
     margin: 5px 0;
   }
+}
+
+/* Ocultar barra superior de Google Translate */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+}
+
+/* Ajuste visual del widget */
+#google_translate_element {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.goog-te-gadget-simple {
+  background-color: transparent !important;
+  border: none !important;
 }
