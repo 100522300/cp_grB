@@ -611,9 +611,11 @@ select {
   display: flex;
 }
 
-.btn-flecha-izq {}
+.btn-flecha-izq {
+}
 
-.btn-flecha-der {}
+.btn-flecha-der {
+}
 
 .caja-sobre-nosotros {
   margin-bottom: 10vh;
@@ -912,7 +914,8 @@ footer {
     font-size: medium;
   }
 
-  .titulo-parrafo-viaje-premium {}
+  .titulo-parrafo-viaje-premium {
+  }
 
   .parrafo-viaje-premium {
     font-size: small;
@@ -1007,7 +1010,7 @@ footer {
   }
 
   /* Ajuste para que los elementos dentro de opciones-header se centren o se comporten bien */
-  .opciones-header>* {
+  .opciones-header > * {
     margin: 5px 0;
   }
 }
@@ -1054,7 +1057,7 @@ body {
 /* El widget de Google va encima pero invisible */
 /* FORZAMOS que ocupe todo el espacio 100% real no fake */
 #google_translate_element,
-#google_translate_element>div,
+#google_translate_element > div,
 #google_translate_element span,
 #google_translate_element iframe,
 .goog-te-gadget-simple {
