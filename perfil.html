@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -16,6 +16,7 @@
   <script src="script/theme.js" defer></script>
   <script src="script/recent.js" defer></script>
   <script type="module" src="script/script_perfil.js" defer></script>
+  <script type="module" src="script/reservas_view.js" defer></script>
 </head>
 
 <body>
@@ -117,39 +118,12 @@
         </div>
       </div>
 
-      <div class="grid-reservas">
-        <article class="tarjeta-reserva">
-          <p class="reserva-titulo">Marrakech, Marruecos</p>
-          <p class="reserva-detalle">
-            Fecha: 3-9 abril 2026<br />
-            Pasajeros: 1 persona<br />
-            Precio: <span class="js-price" data-eur="320"></span>
-          </p>
-        </article>
-
-        <article class="tarjeta-reserva">
-          <p class="reserva-titulo">Desierto Rojo, Australia</p>
-          <p class="reserva-detalle">
-            Fecha: 15-22 julio 2026<br />
-            Pasajeros: 3 personas<br />
-            Precio: <span class="js-price" data-eur="1050"></span>
-          </p>
-        </article>
-
-        <article class="tarjeta-reserva">
-          <p class="reserva-titulo">Desierto Rojo, Australia</p>
-          <p class="reserva-detalle">
-            Fecha: 15-22 julio 2026<br />
-            Pasajeros: 3 personas<br />
-            Precio: <span class="js-price" data-eur="1050"></span>
-          </p>
-        </article>
-      </div>
+      <div class="grid-reservas"></div>
     </section>
 
     <section class="reservas-section">
       <div class="encabezado-reservas">
-        <h2 class="subtitulo">Reservas pasadas</h2>
+        <h2 class="subtitulo">Mis experiencias</h2>
         <div class="controles-reservas">
           <button class="btn-circulo" type="button" aria-label="Anterior">
             <svg width="42" height="42" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -173,28 +147,7 @@
         </div>
       </div>
 
-      <div class="grid-reservas grid-pasadas">
-        <article class="tarjeta-reserva pasada">
-          <p class="reserva-titulo">Alaska, EEUU</p>
-          <p class="reserva-detalle">Fecha: 8-15 abril 2024<br />Valorar: ?????</p>
-          <input type="text" class="input-opinion" placeholder="Introduce tu opinión..." />
-          <img src="images/enviar.png" alt="Enviar" class="icono-enviar" />
-        </article>
-
-        <article class="tarjeta-reserva pasada">
-          <p class="reserva-titulo">Moscú, Rusia</p>
-          <p class="reserva-detalle">Fecha: 2-7 enero 2025<br />Valorar: ?????</p>
-          <input type="text" class="input-opinion" placeholder="Introduce tu opinión..." />
-          <img src="images/enviar.png" alt="Enviar" class="icono-enviar" />
-        </article>
-
-        <article class="tarjeta-reserva pasada">
-          <p class="reserva-titulo">Asturias, España</p>
-          <p class="reserva-detalle">Fecha: 18 mayo 2023<br />Valorar: ?????</p>
-          <input type="text" class="input-opinion" placeholder="Introduce tu opinión..." />
-          <img src="images/enviar.png" alt="Enviar" class="icono-enviar" />
-        </article>
-      </div>
+      <div class="grid-reservas grid-pasadas"></div>
     </section>
   </main>
 
