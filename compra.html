@@ -9,9 +9,10 @@
   <link rel="stylesheet" href="style/currency-ui.css">
   <link rel="icon" href="/images/logo_recortado.PNG">
   <script src="script/currency.js" defer></script>
+  <script src="script/logout.js" defer></script>
   <script src="script/theme.js" defer></script>
-  <script src="script/compra.js" defer></script>
-</head>
+  <script type="module" src="script/compra.js"></script>
+  <script src="script/compra_destino.js" defer></script></head>
 <body>
   <header class="cabecera-compra">
     <div class="caja-logo">
@@ -26,11 +27,11 @@
     <div class="opciones-header">
       <select id="currency-select" class="btn-seleccionar-moneda">
 
-              <option value="EUR">EUR (€)</option>
+              <option value="EUR">EUR (�)</option>
 
               <option value="USD">USD ($)</option>
 
-              <option value="GBP">GBP (£)</option>
+              <option value="GBP">GBP (�)</option>
 
             </select>
             <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
@@ -40,9 +41,9 @@
       <button class="btn-faq">
         <img src="images/question-mark.png" alt="FAQ">
       </button>
-      <button class="btn iniciar-sesion" data-logout="true">Cerrar sesión</button>
-      <button class="menu-icon" aria-label="Abrir men�">
-        <img src="images/tres_rayas.png" alt="Men�" class="icono-menu-img">
+      <button class="btn iniciar-sesion" type="button" data-logout="true">Cerrar sesi�n</button>
+      <button class="menu-icon" aria-label="Abrir men?">
+        <img src="images/tres_rayas.png" alt="Men?" class="icono-menu-img">
       </button>
     </div>
   </header>
@@ -50,7 +51,7 @@
   <main class="compra-main">
     <section class="compra-cabecera">
       <h1 class="titulo-principal">Comprar Billetes</h1>
-      <h2 class="subtitulo-destino">Destino: Marrakesh, Marruecos</h2>
+      <h2 class="subtitulo-destino">Destino:</h2>
     </section>
 
     <form class="form-compra" novalidate>
@@ -66,12 +67,12 @@
       </div>
 
       <div class="campo-compra">
-        <label for="correo">Dirección de correo electrónico</label>
+        <label for="correo">Direcci�n de correo electr�nico</label>
         <input type="email" id="correo" name="correo" placeholder="email@janesfakedomain.net">
       </div>
 
       <button type="button" class="boton-secundario" id="btn-acompanante">
-        + Añadir acompañante
+        + A�adir acompa�ante
       </button>
 
       <div id="contenedor-acompanantes"></div>
@@ -91,7 +92,7 @@
         </div>
         <div class="campo-compra">
           <label for="tamano-mascota" class="label-espaciador"></label>
-          <input type="text" id="tamano-mascota" name="tamano-mascota" placeholder="Tama�o">
+          <input type="text" id="tamano-mascota" name="tamano-mascota" placeholder="Tama?o">
         </div>
       </div>
 
@@ -101,7 +102,7 @@
       </div>
 
       <div class="campo-compra">
-        <label for="metodo-pago">Método de pago</label>
+        <label for="metodo-pago">M�todo de pago</label>
       </div>
 
       <div class="campo-compra">
@@ -111,7 +112,7 @@
 
       <div class="campo-compra">
         <label for="numero-tarjeta" class="label-espaciador"></label>
-        <input type="text" id="numero-tarjeta" name="numero-tarjeta" placeholder="N�mero de tarjeta">
+        <input type="text" id="numero-tarjeta" name="numero-tarjeta" placeholder="N?mero de tarjeta">
       </div>
 
       <div class="fila-doble">
@@ -129,6 +130,16 @@
     </form>
   </main>
 
+  <dialog id="cerrar-sesion-ventana" class="modal-logout" aria-labelledby="cerrar-sesion-titulo">
+    <h2 id="cerrar-sesion-titulo" class="modal-logout__title">�Quieres cerrar sesi�n?</h2>
+    <p class="modal-logout__text">Perder�s el acceso a tu perfil hasta que vuelvas a iniciar sesi�n.</p>
+
+    <div class="modal-logout__actions">
+      <button type="button" id="cerrar-cancel" class="modal-btn modal-btn--ghost">Cancelar</button>
+      <button type="button" id="cerrar-confirm" class="modal-btn modal-btn--danger">Cerrar sesi�n</button>
+    </div>
+  </dialog>
+
   <footer class="footer">
     <div class="footer-izquierda">
       <p class="footer-copyright">
@@ -138,7 +149,7 @@
     </div>
 
     <div class="footer-derecha">
-      <p class="footer-texto">¡Síguenos!</p>
+      <p class="footer-texto">�S�guenos!</p>
       <div class="logos_redes_sociales">
         <a href="#"><img src="images/logo_facebook.png" alt="Facebook"></a>
         <a href="#"><img src="images/logo_twitter.webp" alt="Twitter"></a>
