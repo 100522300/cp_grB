@@ -404,17 +404,30 @@ footer {
     margin-bottom: 1rem;
   }
 
-  .grid-reservas,
   .grid-pasadas {
     display: flex;
     justify-content: center;
     width: 100%;
   }
 
-  .grid-reservas .tarjeta-reserva:not(:first-child),
-  .grid-pasadas .tarjeta-reserva:not(:first-child) {
-    display: none;
+  /* Carrusel responsive: snap y 1 card visible */
+  #contenedor-mis-reservas {
+    scroll-snap-type: x mandatory;
   }
+
+  #contenedor-mis-reservas .tarjeta-reserva {
+    scroll-snap-align: center;
+    flex: 0 0 100% !important;
+    /* Forzamos 100% para mostrar una sola */
+    width: 100% !important;
+    max-width: none !important;
+    /* Quitar restriccion de ancho maximo */
+    margin-right: 0;
+    padding: 0.9rem 3.5rem;
+    /* Espacio para que las flechas no tapen texto */
+  }
+
+  /* Removed hiding rule */
 
   .tarjeta-reserva {
     width: 100%;
@@ -472,7 +485,6 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .grid-reservas,
   .grid-pasadas {
     display: flex;
     justify-content: center;
@@ -483,10 +495,7 @@ footer {
     width: 100%;
   }
 
-  .grid-reservas .tarjeta-reserva:not(:first-child),
-  .grid-pasadas .tarjeta-reserva:not(:first-child) {
-    display: none;
-  }
+  /* Removed hiding rule */
 
   .controles-reservas {
     padding: 0 0.25rem;

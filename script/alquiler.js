@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (sesion_activa) {
         var resultado = guardarReservaCoche(reservaObj);
         if (resultado === false) {
-          alert("¡Ya tienes 2 coches reservados! No puedes reservar más por ahora.");
+          alert("¡Ya tienes 1 coche reservado! No puedes reservar más por ahora.");
           return; /* Paramos aqui, no mostramos resumen ni reseteamos */
         }
       }
