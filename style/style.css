@@ -852,8 +852,12 @@ footer {
     gap: 0.2rem;
     justify-items: center;
     align-items: center;
-    /* definimos 3 columnas */
-    grid-template-columns: repeat(3, 1fr);
+    /* definimos 2 columnas */
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .imagen-perfil-usuario {
+    width: 4rem;
   }
 
   /* Primer elemento ocupa columna 1 por ejemplo */
@@ -896,9 +900,6 @@ footer {
 
   .parrafo-viajar-esta-vez {
     font-size: medium;
-  }
-
-  .titulo-parrafo-viaje-premium {
   }
 
   .parrafo-viaje-premium {
