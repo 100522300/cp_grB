@@ -21,12 +21,14 @@ function safeJsonParse(str) {
 }
 
 function removeSession() {
-  // clave real usada en tu proyecto
+  // marcar sesión como inactiva
   localStorage.removeItem("sesion");
 }
 
 function initLogoutModal() {
-  var triggers = document.querySelectorAll("[data-logout], .CerrarSesion, #cerrar-sesion");
+  var triggers = document.querySelectorAll(
+    "[data-logout], .CerrarSesion, #cerrar-sesion"
+  );
   if (!triggers.length) return;
 
   var dialog = document.getElementById("cerrar-sesion-ventana");
