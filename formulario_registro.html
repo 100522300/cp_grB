@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PackUrBag | Registro</title>
   <link rel="stylesheet" href="style/style_registro.css">
-    <link rel="stylesheet" href="style/theme.css">
+  <link rel="stylesheet" href="style/theme.css">
   <link rel="icon" type="image/png" href="images/logo_recortado_blanco.PNG">
   <link rel="stylesheet" href="style/currency-ui.css">
   <script src="script/currency.js" defer></script>
-    <script src="script/theme.js" defer></script>
+  <script src="script/theme.js" defer></script>
   <script type="module" src="script/registro.js" defer></script>
 </head>
 
@@ -22,14 +23,14 @@
     <div class="cabecera-derecha">
       <select id="currency-select" class="btn-seleccionar-moneda">
 
-              <option value="EUR">EUR (€)</option>
+        <option value="EUR">EUR (€)</option>
 
-              <option value="USD">USD ($)</option>
+        <option value="USD">USD ($)</option>
 
-              <option value="GBP">GBP (£)</option>
+        <option value="GBP">GBP (£)</option>
 
-            </select>
-            <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
+      </select>
+      <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
       <a href="index.html" class="boton-enlace">Pagina principal</a>
     </div>
   </header>
@@ -86,7 +87,10 @@
 
           <div class="campo-form campo-archivo">
             <label for="imagen">Subir foto perfil</label>
-            <label for="imagen" class="boton-subir">Examinar...</label>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <label for="imagen" class="boton-subir">Examinar...</label>
+              <span id="nombre-archivo" style="font-size: 0.9em; color: var(--text-color);"></span>
+            </div>
             <input type="file" id="imagen" name="imagen" class="oculto">
           </div>
 
@@ -103,4 +107,5 @@
     </div>
   </main>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,6 +56,9 @@
     <section class="compra-cabecera">
       <h1 class="titulo-principal">Comprar Billetes</h1>
       <h2 class="subtitulo-destino">Destino:</h2>
+      <div id="precio-total-container" style="font-size: 1.2rem; margin-top: 0.5rem; font-weight: bold;">
+        Total: <span id="precio-total-valor" class="js-price" data-eur="0">0</span>
+      </div>
     </section>
 
     <form class="form-compra" novalidate>
@@ -162,4 +166,5 @@
     </div>
   </footer>
 </body>
+
 </html>

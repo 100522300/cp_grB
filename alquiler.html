@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PackUrBag - Alquiler de Coches</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/theme.css">
+    <link rel="stylesheet" href="style/currency-ui.css">
+    <link rel="stylesheet" href="style/style_alquiler.css">
+
+    <link rel="icon" href="/images/logo_recortado.PNG">
+
+
+    <script src="script/currency.js" defer></script>
+    <script src="script/theme.js" defer></script>
+    <script src="script/logout.js" defer></script>
+    <script type="module" src="script/alquiler.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="caja-logo">
+            <p class="logo-titulo">PackUrBag</p>
+            <img class="img-logo" src="images/logo_recortado.PNG" alt="Logo de la web">
+        </div>
+
+        <div class="enlaces-header">
+            <a href="pagina_principal.html">Inicio</a>
+            <a href="alquiler.html" class="enlace-activo">Alquiler de Coches</a>
+            <a href="newlester.html">Newsletter</a>
+        </div>
+
+        <div class="opciones-header">
+            <select id="currency-select" class="btn-seleccionar-moneda">
+                <option value="EUR">EUR (€)</option>
+                <option value="USD">USD ($)</option>
+                <option value="GBP">GBP (£)</option>
+            </select>
+            <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
+
+            <button class="btn-seleccionar-idioma">
+                <img src="images/spain-flag-circular.png" alt="Idioma">
+            </button>
+
+            <button class="btn-faq">
+                <img src="images/question-mark.png" alt="FAQ">
+            </button>
+
+
+            <button type="button" class="btn-faq boton-perfil" onclick="window.location.href='perfil.html'">
+                <img class="imagen-perfil-usuario" src="images/hustle_hard_persona_2.jpg" alt="Usuario">
+
+            </button>
+        </div>
+    </header>
+
+    <main class="main-alquiler">
+        <h1 class="titulo-alquiler">Reserva tu Vehículo</h1>
+
+
+        <form id="form-alquiler" class="form-reserva">
+
+            <p class="subtitulo-paso">1. Elige tu modelo favorito</p>
+
+            <div class="grid-coches">
+
+                <label class="tarjeta-coche">
+
+                    <img src="images/fiat_500.jpg" alt="Fiat 500" class="coche-img">
+                    <div class="info-coche">
+                        <div class="nombre-coche">Fiat 500</div>
+                        <div class="precio-coche">30€ / día</div>
+                        <input type="radio" name="coche" class="radio-seleccion" value="30" data-modelo="Fiat 500"
+                            data-precio="30">
+                    </div>
+                </label>
+
+
+                <label class="tarjeta-coche">
+                    <img src="images/corolla.jpg" alt="Toyota Corolla" class="coche-img">
+                    <div class="info-coche">
+                        <div class="nombre-coche">Toyota Corolla</div>
+                        <div class="precio-coche">55€ / día</div>
+                        <input type="radio" name="coche" class="radio-seleccion" value="55" data-modelo="Toyota Corolla"
+                            data-precio="55">
+                    </div>
+                </label>
+
+
+                <label class="tarjeta-coche">
+                    <img src="images/nissan.jpg" alt="Nissan Qashqai" class="coche-img">
+                    <div class="info-coche">
+                        <div class="nombre-coche">Nissan Qashqai</div>
+                        <div class="precio-coche">80€ / día</div>
+                        <input type="radio" name="coche" class="radio-seleccion" value="80" data-modelo="Nissan Qashqai"
+                            data-precio="80">
+                    </div>
+                </label>
+
+
+                <label class="tarjeta-coche">
+                    <img src="images/mustang.jpeg" alt="Ford Mustang" class="coche-img">
+                    <div class="info-coche">
+                        <div class="nombre-coche">Ford Mustang</div>
+                        <div class="precio-coche">150€ / día</div>
+                        <input type="radio" name="coche" class="radio-seleccion" value="150" data-modelo="Ford Mustang"
+                            data-precio="150">
+                    </div>
+                </label>
+            </div>
+
+            <p class="subtitulo-paso">2. Datos de la reserva</p>
+
+            <div class="campo-form">
+                <label for="ciudad-recogida">Ciudad de recogida</label>
+                <select id="ciudad-recogida" required>
+                    <option value="" disabled selected>Selecciona una ciudad</option>
+                    <option value="Madrid">Madrid, España</option>
+                    <option value="Barcelona">Barcelona, España</option>
+                    <option value="Paris">París, Francia</option>
+                    <option value="Londres">Londres, Reino Unido</option>
+                    <option value="Roma">Roma, Italia</option>
+                    <option value="Berlin">Berlín, Alemania</option>
+                    <option value="Tokyo">Tokyo, Japón</option>
+                    <option value="Nueva York">Nueva York, EEUU</option>
+                    <option value="Sydney">Sydney, Australia</option>
+                    <option value="Buenos Aires">Buenos Aires, Argentina</option>
+                </select>
+            </div>
+
+            <div class="campo-form">
+                <label for="dias-alquiler">¿Cuántos días?</label>
+                <input type="number" id="dias-alquiler" min="1" placeholder="Ej: 3" required>
+            </div>
+
+            <div class="campo-form">
+                <label for="fecha-alquiler">Fecha de recogida</label>
+                <input type="date" id="fecha-alquiler" required>
+            </div>
+
+            <div class="campo-form">
+                <label for="rango-edad">Edad del conductor</label>
+                <select id="rango-edad" required>
+                    <option value="25" selected>25 años o más</option>
+                    <option value="18">Menor de 25 años (+10€/día)</option>
+                </select>
+            </div>
+
+            <p class="subtitulo-paso margen-top">3. Selecciona tu cobertura</p>
+
+            <div class="grid-cobertura">
+                <label class="tarjeta-cobertura">
+                    <input type="radio" name="cobertura" value="0" checked>
+                    <div class="texto-negrita">Básica</div>
+                    <div>Incluido en el precio</div>
+                </label>
+                <label class="tarjeta-cobertura">
+                    <input type="radio" name="cobertura" value="15">
+                    <div class="texto-negrita">Completa (+15€/día)</div>
+                    <div>Sin franquicia</div>
+                </label>
+            </div>
+
+            <!-- Precio -->
+            <div id="contenedor-precio-total" class="precio-total-box">
+                Total estimado: <span id="precio-total-valor">0</span>€
+            </div>
+
+            <!-- Aviso -->
+            <div class="aviso-legal">
+                <p>⚠️ <strong>IMPORTANTE:</strong> Al retirar el vehículo será obligatorio presentar:</p>
+                <ul>
+                    <li>DNI / Pasaporte original en vigor.</li>
+                    <li>Permiso de conducir válido del conductor principal.</li>
+                </ul>
+            </div>
+
+            <button type="submit" class="btn-reservar">Confirmar Reserva (Pago presencial)</button>
+
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-izquierda">
+            <img class="img-logo-footer" src="images/logo_recortado.PNG" alt="Logo Footer">
+            <p class="footer-copyright">Copyright © 2024 PackUrBag. Todos los derechos reservados</p>
+        </div>
+
+        <div class="footer-derecha">
+            <p class="footer-texto">Síguenos en nuestras redes sociales</p>
+            <div class="logos-redes-sociales">
+                <a href="#"><img src="images/instagram_icon.png" alt="Instagram"></a>
+                <a href="#"><img src="images/twitter_icon.png" alt="Twitter"></a>
+                <a href="#"><img src="images/facebook_icon.png" alt="Facebook"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
