@@ -8,8 +8,8 @@
 }
 
 .newsletter-body {
-  background: #fff;
-  color: #111;
+  background: var(--bg, #fff);
+  color: var(--text, #111);
 }
 
 /* Cabecera */
@@ -138,17 +138,13 @@
   font-size: 1rem;
 }
 
-/* ===== MODAL NEWSLETTER ===== */
-
+/* Modal */
 .modal-newsletter {
   display: none;
   position: fixed;
   inset: 0;
   z-index: 2000;
   background-color: rgba(0, 0, 0, 0.4);
-
-  /* centrado */
-  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -157,7 +153,6 @@
   display: flex;
 }
 
-/* Caja blanca */
 .modal-newsletter .contenido {
   background-color: #ffffff;
   color: #000;
@@ -169,20 +164,17 @@
   animation: aparecerModal 0.3s ease forwards;
 }
 
-/* Título */
 .modal-newsletter h1 {
   font-size: 2rem;
   font-weight: 800;
   margin-bottom: 1rem;
 }
 
-/* Texto */
 .modal-newsletter p {
   font-size: 0.95rem;
   margin-bottom: 1.5rem;
 }
 
-/* Lista */
 .modal-newsletter ul {
   list-style: none;
   padding: 0;
@@ -195,7 +187,6 @@
   margin: 0.4rem 0;
 }
 
-/* Botón */
 .modal-newsletter .btn-confirmar {
   background: #000;
   color: #fff;
@@ -211,7 +202,6 @@
   opacity: 0.9;
 }
 
-/* Animación */
 @keyframes aparecerModal {
   from {
     opacity: 0;
