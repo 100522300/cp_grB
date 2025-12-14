@@ -599,8 +599,8 @@ select {
   font-weight: bold;
   text-decoration: underline;
   font-size: 1.1em;
+  cursor: pointer;
 }
-
 
 button {
   background-color: transparent;
