@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PackUrBag</title>
+  <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="style/style_compra.css">
   <link rel="stylesheet" href="style/theme.css">
   <link rel="stylesheet" href="style/currency-ui.css">
@@ -17,40 +18,45 @@
 </head>
 
 <body>
-  <header class="cabecera-compra">
+  <header>
     <div class="caja-logo">
-      <a href="pagina_principal.html"
-        style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: inherit;">
-        <p class="logo-titulo">PackUrBag</p>
-        <img class="img-logo" src="images/logo_recortado.PNG" alt="Logo de la web">
-      </a>
+      <p class="logo-titulo">PackUrBag</p>
+      <img class="img-logo" src="images/logo_recortado.PNG" alt="Logo de la web">
     </div>
-    <div class="enlaces-header">
-      <a href="pagina_principal.html#scroll-rincones">Otros rincones</a>
-      <a href="pagina_principal.html#scroll-sobre-nosotros">Sobre nosotros</a>
-      <a href="newlester.html">Newsletter</a>
-    </div>
-    <div class="opciones-header">
-      <select id="currency-select" class="btn-seleccionar-moneda">
-        <option value="EUR">EUR (€)</option>
-        <option value="USD">USD ($)</option>
-        <option value="GBP">GBP (£)</option>
-      </select>
 
-      <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
+    <button class="hamburger" id="hamburger-menu" aria-label="Abrir menú de navegación">
+      &#9776;
+    </button>
+    <nav class="menu-colapsable" id="menu-colapsable">
+      <div class="enlaces-header">
+        <a href="pagina_principal.html#scroll-rincones">Otros rincones</a>
+        <a href="pagina_principal.html#scroll-sobre-nosotros">Sobre nosotros</a>
+        <a href="alquiler.html">Alquiler de Coches</a>
+        <a href="newlester.html">Newsletter</a>
+      </div>
 
-      <button class="btn-seleccionar-idioma">
-        <img src="images/spain-flag-circular.png" alt="Bandera">
-      </button>
+      <div class="opciones-header">
+        <select id="currency-select" class="btn-seleccionar-moneda">
 
+          <option value="EUR">EUR (€)</option>
 
+          <option value="USD">USD ($)</option>
 
-      <button class="btn iniciar-sesion" type="button" data-logout="true">Cerrar sesión</button>
+          <option value="GBP">GBP (£)</option>
 
-      <button class="menu-icon" aria-label="Abrir menú">
-        <img src="images/tres_rayas.png" alt="Menú" class="icono-menu-img">
-      </button>
-    </div>
+        </select>
+        <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
+
+        <button class="btn-seleccionar-idioma">
+          <img src="images/spain-flag-circular.png" alt="Idioma">
+        </button>
+
+        <button class="btn iniciar-sesion CerrarSesion" type="button" data-logout>
+          Cerrar sesión
+        </button>
+
+      </div>
+    </nav>
   </header>
 
   <main class="compra-main">
