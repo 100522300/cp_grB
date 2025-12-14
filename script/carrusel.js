@@ -1,3 +1,5 @@
+"use strict";
+
 let contadorEuropa=0;
 let contadorAsia=0;
 let contadorAfrica=0;
@@ -5,11 +7,33 @@ let contadorOceania=0;
 let contadorAmericaDelNorte=0;
 let contadorAmericaDelSur=0;
 let carruselAutomatico;
+let resizeTimer;
+const LIMITE_UNO = 900;
+const grupos = {
+    Europa: ["Viena","Brujas","Copenhague","Liubliana","Barcelona","Sevilla","Tallin","Paris","Budapest","Florencia","Roma","Venecia","LaValeta","Bergen","Amsterdam","Oporto","Londres","Edimburgo","Praga","Lucerna","Zurich","Reikiavik","Santorini","Monaco"],
+    Asia: ["Beijing","HongKong","Seul","Jaipur","Kioto","LuangPrabang","Beirut","Mascate","Doha","ChiangMai","Hanoi","Singapur"],
+    Africa: ["Chefchaouen","CiudadDelCabo","ElCairo","ElSerengueti","Zanzibar","Nairobi"],
+    Oceania: ["Sidney","Queenstown","TarawaSur","PortVila","Yaren","Samoia"],
+    AmericaNorte: ["CiudadDeQuebec","LaHabana","SanMiguelDeAllende","NuevaYork","SanFrancisco","Chicago"],
+    AmericaSur: ["BuenosAires","RioDeJaneiro","Cartagena","Quito","Cuzco","Patagonia"],
+};
+
+function limitarUno(ids) {
+    if (window.innerWidth > LIMITE_UNO) return;
+    let mostrado = 0;
+    ids.forEach((id) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        if (el.style.display !== "none" && mostrado === 0) {
+            mostrado = 1;
+        } else {
+            el.style.display = "none";
+        }
+    });
+}
 
 window.addEventListener("DOMContentLoaded", iniciarCarrusel);
 
-
-/* Función para iniciar el carrusel */
 function iniciarCarrusel() {
     ElegirViajeEuropa();
     ElegirViajeAsia();
@@ -18,7 +42,6 @@ function iniciarCarrusel() {
     ElegirViajeAmericaDelNorte();
     ElegirViajeAmericaDelSur();
 
-    /* Iniciamos el carrusel automático */
     carruselAutomatico = setInterval(() => {
         moverDerechaEuropa();
         moverDerechaAsia();
@@ -28,38 +51,31 @@ function iniciarCarrusel() {
         moverDerechaAmericaDelSur();
     }, 30000);
 
-    /* Llamamos a distintas funciones en función del botón pulsado para Europa */
     document.getElementById("flechaIzquierdaEuropa").addEventListener("click", moverIzquierdaEuropa);
     document.getElementById("flechaDerechaEuropa").addEventListener("click", moverDerechaEuropa);
 
-    /* Llamamos a distintas funciones en función del botón pulsado para Asia */
     document.getElementById("flechaIzquierdaAsia").addEventListener("click", moverIzquierdaAsia);
     document.getElementById("flechaDerechaAsia").addEventListener("click", moverDerechaAsia);
 
-    /* Llamamos a distintas funciones en función del botón pulsado para África */
     document.getElementById("flechaIzquierdaAfrica").addEventListener("click", moverIzquierdaAfrica);
     document.getElementById("flechaDerechaAfrica").addEventListener("click", moverDerechaAfrica);
 
-    /* Llamamos a distintas funciones en función del botón pulsado para Oceanía */
     document.getElementById("flechaIzquierdaOceania").addEventListener("click", moverIzquierdaOceania);
     document.getElementById("flechaDerechaOceania").addEventListener("click", moverDerechaOceania);
 
-    /* Llamamos a distintas funciones en función del botón pulsado para América Del Norte */
     document.getElementById("flechaIzquierdaAmericaDelNorte").addEventListener("click", moverIzquierdaAmericaDelNorte);
     document.getElementById("flechaDerechaAmericaDelNorte").addEventListener("click", moverDerechaAmericaDelNorte);
 
-    /* Llamamos a distintas funciones en función del botón pulsado para América Del Sur */
     document.getElementById("flechaIzquierdaAmericaDelSur").addEventListener("click", moverIzquierdaAmericaDelSur);
     document.getElementById("flechaDerechaAmericaDelSur").addEventListener("click", moverDerechaAmericaDelSur);
+
+    window.addEventListener("resize", () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(recalcularCarruseles, 150);
+    });
 }
 
-
-
-/* --- LÓGICA DEL CARRUSEL DE EUROPA --- */
-
-/* Función para mostrar el pack correspondiente en Europa */
 function ElegirViajeEuropa() {
-    /* Ocultamos todos los packs */
     document.getElementById("Viena").style.display = "none";
     document.getElementById("Brujas").style.display = "none";
     document.getElementById("Copenhague").style.display = "none";
@@ -85,7 +101,6 @@ function ElegirViajeEuropa() {
     document.getElementById("Santorini").style.display = "none";
     document.getElementById("Monaco").style.display = "none";
 
-    /* Mostramos el pack correspondiente */
     if (contadorEuropa === 0) {
         document.getElementById("Viena").style.display = "block";
         document.getElementById("Brujas").style.display = "block";
@@ -119,15 +134,12 @@ function ElegirViajeEuropa() {
         document.getElementById("Santorini").style.display = "block";
         document.getElementById("Monaco").style.display = "block";
     }
+    if (window.innerWidth <= LIMITE_UNO) limitarUno(grupos.Europa);
 }
 
-
-/* Función para mover el carrusel de Europa a la izquierda */
 function moverIzquierdaEuropa() {
-    contadorEuropa = (contadorEuropa - 1 + 8) % 8;    /* Contador mod8 para mover las imágenes de 3 en 3*/
+    contadorEuropa = (contadorEuropa - 1 + 8) % 8;
     ElegirViajeEuropa();
-
-    /* Reiniciamos el intervalo */
     clearInterval(carruselAutomatico);
     carruselAutomatico = setInterval(() => {
         moverDerechaEuropa();
@@ -139,13 +151,9 @@ function moverIzquierdaEuropa() {
     }, 30000);
 }
 
-
-/* Función para mover el carrusel de Europa a la derecha */
 function moverDerechaEuropa() {
-    contadorEuropa = (contadorEuropa + 1) % 8;    /* Contador mod8 para mover las imágenes de 3 en 3 */
+    contadorEuropa = (contadorEuropa + 1) % 8;
     ElegirViajeEuropa();
-
-    /* Reiniciamos el intervalo */
     clearInterval(carruselAutomatico);
     carruselAutomatico = setInterval(() => {
         moverDerechaEuropa();
@@ -157,14 +165,7 @@ function moverDerechaEuropa() {
     }, 30000);
 }
 
-
-
-
-/* --- LÓGICA DEL CARRUSEL DE ASIA --- */
-
-/* Función para mostrar el pack correspondiente en Asia */
 function ElegirViajeAsia() {
-    /* Ocultamos todos los packs */
     document.getElementById("Beijing").style.display = "none";
     document.getElementById("HongKong").style.display = "none";
     document.getElementById("Seul").style.display = "none";
@@ -178,7 +179,6 @@ function ElegirViajeAsia() {
     document.getElementById("Hanoi").style.display = "none";
     document.getElementById("Singapur").style.display = "none";
 
-    /* Mostramos el pack correspondiente */
     if (contadorAsia === 0) {
         document.getElementById("Beijing").style.display = "block";
         document.getElementById("HongKong").style.display = "block";
@@ -195,16 +195,13 @@ function ElegirViajeAsia() {
         document.getElementById("ChiangMai").style.display = "block";
         document.getElementById("Hanoi").style.display = "block";
         document.getElementById("Singapur").style.display = "block";
-    } 
+    }
+    if (window.innerWidth <= LIMITE_UNO) limitarUno(grupos.Asia);
 }
 
-
-/* Función para mover el carrusel de Asia a la izquierda */
 function moverIzquierdaAsia() {
-    contadorAsia = (contadorAsia - 1 + 4) % 4;    /* Contador mod4 para mover las imágenes de 3 en 3 */
+    contadorAsia = (contadorAsia - 1 + 4) % 4;
     ElegirViajeAsia();
-
-    /* Reiniciamos el intervalo */
     clearInterval(carruselAutomatico);
     carruselAutomatico = setInterval(() => {
         moverDerechaEuropa();
@@ -216,13 +213,9 @@ function moverIzquierdaAsia() {
     }, 30000);
 }
 
-
-/* Función para mover el carrusel de Asia a la derecha */
 function moverDerechaAsia() {
-    contadorAsia = (contadorAsia + 1) % 4;    /* Contador mod4 para mover las imágenes de 3 en 3*/
+    contadorAsia = (contadorAsia + 1) % 4;
     ElegirViajeAsia();
-
-    /* Reiniciamos el intervalo */
     clearInterval(carruselAutomatico);
     carruselAutomatico = setInterval(() => {
         moverDerechaEuropa();
@@ -234,14 +227,7 @@ function moverDerechaAsia() {
     }, 30000);
 }
 
-
-
-
-/* --- LÓGICA DEL CARRUSEL DE ÁFRICA --- */
-
-/* Función para mostrar el pack correspondiente en África */
 function ElegirViajeAfrica() {
-    /* Ocultamos todos los packs */
     document.getElementById("Chefchaouen").style.display = "none";
     document.getElementById("CiudadDelCabo").style.display = "none";
     document.getElementById("ElCairo").style.display = "none";
@@ -249,7 +235,6 @@ function ElegirViajeAfrica() {
     document.getElementById("Zanzibar").style.display = "none";
     document.getElementById("Nairobi").style.display = "none";
 
-    /* Mostramos el pack correspondiente */
     if (contadorAfrica === 0) {
         document.getElementById("Chefchaouen").style.display = "block";
         document.getElementById("CiudadDelCabo").style.display = "block";
@@ -259,15 +244,12 @@ function ElegirViajeAfrica() {
         document.getElementById("Zanzibar").style.display = "block";
         document.getElementById("Nairobi").style.display = "block";
     }
+    if (window.innerWidth <= LIMITE_UNO) limitarUno(grupos.Africa);
 }
 
-
-/* Función para mover el carrusel de África a la izquierda */
 function moverIzquierdaAfrica() {
-    contadorAfrica = (contadorAfrica - 1 + 2) % 2;    /* Contador mod2 para mover las imágenes de 3 en 3 */
+    contadorAfrica = (contadorAfrica - 1 + 2) % 2;
     ElegirViajeAfrica();
-
-    /* Reiniciamos el intervalo */
     clearInterval(carruselAutomatico);
     carruselAutomatico = setInterval(() => {
         moverDerechaEuropa();
@@ -279,13 +261,9 @@ function moverIzquierdaAfrica() {
     }, 30000);
 }
 
-
-/* Función para mover el carrusel de África a la derecha */
 function moverDerechaAfrica() {
-    contadorAfrica = (contadorAfrica + 1) % 2;    /* Contador mod2 para mover las imágenes de 3 en 3*/
+    contadorAfrica = (contadorAfrica + 1) % 2;
     ElegirViajeAfrica();
-
-    /* Reiniciamos el intervalo */
     clearInterval(carruselAutomatico);
     carruselAutomatico = setInterval(() => {
         moverDerechaEuropa();
@@ -297,14 +275,7 @@ function moverDerechaAfrica() {
     }, 30000);
 }
 
-
-
-
-/* --- LÓGICA DEL CARRUSEL DE OCEANÍA --- */
-
-/* Función para mostrar el pack correspondiente en Oceanía */
 function ElegirViajeOceania() {
-    /* Ocultamos todos los packs */
     document.getElementById("Sidney").style.display = "none";
     document.getElementById("Queenstown").style.display = "none";
     document.getElementById("TarawaSur").style.display = "none";
@@ -312,7 +283,6 @@ function ElegirViajeOceania() {
     document.getElementById("Yaren").style.display = "none";
     document.getElementById("Samoia").style.display = "none";
 
-    /* Mostramos el pack correspondiente */
     if (contadorOceania === 0) {
         document.getElementById("Sidney").style.display = "block";
         document.getElementById("Queenstown").style.display = "block";
@@ -322,15 +292,12 @@ function ElegirViajeOceania() {
         document.getElementById("Yaren").style.display = "block";
         document.getElementById("Samoia").style.display = "block";
     }
+    if (window.innerWidth <= LIMITE_UNO) limitarUno(grupos.Oceania);
 }
 
-
-/* Función para mover el carrusel de Oceanía a la izquierda */
 function moverIzquierdaOceania() {
-    contadorOceania = (contadorOceania - 1 + 2) % 2;    /* Contador mod2 para mover las imágenes de 3 en 3*/
+    contadorOceania = (contadorOceania - 1 + 2) % 2;
     ElegirViajeOceania();
-
-    /* Reiniciamos el intervalo */
     clearInterval(carruselAutomatico);
     carruselAutomatico = setInterval(() => {
         moverDerechaEuropa();
@@ -342,13 +309,9 @@ function moverIzquierdaOceania() {
     }, 30000);
 }
 
-
-/* Función para mover el carrusel de Oceanía a la derecha */
 function moverDerechaOceania() {
-    contadorOceania = (contadorOceania + 1) % 2;    /* Contador mod2 para mover las imágenes de 3 en 3 */
+    contadorOceania = (contadorOceania + 1) % 2;
     ElegirViajeOceania();
-
-    /* Reiniciamos el intervalo */
     clearInterval(carruselAutomatico);
     carruselAutomatico = setInterval(() => {
         moverDerechaEuropa();
@@ -360,14 +323,7 @@ function moverDerechaOceania() {
     }, 30000);
 }
 
-
-
-
-/* --- LÓGICA DEL CARRUSEL DE AMÉRICA DEL NORTE --- */
-
-/* Función para mostrar el pack correspondiente en América Del Norte */
 function ElegirViajeAmericaDelNorte() {
-    /* Ocultamos todos los packs */
     document.getElementById("CiudadDeQuebec").style.display = "none";
     document.getElementById("LaHabana").style.display = "none";
     document.getElementById("SanMiguelDeAllende").style.display = "none";
@@ -375,7 +331,6 @@ function ElegirViajeAmericaDelNorte() {
     document.getElementById("SanFrancisco").style.display = "none";
     document.getElementById("Chicago").style.display = "none";
 
-    /* Mostramos el pack correspondiente */
     if (contadorAmericaDelNorte === 0) {
         document.getElementById("CiudadDeQuebec").style.display = "block";
         document.getElementById("LaHabana").style.display = "block";
@@ -385,15 +340,12 @@ function ElegirViajeAmericaDelNorte() {
         document.getElementById("SanFrancisco").style.display = "block";
         document.getElementById("Chicago").style.display = "block";
     }
+    if (window.innerWidth <= LIMITE_UNO) limitarUno(grupos.AmericaNorte);
 }
 
-
-/* Función para mover el carrusel de América Del Norte a la izquierda */
 function moverIzquierdaAmericaDelNorte() {
-    contadorAmericaDelNorte = (contadorAmericaDelNorte - 1 + 2) % 2;    /* Contador mod2 para mover las imágenes de 3 en 3*/
+    contadorAmericaDelNorte = (contadorAmericaDelNorte - 1 + 2) % 2;
     ElegirViajeAmericaDelNorte();
-
-    /* Reiniciamos el intervalo */
     clearInterval(carruselAutomatico);
     carruselAutomatico = setInterval(() => {
         moverDerechaEuropa();
@@ -405,13 +357,9 @@ function moverIzquierdaAmericaDelNorte() {
     }, 30000);
 }
 
-
-/* Función para mover el carrusel de América Del Norte a la derecha */
 function moverDerechaAmericaDelNorte() {
-    contadorAmericaDelNorte = (contadorAmericaDelNorte + 1) % 2;    /* Contador mod2 para mover las imágenes de 3 en 3 */
+    contadorAmericaDelNorte = (contadorAmericaDelNorte + 1) % 2;
     ElegirViajeAmericaDelNorte();
-
-    /* Reiniciamos el intervalo */
     clearInterval(carruselAutomatico);
     carruselAutomatico = setInterval(() => {
         moverDerechaEuropa();
@@ -423,14 +371,7 @@ function moverDerechaAmericaDelNorte() {
     }, 30000);
 }
 
-
-
-
-/* --- LÓGICA DEL CARRUSEL DE AMÉRICA DEL SUR --- */
-
-/* Función para mostrar el pack correspondiente en América Del Sur */
 function ElegirViajeAmericaDelSur() {
-    /* Ocultamos todos los packs */
     document.getElementById("BuenosAires").style.display = "none";
     document.getElementById("RioDeJaneiro").style.display = "none";
     document.getElementById("Cartagena").style.display = "none";
@@ -438,7 +379,6 @@ function ElegirViajeAmericaDelSur() {
     document.getElementById("Cuzco").style.display = "none";
     document.getElementById("Patagonia").style.display = "none";
 
-    /* Mostramos el pack correspondiente */
     if (contadorAmericaDelSur === 0) {
         document.getElementById("BuenosAires").style.display = "block";
         document.getElementById("RioDeJaneiro").style.display = "block";
@@ -448,15 +388,12 @@ function ElegirViajeAmericaDelSur() {
         document.getElementById("Cuzco").style.display = "block";
         document.getElementById("Patagonia").style.display = "block";
     }
+    if (window.innerWidth <= LIMITE_UNO) limitarUno(grupos.AmericaSur);
 }
 
-
-/* Función para mover el carrusel de América Del Sur a la izquierda */
 function moverIzquierdaAmericaDelSur() {
-    contadorAmericaDelSur = (contadorAmericaDelSur - 1 + 2) % 2;    /* Contador mod2 para mover las imágenes de 3 en 3*/
+    contadorAmericaDelSur = (contadorAmericaDelSur - 1 + 2) % 2;
     ElegirViajeAmericaDelSur();
-
-    /* Reiniciamos el intervalo */
     clearInterval(carruselAutomatico);
     carruselAutomatico = setInterval(() => {
         moverDerechaEuropa();
@@ -468,13 +405,9 @@ function moverIzquierdaAmericaDelSur() {
     }, 30000);
 }
 
-
-/* Función para mover el carrusel de América Del Sur a la derecha */
 function moverDerechaAmericaDelSur() {
-    contadorAmericaDelSur = (contadorAmericaDelSur + 1) % 2;    /* Contador mod2 para mover las imágenes de 3 en 3 */
+    contadorAmericaDelSur = (contadorAmericaDelSur + 1) % 2;
     ElegirViajeAmericaDelSur();
-
-    /* Reiniciamos el intervalo */
     clearInterval(carruselAutomatico);
     carruselAutomatico = setInterval(() => {
         moverDerechaEuropa();
@@ -484,4 +417,13 @@ function moverDerechaAmericaDelSur() {
         moverDerechaAmericaDelNorte();
         moverDerechaAmericaDelSur();
     }, 30000);
+}
+
+function recalcularCarruseles() {
+    ElegirViajeEuropa();
+    ElegirViajeAsia();
+    ElegirViajeAfrica();
+    ElegirViajeOceania();
+    ElegirViajeAmericaDelNorte();
+    ElegirViajeAmericaDelSur();
 }
