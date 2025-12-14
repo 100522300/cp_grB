@@ -64,24 +64,42 @@ function meterVisto(login, item) {
 
 function guardarVistoSiEstoyEnResultados() {
   /* si estoy en resultados.html, guardo el destino principal al cargar */
+
+  /* 1. Detectar si es resultados */
+  if (!window.location.pathname.includes("resultados.html")) return;
+
   const login = sacarLogin();
   if (!login) return;
 
-  /* esto detecta que estamos en la página de resultados (si no existe, no hace nada) */
-  const bloqueResultados = document.querySelector(".cuerpo-resultados");
-  if (!bloqueResultados) return;
+  /* 2. Leer URL param para saber el destino real (no el del HTML estático) */
+  const params = new URLSearchParams(window.location.search);
+  const destinoParam = params.get("destino");
 
-  /* pillo el nombre del destino principal (en tu html es el h3 de la parte "Mejor valorado") */
-  const h3 = document.querySelector(".mejor-valorado .informacion-busqueda h3");
-  if (!h3) return;
+  if (!destinoParam) return; // Si no hay param, no guardamos nada (o guardamos Tokyo por defecto si quisieras)
 
-  const titulo = h3.textContent.trim();
-  if (!titulo) return;
+  /* 3. Mapeo simple para títulos bonitos (copiado de resultados_dinamico/busqueda para consistencia) */
+  const mapas = {
+    "tokyo": "Tokyo",
+    "madrid": "Madrid",
+    "paris": "París",
+    "londres": "Londres",
+    "nueva-york": "Nueva York",
+    "viena": "Viena",
+    "brujas": "Brujas"
+    // Se pueden añadir más si hace falta, o usar el slug capitalizado por defecto
+  };
+
+  let titulo = mapas[destinoParam];
+  if (!titulo) {
+    // Fallback: Capitalizar primera letra
+    titulo = destinoParam.charAt(0).toUpperCase() + destinoParam.slice(1);
+  }
 
   const id = limpiarId(titulo);
 
-  /* guardo como url la página actual (para que al click te lleve a resultados) */
-  const url = window.location.pathname.split("/").pop() || "resultados.html";
+  /* 4. Guardar la URL COMPLETA con parámetros */
+  // Asumimos que queremos volver a ver lo mismo
+  const url = `resultados.html?destino=${destinoParam}`;
 
   meterVisto(login, { id: id, titulo: titulo, url: url });
 }
