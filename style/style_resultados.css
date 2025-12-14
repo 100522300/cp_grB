@@ -266,28 +266,6 @@ button:hover {
 
 /*Vamos con la parte de opiniones de otros usuarios*/
 
-.opiniones-contenedor {
-  display: flex;
-  flex-direction: column;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
-
-.opiniones-flechas {
-  display: flex;
-  flex-direction: row;
-  padding: 0.2rem 0.2rem 0.2rem 0.2rem;
-  align-items: center;
-  justify-content: space-between;
-  margin-right: 8rem;
-}
-
-.flechas {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-}
-
 .carrusel-flecha {
   background-color: #222;
   width: 3.5rem;
@@ -304,57 +282,6 @@ button:hover {
 
 .carrusel-flecha:hover {
   background: rgba(17, 24, 39, 0.85);
-}
-
-/*Línea de tarjetas*/
-.opiniones-usuarios {
-  display: flex;
-  flex-direction: row;
-  gap: 3rem;
-  padding: 1rem 2.3rem 1rem 2.3rem;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-}
-
-.opinion-card {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  border: 1px solid black;
-  border-radius: 3rem;
-  background-color: rgb(255, 255, 255);
-  padding: 1.8rem 1.5rem 1rem 1.5rem;
-  box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
-  width: 18rem;
-  min-height: 12rem;
-  justify-content: flex-start;
-  margin: 1rem 1rem 1rem 1rem;
-}
-
-.opinion-usuario {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-}
-
-.avatar {
-  height: 3.5rem;
-  width: 3.5rem;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.nombre-usuario {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.texto-opinion {
-  font-size: 1.05rem;
-  line-height: 1.5;
 }
 
 /* Parte de más resultados */
@@ -447,4 +374,114 @@ button:hover {
 
 .tipo-hotel {
   color: #828282;
+}
+
+
+/* Carrusel de opiniones */
+
+.opinion-form button {
+  width: fit-content;
+}
+
+.opiniones-contenedor {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.opiniones-flechas {
+  display: flex;
+  flex-direction: row;
+  padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 8rem;
+}
+
+.flechas {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.carrusel-flecha {
+  background-color: #222;
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 1.125rem;
+  background: rgba(17, 24, 39, 0.65);
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  border-color: solid black;
+}
+
+.carrusel-flecha:hover {
+  background: rgba(17, 24, 39, 0.85);
+}
+
+.opiniones-usuarios {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+
+.opinion-card {
+  flex: 0 0 23%; /* 4 tarjetas visibles */
+  box-sizing: border-box;
+  display: none; /* Se muestran solo las visibles */
+}
+
+.opinion-usuario {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nombre-usuario {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.texto-opinion {
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.opinion-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.opinion-form textarea {
+  width: 60%;
+  min-height: 5rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 0.2rem solid #aaa;
+  resize: none;
+  font-size: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .opinion-card { flex: 0 0 calc((100% - 40px)/3); }
+}
+@media (max-width: 900px) {
+  .opinion-card { flex: 0 0 calc((100% - 20px)/2); }
+}
+@media (max-width: 600px) {
+  .opinion-card { flex: 0 0 100%; }
 }
