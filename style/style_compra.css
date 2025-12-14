@@ -321,6 +321,20 @@ footer {
   color: white;
 }
 
+/* Modo oscuro: texto claro en formularios */
+.theme-dark .compra-main,
+.theme-dark .compra-cabecera,
+.theme-dark .campo-compra label,
+.theme-dark .subtitulo-destino,
+.theme-dark .titulo-principal,
+.theme-dark .metodo-pago {
+  color: #fff;
+}
+
+.theme-dark .boton-secundario {
+  color: #111;
+}
+
 @media (max-width: 768px) {
   .cabecera-compra {
     margin: 1.5rem 1.5rem 0 1.5rem;
