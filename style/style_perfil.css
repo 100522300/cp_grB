@@ -66,6 +66,10 @@ header {
   flex: 4;
 }
 
+.enlaces-header a {
+  text-decoration: none;
+}
+
 .opciones-header {
   display: flex;
   align-items: center;
@@ -530,7 +534,7 @@ footer {
 }
 
 /* modal */
-.modal-logout{
+.modal-logout {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -543,50 +547,50 @@ footer {
   background: white;
 }
 
-.modal-logout::backdrop{
-  background: rgba(0,0,0,0.5);
+.modal-logout::backdrop {
+  background: rgba(0, 0, 0, 0.5);
 }
 
-.modal-logout__title{
+.modal-logout__title {
   margin: 0 0 10px 0;
   font-size: 18px;
   font-weight: bold;
 }
 
-.modal-logout__text{
+.modal-logout__text {
   margin: 0 0 14px 0;
   font-size: 14px;
 }
 
-.modal-logout__actions{
+.modal-logout__actions {
   display: flex;
   justify-content: flex-end;
   gap: 10px;
 }
 
-.modal-btn{
+.modal-btn {
   padding: 8px 12px;
   border-radius: 6px;
   border: 1px solid #999;
   cursor: pointer;
 }
 
-.modal-btn--ghost{
+.modal-btn--ghost {
   background: #eee;
 }
 
-.modal-btn--danger{
+.modal-btn--danger {
   background: #ff4d4d;
   border-color: #ff4d4d;
   color: white;
 }
 
 /* boton gestionar newsletter */
-.btn-gestionar-newsletter{
+.btn-gestionar-newsletter {
   padding: 0.55rem 0.85rem;
   font-size: 0.95rem;
 }
 
-.oculto{
+.oculto {
   display: none;
 }
