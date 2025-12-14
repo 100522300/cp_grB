@@ -399,6 +399,11 @@ button:hover {
   box-sizing: border-box;
   display: none;
   /* Se muestran solo las visibles */
+  border: 1.5px solid #d1d1d1;
+  border-radius: 1rem;
+  padding: 1.2rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .opinion-usuario {
@@ -482,5 +487,6 @@ button:hover {
 @media (max-width: 600px) {
   .opinion-card {
     flex: 0 0 100%;
+    padding: 1rem;
   }
 }
