@@ -1,39 +1,35 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
+    <meta charset="UTF-8">
     <title>Resultados de búsqueda</title>
     <link rel="stylesheet" href="style/style_resultados.css">
     <link rel="stylesheet" href="style/theme.css">
     <link rel="stylesheet" href="style/currency-ui.css">
-    <!-- Aquí ira el javascript-->
+
+    <!-- Scripts -->
     <script src="script/currency.js" defer></script>
     <script src="script/resultados_dinamico.js" defer></script>
     <script src="script/favorites.js" defer></script>
     <script src="script/recent.js" defer></script>
     <script src="script/theme.js" defer></script>
     <script src="script/destino.js" defer></script>
-
+    <script src="script/opiniones.js" defer></script>
 </head>
 
-
 <body class="resultados-body">
+
     <header class="cabecera-sesion">
         <div class="cabecera-izquierda">
-            <a href="pagina_principal.html"
-                style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: inherit;">
-                <p class="titulo-marca">PackUrBag</p>
-                <img class="logo-marca" src="images/logo_recortado_blanco.PNG" alt="Logo PackUrBag">
-            </a>
+            <p class="titulo-marca">PackUrBag</p>
+            <img class="logo-marca" src="images/logo_recortado_blanco.PNG" alt="Logo PackUrBag">
         </div>
         <div class="cabecera-derecha">
             <select id="currency-select" class="btn-seleccionar-moneda">
-
                 <option value="EUR">EUR (€)</option>
-
                 <option value="USD">USD ($)</option>
-
                 <option value="GBP">GBP (£)</option>
-
             </select>
             <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
 
@@ -45,32 +41,32 @@
             </script>
             <script type="text/javascript"
                 src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
             <a class="boton-enlace" href="pagina_principal.html">Pagina principal</a>
         </div>
     </header>
 
     <main class="cuerpo-resultados">
+
+        <!-- Mejor valorado -->
         <p class="titulo-perfil">Mejor valorado</p>
         <div class="mejor-valorado">
-
             <div class="imagen-favoritos">
                 <img class="imagen-tokyo" src="images/tokyo.jpg" alt="Imagen de tokyo">
                 <button class="añadir-a-favoritos" type="button" data-fav-id="tokyo" data-fav-title="Tokyo"
                     data-fav-url="resultados.html" aria-pressed="false">⭐ Añadir a favoritos</button>
             </div>
-
             <div class="informacion-busqueda">
                 <h3>Tokyo</h3>
                 <p class="informacion-destino">Vuelo y hotel incluidos para la ciudad más avanzada del mundo.</p>
                 <p class="precio"><span class="js-price" data-eur="2150"></span></p>
-
                 <button class="comprar btn" type="button" data-recent-id="tokyo" data-recent-title="Tokyo"
                     data-recent-url="compra.html">Comprar</button>
                 <p class="no-reembolso">La web no admite reembolsos</p>
             </div>
-
         </div>
 
+        <!-- Carrusel de opiniones -->
         <div class="opiniones-contenedor">
             <div class="opiniones-flechas">
                 <p class="titulo-perfil">Opiniones de otros usuarios</p>
@@ -104,20 +100,16 @@
                 </div>
             </div>
 
-            <div class="opiniones-usuarios">
-                <!-- EJEMPLO TEMPORAL SOLO PARA MAQUETAR -->
-                <article class="opinion-card">
-                    <div class="opinion-usuario">
 
-                        <img class="avatar" src="images/hustle_hard_persona_2.jpg" alt="Foto de perfil">
-                        <span class="nombre-usuario">María López</span>
-                    </div>
-                    <p class="texto-opinion">
-                        Me encantó el viaje, superó mis expectativas ❤️
-                    </p>
-                </article>
+            <div class="opiniones-usuarios" id="contenedor-opiniones">
+                <!-- Opiniones dinámicas se insertan aquí -->
             </div>
-            <!-- Esto quedara oculto y lo usara js para reutilizarlo-->
+
+            <div class="opinion-form">
+                <textarea id="opinion-text" placeholder="Escribe tu opinión..." maxlength="200"></textarea>
+                <button id="enviar-opinion" class="btn">Publicar opinión</button>
+            </div>
+
             <template id="opinion-template">
                 <article class="opinion-card">
                     <div class="opinion-usuario">
@@ -127,14 +119,12 @@
                     <p class="texto-opinion"></p>
                 </article>
             </template>
-
         </div>
 
-
+        <!-- Más resultados -->
         <div class="mas-resultados-contenedor">
             <p class="titulo-perfil">Más resultados</p>
             <section class="mas-resultados-ejemplos">
-
                 <article class="resultado-card">
                     <div class="imagen-comprar">
                         <img class="imagen-1-busqueda" src="images/imagen1busqueda.jpg">
@@ -145,7 +135,6 @@
                     <p class="precio-mas"><span class="js-price" data-eur="1850"></span></p>
                     <p class="tipo-hotel">Hotel 7 noches</p>
                 </article>
-
                 <article class="resultado-card">
                     <div class="imagen-comprar">
                         <img class="imagen-1-busqueda" src="images/imagen2busqueda.jpg">
@@ -156,7 +145,6 @@
                     <p class="precio-mas"><span class="js-price" data-eur="590"></span></p>
                     <p class="tipo-hotel">Hotel más visita guiada</p>
                 </article>
-
                 <article class="resultado-card">
                     <div class="imagen-comprar">
                         <img class="imagen-1-busqueda" src="images/imagen3busqueda.jpg">
@@ -167,11 +155,8 @@
                     <p class="precio-mas"><span class="js-price" data-eur="3400"></span></p>
                     <p class="tipo-hotel">Hotel lujo + vuelo + tour</p>
                 </article>
-
             </section>
-
         </div>
-
     </main>
 
     <footer>
@@ -184,22 +169,15 @@
 
         <div class="footer-derecha">
             <p class="footer-texto">¡Síguenos!</p>
-            <div class="logos_redes_sociales">
-                <a href="#">
-                    <img src="images/logo_facebook.png" alt="Facebook">
-                </a>
-                <a href="#">
-                    <img src="images/logo_twitter.webp" alt="Twitter">
-                </a>
-                <a href="#">
-                    <img src="images/logo_youtube.png" alt="YouTube">
-                </a>
-                <a href="#">
-                    <img src="images/logo_instagram.webp" alt="Instagram">
-                </a>
+            <div class="logos-redes-sociales">
+                <a href="#"><img src="images/logo_facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/logo_twitter.webp" alt="Twitter"></a>
+                <a href="#"><img src="images/logo_youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/logo_instagram.webp" alt="Instagram"></a>
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>
