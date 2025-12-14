@@ -31,6 +31,12 @@ header,
   color: var(--text);
 }
 
+.theme-dark header a,
+.theme-dark .enlaces-header a,
+.theme-dark .logo-titulo {
+  color: #ffffff !important;
+}
+
 a {
   color: var(--link);
 }
@@ -61,6 +67,7 @@ a {
   border: 1px solid var(--border);
   color: var(--text);
 }
+
 .theme-dark .opinion-card .nombre-usuario,
 .theme-dark .opinion-card .texto-opinion {
   color: var(--text);
@@ -71,6 +78,7 @@ a {
   background: var(--card);
   border: 1px solid var(--border);
 }
+
 .theme-dark .caja-preguntas .parrafo-pregunta,
 .theme-dark .caja-preguntas button {
   color: var(--text);
@@ -118,10 +126,12 @@ a {
 .theme-dark .perfil-main {
   color: var(--text);
 }
+
 .theme-dark .perfil-info .dato-perfil,
 .theme-dark .estado-suscripcion {
   color: var(--text);
 }
+
 .theme-dark .lista-favoritos,
 .theme-dark .caja-vistos,
 .theme-dark .tarjeta-reserva {
@@ -129,13 +139,16 @@ a {
   border: 1px solid var(--border);
   color: var(--text);
 }
+
 .theme-dark .lista-favoritos a {
   color: var(--link);
 }
+
 .theme-dark .reserva-titulo,
 .theme-dark .reserva-detalle {
   color: var(--text);
 }
+
 .theme-dark .input-opinion {
   background: var(--card);
   color: var(--text);

@@ -5,45 +5,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PackUrBag | Newsletter</title>
+  <!-- Global Styles (Header, Theme, etc) -->
+  <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="style/style_new.css">
   <link rel="stylesheet" href="style/theme.css">
-  <link rel="icon" href="images/logo_recortado.PNG">
   <link rel="stylesheet" href="style/currency-ui.css">
+  <link rel="icon" href="images/logo_recortado.PNG">
+
   <script src="script/currency.js" defer></script>
   <script src="script/theme.js" defer></script>
   <script src="script/newsletter.js" defer></script>
+  <!-- Hamburger Menu Logic -->
+  <script type="module" src="script/script_principal.js" defer></script>
 </head>
 
 <body class="newsletter-body">
-  <header class="cabecera-newsletter">
-    <div class="bloque-marca">
-      <a href="pagina_principal.html" style="text-decoration: none; display: flex; align-items: center; gap: 1rem;">
-        <p class="nombre-marca">PackUrBag</p>
-        <img class="logo-marca" src="images/logo_recortado_blanco.PNG" alt="Logo PackUrBag">
+  <header>
+    <div class="caja-logo">
+      <a href="pagina_principal.html"
+        style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: inherit;">
+        <p class="logo-titulo">PackUrBag</p>
+        <img class="img-logo" src="images/logo_recortado.PNG" alt="Logo de la web">
       </a>
     </div>
 
-    <select id="currency-select" class="btn-seleccionar-moneda">
-      <option value="EUR">EUR (€)</option>
-      <option value="USD">USD ($)</option>
-      <option value="GBP">GBP (£)</option>
-    </select>
+    <button class="hamburger" id="hamburger-menu" aria-label="Abrir menú de navegación">
+      &#9776;
+    </button>
+    <nav class="menu-colapsable" id="menu-colapsable">
+      <div class="enlaces-header">
+        <a href="pagina_principal.html#scroll-rincones">Otros rincones</a>
+        <a href="pagina_principal.html#scroll-sobre-nosotros">Sobre nosotros</a>
+        <a href="alquiler.html">Alquiler de Coches</a>
+        <a href="newlester.html" class="enlace-activo">Newsletter</a>
+      </div>
 
-    <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
+      <div class="opciones-header">
+        <select id="currency-select" class="btn-seleccionar-moneda">
+          <option value="EUR">EUR (€)</option>
+          <option value="USD">USD ($)</option>
+          <option value="GBP">GBP (£)</option>
+        </select>
+        <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
 
-    <div class="contenedor-traductor" title="Seleccionar Idioma">
-      <img src="images/idioma.jpg" alt="Idioma" class="icono-bandera">
-      <div id="google_translate_element"></div>
-    </div>
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({ pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
-      }
-    </script>
-    <script type="text/javascript"
-      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <div class="contenedor-traductor" title="Seleccionar Idioma">
+          <img src="images/idioma.jpg" alt="Idioma" class="icono-bandera">
+          <div id="google_translate_element"></div>
+        </div>
+        <script type="text/javascript">
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+          }
+        </script>
+        <script type="text/javascript"
+          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-    <a class="boton-enlace" href="pagina_principal.html">Página principal</a>
+        <button class="boton-perfil" onclick="window.location.href='perfil.html'">
+          <img class="imagen-perfil-usuario" src="images/hustle_hard_persona_2.jpg" alt="Usuario">
+        </button>
+      </div>
+    </nav>
   </header>
 
   <main class="cuerpo-newsletter">
