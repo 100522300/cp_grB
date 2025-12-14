@@ -1,8 +1,18 @@
 "use strict";
 
-/* ---- Validaciones locales (sin módulos) ---- */
+import { 
+  guardarReserva 
+} from "./reservas_storage.js";
+
+/* ---- Datos desde la URL ---- */
+const params = new URLSearchParams(window.location.search);
+const destinoURL = params.get("destino");
+const precioURL = Number(params.get("precio"));
+const subtituloDestino = document.querySelector(".subtitulo-destino");
+
+/* ---- Validaciones locales ---- */
 function validarNombre(nombre) {
-  return /^[A-Za-zÁÉÍÓÚÜáéíóúüÑñ\s]{3,}$/.test(nombre);
+  return /^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ\s]{3,}$/.test(nombre.trim());
 }
 function validarEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -31,7 +41,7 @@ const cvv = document.getElementById("cvv");
 
 let contadorAcompanantes = 0;
 
-/* ---- Funciones del programa ---- */
+/* ---- Funciones auxiliares ---- */
 function diaHoy() {
   return new Date().toISOString().slice(0, 10);
 }
@@ -43,7 +53,6 @@ function parseFechaISO(valor) {
   const fecha = new Date(valor);
   return Number.isNaN(fecha.getTime()) ? null : fecha;
 }
-
 function caducidadValida(valor) {
   if (!/^\d{4}-\d{2}$/.test(valor)) return false;
   const [anio, mes] = valor.split("-").map(Number);
@@ -90,6 +99,18 @@ function validarAcompanante(nombreVal, emailVal) {
   if (nombreVal.trim() === "" && emailVal.trim() === "") return true;
   if (!nombreVal.trim() || !emailVal.trim()) return false;
   return nombreOk && emailOk;
+}
+
+function inicializarDestino() {
+  if (subtituloDestino) {
+    subtituloDestino.textContent = destinoURL ? `Destino: ${destinoURL}` : "Destino:";
+  }
+  if (destinoURL) {
+    localStorage.setItem("destinoSeleccionado", destinoURL);
+  }
+  if (Number.isFinite(precioURL)) {
+    localStorage.setItem("precioSeleccionado", String(precioURL));
+  }
 }
 
 /* ---- Validación del formulario ---- */
@@ -168,7 +189,7 @@ function validar_formulario_compra(e) {
 
   const cad = caducidad.value.trim();
   if (!caducidadValida(cad)) {
-    alert("Caducidad inválida. Usa MM/YY o MM/YYYY y que no esté caducada.");
+    alert("Caducidad inválida. Usa YYYY-MM y que no esté caducada.");
     caducidad.focus();
     return;
   }
@@ -180,13 +201,28 @@ function validar_formulario_compra(e) {
     return;
   }
 
+  const destinoReserva = localStorage.getItem("destinoSeleccionado") || destinoURL || "Destino sin especificar";
+  const precioGuardado = localStorage.getItem("precioSeleccionado");
+  let precioReserva = Number(precioGuardado ?? precioURL);
+  if (!Number.isFinite(precioReserva)) precioReserva = 0;
+
+  guardarReserva({
+    destino: destinoReserva,
+    salida: fechaSalida.value,
+    regreso: fechaRegreso.value,
+    pasajeros: 1 + contadorAcompanantes,
+    precio: precioReserva,
+  });
+
   alert("Compra realizada correctamente.");
-  form.reset();
+  window.location.href = "pagina_principal.html";
   botonesMascota.forEach((btn) => btn.classList.remove("activo"));
   botonesMascota.forEach((btn) => (btn.style.backgroundColor = ""));
 }
 
 /* ---- Acciones ---- */
+inicializarDestino();
+
 if (btnAcompanante) {
   btnAcompanante.addEventListener("click", crearAcompanante);
 }
