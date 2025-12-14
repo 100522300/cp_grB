@@ -187,3 +187,15 @@
     color: white;
     border-color: white;
 }
+
+.theme-dark .campo-form input,
+.theme-dark .campo-form select {
+    background-color: #444;
+    color: white;
+    border: 1px solid #777;
+}
+
+.theme-dark .campo-form select option {
+    background-color: #333;
+    color: white;
+}
