@@ -141,3 +141,7 @@ a {
   color: var(--text);
   border: 1px solid var(--border);
 }
+
+.theme-dark nav {
+  background: var(--card);
+}
