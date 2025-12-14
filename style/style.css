@@ -798,3 +798,23 @@ footer {
   border-radius: 50%;
   vertical-align: middle;
 }
+
+/* Modo oscuro: textos más claros en index/página principal */
+.theme-dark .apartado-busqueda {
+  background-color: var(--card);
+  color: var(--text);
+}
+
+.theme-dark .placeholder-fecha,
+.theme-dark select {
+  color: var(--text);
+}
+
+.theme-dark .apartado-busqueda input::placeholder {
+  color: #ccc;
+}
+
+.theme-dark .parrafo-viajar-esta-vez,
+.theme-dark .parrafo-viaje-premium {
+  color: var(--text);
+}
