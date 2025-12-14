@@ -21,8 +21,11 @@
 <body>
   <header>
     <div class="caja-logo">
-      <p class="logo-titulo">PackUrBag</p>
-      <img class="img-logo" src="images/logo_recortado.PNG" alt="Logo de la web">
+      <a href="pagina_principal.html"
+        style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: inherit;">
+        <p class="logo-titulo">PackUrBag</p>
+        <img class="img-logo" src="images/logo_recortado.PNG" alt="Logo de la web">
+      </a>
     </div>
 
     <button class="hamburger" id="hamburger-menu" aria-label="Abrir menú de navegación">
@@ -48,7 +51,10 @@
         </select>
         <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
 
-        <div id="google_translate_element"></div>
+        <div class="contenedor-traductor" title="Seleccionar Idioma">
+          <img src="images/idioma.jpg" alt="Idioma" class="icono-bandera">
+          <div id="google_translate_element"></div>
+        </div>
         <script type="text/javascript">
           function googleTranslateElementInit() {
             new google.translate.TranslateElement({ pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
@@ -56,10 +62,6 @@
         </script>
         <script type="text/javascript"
           src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-        <button class="btn-seleccionar-idioma">
-          <img src="images/spain-flag-circular.png" alt="Idioma">
-        </button>
 
         <button class="btn iniciar-sesion CerrarSesion" type="button" data-logout>
           Cerrar sesión

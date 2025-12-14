@@ -24,8 +24,11 @@
 <body>
     <header>
         <div class="caja-logo">
-            <p class="logo-titulo">PackUrBag</p>
-            <img class="img-logo" src="images/logo_recortado.PNG" alt="Logo de la web">
+            <a href="pagina_principal.html"
+                style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: inherit;">
+                <p class="logo-titulo">PackUrBag</p>
+                <img class="img-logo" src="images/logo_recortado.PNG" alt="Logo de la web">
+            </a>
         </div>
 
         <button class="hamburger" id="hamburger-menu" aria-label="Abrir menú de navegación">
@@ -36,7 +39,10 @@
             <div class="enlaces-header">
                 <a href="#scroll-rincones">Otros rincones</a>
                 <a href="#scroll-sobre-nosotros">Sobre nosotros</a>
-                <a href="formulario_sesion.html">Newsletter</a>
+                <a href="formulario_sesion.html"
+                    onclick="alert('Debes iniciar sesión para alquilar un coche');">Alquiler de Coches</a>
+                <a href="formulario_sesion.html"
+                    onclick="alert('Debes iniciar sesión para suscribirte');">Newsletter</a>
             </div>
             <div class="opciones-header">
                 <select id="currency-select" class="btn-seleccionar-moneda">
@@ -45,9 +51,18 @@
                     <option value="GBP">GBP (£)</option>
                 </select>
                 <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
-                <button class="btn-seleccionar-idioma">
-                    <img src="images/spain-flag-circular.png">
-                </button>
+
+                <div class="contenedor-traductor" title="Seleccionar Idioma">
+                    <img src="images/idioma.jpg" alt="Idioma" class="icono-bandera">
+                    <div id="google_translate_element"></div>
+                </div>
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+                    }
+                </script>
+                <script type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
                 <a href="formulario_sesion.html" class="btn iniciar-sesion">Iniciar sesión</a>
             </div>
