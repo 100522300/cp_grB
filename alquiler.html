@@ -16,45 +16,47 @@
     <script src="script/currency.js" defer></script>
     <script src="script/theme.js" defer></script>
     <script src="script/logout.js" defer></script>
+    <script type="module" src="script/script_principal.js" defer></script>
     <script type="module" src="script/alquiler.js" defer></script>
 </head>
 
 <body>
     <header>
         <div class="caja-logo">
-            <a href="pagina_principal.html"
-                style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: inherit;">
+            <a href="pagina_principal.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: inherit;">
                 <p class="logo-titulo">PackUrBag</p>
                 <img class="img-logo" src="images/logo_recortado.PNG" alt="Logo de la web">
             </a>
         </div>
 
-        <div class="enlaces-header">
-            <a href="pagina_principal.html">Inicio</a>
-            <a href="alquiler.html" class="enlace-activo">Alquiler de Coches</a>
-            <a href="newlester.html">Newsletter</a>
-        </div>
+        <button class="hamburger" id="hamburger-menu" aria-label="Abrir menu de navegacion">
+            &#9776;
+        </button>
 
-        <div class="opciones-header">
-            <select id="currency-select" class="btn-seleccionar-moneda">
-                <option value="EUR">EUR (€)</option>
-                <option value="USD">USD ($)</option>
-                <option value="GBP">GBP (£)</option>
-            </select>
-            <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
+        <nav class="menu-colapsable" id="menu-colapsable">
+            <div class="enlaces-header">
+                <a href="pagina_principal.html">Inicio</a>
+                <a href="alquiler.html" class="enlace-activo">Alquiler de Coches</a>
+                <a href="newlester.html">Newsletter</a>
+            </div>
 
-            <button class="btn-seleccionar-idioma">
-                <img src="images/spain-flag-circular.png" alt="Idioma">
-            </button>
+            <div class="opciones-header">
+                <select id="currency-select" class="btn-seleccionar-moneda">
+                    <option value="EUR">EUR (€)</option>
+                    <option value="USD">USD ($)</option>
+                    <option value="GBP">GBP (£)</option>
+                </select>
+                <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
 
+                <button class="btn-seleccionar-idioma">
+                    <img src="images/spain-flag-circular.png" alt="Idioma">
+                </button>
 
-
-
-            <button type="button" class="btn-faq boton-perfil" onclick="window.location.href='perfil.html'">
-                <img class="imagen-perfil-usuario" src="images/hustle_hard_persona_2.jpg" alt="Usuario">
-
-            </button>
-        </div>
+                <button type="button" class="btn-faq boton-perfil" onclick="window.location.href='perfil.html'">
+                    <img class="imagen-perfil-usuario" src="images/hustle_hard_persona_2.jpg" alt="Usuario">
+                </button>
+            </div>
+        </nav>
     </header>
 
     <main class="main-alquiler">
@@ -185,16 +187,27 @@
 
     <footer>
         <div class="footer-izquierda">
-            <img class="img-logo-footer" src="images/logo_recortado.PNG" alt="Logo Footer">
-            <p class="footer-copyright">Copyright © 2024 PackUrBag. Todos los derechos reservados</p>
+            <p class="footer-copyright">
+                © 2025 PackUrBag. Todos los derechos reservados.
+            </p>
+            <img class="img-logo-footer" src="images/logo_recortado.PNG" alt="Logo de la web">
         </div>
 
         <div class="footer-derecha">
-            <p class="footer-texto">Síguenos en nuestras redes sociales</p>
+            <p class="footer-texto">¡Síguenos!</p>
             <div class="logos-redes-sociales">
-                <a href="#"><img src="images/instagram_icon.png" alt="Instagram"></a>
-                <a href="#"><img src="images/twitter_icon.png" alt="Twitter"></a>
-                <a href="#"><img src="images/facebook_icon.png" alt="Facebook"></a>
+                <a href="#">
+                    <img src="images/logo_facebook.png" alt="Facebook">
+                </a>
+                <a href="#">
+                    <img src="images/logo_twitter.webp" alt="Twitter">
+                </a>
+                <a href="#">
+                    <img src="images/logo_youtube.png" alt="YouTube">
+                </a>
+                <a href="#">
+                    <img src="images/logo_instagram.webp" alt="Instagram">
+                </a>
             </div>
         </div>
     </footer>
