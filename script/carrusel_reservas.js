@@ -16,15 +16,17 @@ document.addEventListener("DOMContentLoaded", function () {
     /* Eventos click para Mis Reservas */
     if (btn_izq_reservas) {
         btn_izq_reservas.addEventListener("click", function () {
-            /* Mover a la izquierda restar pixels */
-            moverCarrusel(contenedor_reservas, -320);
+            /* Mover a la izquierda el ancho que tenga el contenedor */
+            var anchoScroll = contenedor_reservas.offsetWidth || 320;
+            moverCarrusel(contenedor_reservas, -anchoScroll);
         });
     }
 
     if (btn_der_reservas) {
         btn_der_reservas.addEventListener("click", function () {
-            /* Mover a la derecha sumar pixels */
-            moverCarrusel(contenedor_reservas, 320);
+            /* Mover a la derecha sumar el ancho que tenga el contenedor */
+            var anchoScroll = contenedor_reservas.offsetWidth || 320;
+            moverCarrusel(contenedor_reservas, anchoScroll);
         });
     }
 
