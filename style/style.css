@@ -1,12 +1,15 @@
 ﻿@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Todos los paddings, margins... por defecto eliminados*/
+  box-sizing: border-box;
+  /* Todos los paddings, margins... por defecto eliminados*/
 
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: normal; /* Use a value from 100 to 900 */
+  font-weight: normal;
+  /* Use a value from 100 to 900 */
   font-style: normal;
 }
 
@@ -68,11 +71,7 @@ header {
   width: auto;
 }
 
-.btn-faq {
-  display: flex;
-  height: 3rem;
-  aspect-ratio: 1/1;
-}
+
 
 .btn {
   background-color: black;
@@ -199,7 +198,8 @@ select {
   background: transparent;
   font-size: large;
   outline: none;
-  appearance: none; /* quita estilo por defecto */
+  appearance: none;
+  /* quita estilo por defecto */
   width: 100%;
   cursor: pointer;
   color: #888;
@@ -241,9 +241,12 @@ select {
   max-height: 70vh;
 
   border-radius: 1rem;
-  background-size: cover; /* 1. Escala la imagen para que cubra todo el área del div */
-  background-repeat: no-repeat; /* 2. Evita que la imagen se duplique */
-  background-position: center; /* 3. Centra la imagen dentro del div*/
+  background-size: cover;
+  /* 1. Escala la imagen para que cubra todo el área del div */
+  background-repeat: no-repeat;
+  /* 2. Evita que la imagen se duplique */
+  background-position: center;
+  /* 3. Centra la imagen dentro del div*/
 }
 
 .caja-mas-premium {
@@ -273,6 +276,7 @@ select {
     transform: translateX(80px);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -284,17 +288,24 @@ select {
   aspect-ratio: 1/1;
 
   border-radius: 1rem;
-  background-size: cover; /* 1. Escala la imagen para que cubra todo el área del div */
-  background-repeat: no-repeat; /* 2. Evita que la imagen se duplique */
-  background-position: center; /* 3. Centra la imagen dentro del div*/
-  position: relative; /* Los elementos hijos con 'absolute' se posicionarán respecto a este div. */
+  background-size: cover;
+  /* 1. Escala la imagen para que cubra todo el área del div */
+  background-repeat: no-repeat;
+  /* 2. Evita que la imagen se duplique */
+  background-position: center;
+  /* 3. Centra la imagen dentro del div*/
+  position: relative;
+  /* Los elementos hijos con 'absolute' se posicionarán respecto a este div. */
 }
 
 .btn-comprar-viaje-premium {
   position: absolute;
-  bottom: 1rem; /* Margen de 1rem desde el borde inferior del contenedor padre */
-  right: 1rem; /* Margen de 1rem desde el borde derecho del contenedor padre */
-  z-index: 10; /* Para asegurar que esté por encima de la imagen de fondo si es necesario */
+  bottom: 1rem;
+  /* Margen de 1rem desde el borde inferior del contenedor padre */
+  right: 1rem;
+  /* Margen de 1rem desde el borde derecho del contenedor padre */
+  z-index: 10;
+  /* Para asegurar que esté por encima de la imagen de fondo si es necesario */
 }
 
 .imagen-premium-1 {
@@ -588,11 +599,9 @@ select {
   display: flex;
 }
 
-.btn-flecha-izq {
-}
+.btn-flecha-izq {}
 
-.btn-flecha-der {
-}
+.btn-flecha-der {}
 
 .caja-sobre-nosotros {
   margin-bottom: 10vh;
@@ -753,6 +762,7 @@ footer {
   font-size: 1rem;
   line-height: 1.5;
 }
+
 /* Contenedor Izquierdo */
 .footer-izquierda {
   display: flex;
@@ -848,9 +858,11 @@ footer {
   .opciones-header div:nth-child(1) {
     grid-column: 1;
   }
+
   .opciones-header div:nth-child(2) {
     grid-column: 2;
   }
+
   .opciones-header div:nth-child(3) {
     grid-column: 3;
   }
@@ -859,6 +871,7 @@ footer {
   .opciones-header div:nth-child(4) {
     grid-column: 1;
   }
+
   .opciones-header div:nth-child(5) {
     grid-column: 2;
   }
@@ -883,8 +896,7 @@ footer {
     font-size: medium;
   }
 
-  .titulo-parrafo-viaje-premium {
-  }
+  .titulo-parrafo-viaje-premium {}
 
   .parrafo-viaje-premium {
     font-size: small;
@@ -892,21 +904,25 @@ footer {
 }
 
 .hamburger {
-  display: none; /* Ocultar el botón de hamburguesa en escritorio */
+  display: none;
+  /* Ocultar el botón de hamburguesa en escritorio */
   background: none;
   border: none;
   font-size: 2em;
   cursor: pointer;
-  color: inherit; /* O el color que desees */
+  color: inherit;
+  /* O el color que desees */
 }
 
 /* El menú colapsable y sus contenidos se muestran en escritorio */
 .menu-colapsable {
-  display: flex; /* Mantener la estructura original para escritorio */
+  display: flex;
+  /* Mantener la estructura original para escritorio */
   /* ... otros estilos de alineación para la barra principal ... */
   justify-content: space-between;
   align-items: center;
-  flex-grow: 1; /* Para que ocupe el espacio restante */
+  flex-grow: 1;
+  /* Para que ocupe el espacio restante */
   gap: 1rem;
 }
 
@@ -916,24 +932,33 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px; /* Ajusta el padding de la cabecera */
-    position: relative; /* Importante para el posicionamiento absoluto del menú */
+    padding: 10px 20px;
+    /* Ajusta el padding de la cabecera */
+    position: relative;
+    /* Importante para el posicionamiento absoluto del menú */
   }
 
   .hamburger {
-    display: block; /* Mostrar el botón de hamburguesa */
-    order: 2; /* Colocarlo después del logo si quieres que esté a la derecha */
+    display: block;
+    /* Mostrar el botón de hamburguesa */
+    order: 2;
+    /* Colocarlo después del logo si quieres que esté a la derecha */
   }
 
   /* Ocultar el menú colapsable por defecto */
   .menu-colapsable {
-    display: none; /* Oculto inicialmente */
-    flex-direction: column; /* Apilar elementos verticalmente */
-    position: absolute; /* Colocar el menú debajo de la cabecera */
-    top: 100%; /* Justo debajo del header */
+    display: none;
+    /* Oculto inicialmente */
+    flex-direction: column;
+    /* Apilar elementos verticalmente */
+    position: absolute;
+    /* Colocar el menú debajo de la cabecera */
+    top: 100%;
+    /* Justo debajo del header */
     left: 0;
     width: 100%;
-    background-color: #fff; /* Fondo para el menú (ajusta a tu diseño) */
+    background-color: #fff;
+    /* Fondo para el menú (ajusta a tu diseño) */
     border-top: 1px solid #ccc;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px 0;
@@ -951,19 +976,22 @@ footer {
   /* Estilos para los contenidos dentro del menú colapsable en móvil */
   .enlaces-header,
   .opciones-header {
-    flex-direction: column; /* Apilar enlaces y opciones */
+    flex-direction: column;
+    /* Apilar enlaces y opciones */
     width: 90%;
     text-align: center;
     padding: 10px 0;
-    border-bottom: 1px solid #eee; /* Separador */
+    border-bottom: 1px solid #eee;
+    /* Separador */
   }
 
   .opciones-header {
-    border-bottom: none; /* Quitar el separador del último grupo */
+    border-bottom: none;
+    /* Quitar el separador del último grupo */
   }
 
   /* Ajuste para que los elementos dentro de opciones-header se centren o se comporten bien */
-  .opciones-header > * {
+  .opciones-header>* {
     margin: 5px 0;
   }
 }
