@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const inputDestino = document.getElementById("destino");
-  const selectViajeros = document.getElementById("viajeros");
   const btnBuscar = document.querySelector(".busqueda-lupa");
 
   // Si no existe el botón, no hacemos nada
@@ -21,14 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
 
     // Seguridad: comprobar que existen los campos
-    if (!inputDestino || !inputFecha || !selectViajeros) {
+    if (!inputDestino || !inputFecha) {
       console.error("Faltan campos del formulario de búsqueda");
       return;
     }
 
     const destinoTexto = inputDestino.value.trim().toLowerCase();
     const fechaValor = inputFecha.value.trim();
-    const viajerosValor = selectViajeros.value;
 
     const destinosMap = {
       tokyo: "tokyo",
@@ -53,11 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    if (!viajerosValor) {
-      alert("Selecciona la cantidad de viajeros");
-      selectViajeros.focus();
-      return;
-    }
+
 
     const destinoFinal = destinosMap[destinoTexto];
 
@@ -70,10 +64,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!usuarioLogueado) {
       // NO logueado -> login
-      window.location.href = `formulario_sesion.html?destino=${destinoFinal}&fecha=${fechaValor}&viajeros=${viajerosValor}`;
+      window.location.href = `formulario_sesion.html?destino=${destinoFinal}&fecha=${fechaValor}`;
     } else {
       // Logueado -> resultados
-      window.location.href = `resultados.html?destino=${destinoFinal}&fecha=${fechaValor}&viajeros=${viajerosValor}`;
+      window.location.href = `resultados.html?destino=${destinoFinal}&fecha=${fechaValor}`;
     }
   });
 });
