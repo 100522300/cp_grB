@@ -84,7 +84,7 @@
 }
 
 .precio-coche {
-  color: red;
+  color: rgb(88, 88, 88);
 }
 
 /* Formulario */
@@ -148,12 +148,12 @@
 }
 
 #precio-total-valor {
-  color: red;
+  color: rgb(88, 88, 88);
 }
 
 /* Aviso Legal */
 .aviso-legal {
-  background-color: yellow;
+  background-color: rgb(156, 156, 156);
   color: black;
   border: 1px solid black;
   padding: 1rem;
