@@ -246,6 +246,9 @@ select {
   /* 2. Evita que la imagen se duplique */
   background-position: center;
   /* 3. Centra la imagen dentro del div*/
+
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
 }
 
 .caja-mas-premium {
