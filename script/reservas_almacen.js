@@ -81,8 +81,8 @@ export function guardarReservaCoche(reserva) {
     miUsuario.reservasCoches = [];
   }
 
-  /* RESTRICCION: Maximo 2 coches */
-  if (miUsuario.reservasCoches.length >= 2) {
+  /* RESTRICCION: Maximo 1 coche */
+  if (miUsuario.reservasCoches.length >= 1) {
     return false;
   }
 

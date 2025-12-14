@@ -1,5 +1,6 @@
 /* Reset y tipografia base (alineado con style.css) */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -66,10 +67,19 @@ body.registro-body {
 .contenedor-formulario {
   width: 100%;
   max-width: 51.25rem;
+  margin: 0 auto;
+  /* Centrado horizontal */
 }
 
 .caja-formulario {
   width: 100%;
+}
+
+/* Fix botón enlace oscuro */
+.theme-dark .boton-enlace {
+  background-color: transparent !important;
+  color: #fff !important;
+  border: 1px solid #fff;
 }
 
 button {
