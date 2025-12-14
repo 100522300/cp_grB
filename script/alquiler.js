@@ -165,7 +165,17 @@ document.addEventListener("DOMContentLoaded", function () {
         precioTotal: total,
         cobertura: nombre_cobertura
       };
-      guardarReservaCoche(reservaObj);
+
+      /* Intentamos guardar */
+      /* Si devuelve false y estamos logueados, es por el limite */
+      var sesion_activa = localStorage.getItem("sesion");
+      if (sesion_activa) {
+        var resultado = guardarReservaCoche(reservaObj);
+        if (resultado === false) {
+          alert("¡Ya tienes 2 coches reservados! No puedes reservar más por ahora.");
+          return; /* Paramos aqui, no mostramos resumen ni reseteamos */
+        }
+      }
 
       alert(mensaje);
 

@@ -574,3 +574,31 @@ footer {
 .oculto {
   display: none;
 }
+
+/* CARRUSEL DE RESERVAS */
+#contenedor-mis-reservas,
+#contenedor-mis-experiencias {
+  display: flex !important;
+  /* Forzamos flex en lugar de grid */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  /* Firefox */
+  align-items: stretch;
+  /* Altura igual */
+  padding-bottom: 15px;
+  /* Espacio */
+}
+
+#contenedor-mis-reservas::-webkit-scrollbar,
+#contenedor-mis-experiencias::-webkit-scrollbar {
+  display: none;
+  /* Ocultar barra en Chrome/Safari */
+}
+
+#contenedor-mis-reservas .tarjeta-reserva,
+#contenedor-mis-experiencias .tarjeta-reserva {
+  flex: 0 0 300px;
+  /* Ancho fijo para que no se aplasten */
+  width: 300px;
+}
