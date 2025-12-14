@@ -90,6 +90,9 @@ function validarFormulario(e) {
     return;
   }
 
+
+
+
   // Convertir imagen a Base64
   const reader = new FileReader();
 
@@ -105,20 +108,40 @@ function validarFormulario(e) {
       imagen: imgBase64,
     };
 
-    // Guardar usuario
-    const usuarios = JSON.parse(localStorage.getItem("usuarios") || "{}");
-    usuarios[user] = usuario;
-    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    try {
+      // Guardar usuario
+      const usuarios = JSON.parse(localStorage.getItem("usuarios") || "{}");
+      usuarios[user] = usuario;
+      localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
-    // Guardar sesión (incluye la imagen para evitar problemas al pintar)
-    localStorage.setItem("sesion", JSON.stringify({ login: user, imagen: imgBase64 }));
+      // NO iniciamos sesión automáticamente, redirigimos al login
+      // localStorage.setItem("sesion", JSON.stringify({ login: user, imagen: imgBase64 }));
 
-    // Redirigir
-    window.location.href = "pagina_principal.html";
+      alert("Usuario registrado correctamente. Ahora inicia sesión.");
+      window.location.href = "formulario_sesion.html";
+
+    } catch (e) {
+      if (e.name === "QuotaExceededError" || e.code === 22) {
+        alert("La imagen seleccionada es demasiado grande y no cabe en el almacenamiento local. Por favor, elige una imagen más pequeña o comprímela antes de subirla.");
+      } else {
+        alert("Error desconocido al guardar el usuario: " + e.message);
+      }
+    }
   };
 
   reader.readAsDataURL(archivo);
 }
 
 setMaxFecha(fecha);
+
+// Listener para mostrar nombre de archivo
+if (imagen) {
+  imagen.addEventListener("change", function () {
+    const spanNombre = document.getElementById("nombre-archivo");
+    if (spanNombre && this.files && this.files[0]) {
+      spanNombre.textContent = this.files[0].name;
+    }
+  });
+}
+
 form.addEventListener("submit", validarFormulario);
