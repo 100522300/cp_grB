@@ -72,119 +72,128 @@
 
         <form id="form-alquiler" class="form-reserva">
 
-            <p class="subtitulo-paso">1. Elige tu modelo favorito</p>
+            <!-- Paso 1: Coches -->
+            <section class="seccion-paso">
+                <p class="subtitulo-paso">1. Elige tu modelo favorito</p>
 
-            <div class="grid-coches">
+                <div class="grid-coches">
 
-                <label class="tarjeta-coche">
-                    <img src="images/fiat_500.jpg" alt="Fiat 500" class="coche-img">
-                    <div class="info-coche">
-                        <div class="nombre-coche">Fiat 500</div>
-                        <div class="precio-coche">30€ / día</div>
-                        <input type="radio" name="coche" class="radio-seleccion" value="30" data-modelo="Fiat 500"
-                            data-precio="30">
-                    </div>
-                </label>
-
-
-                <label class="tarjeta-coche">
-                    <img src="images/corolla.jpg" alt="Toyota Corolla" class="coche-img">
-                    <div class="info-coche">
-                        <div class="nombre-coche">Toyota Corolla</div>
-                        <div class="precio-coche">55€ / día</div>
-                        <input type="radio" name="coche" class="radio-seleccion" value="55" data-modelo="Toyota Corolla"
-                            data-precio="55">
-                    </div>
-                </label>
+                    <label class="tarjeta-coche">
+                        <img src="images/fiat_500.jpg" alt="Fiat 500" class="coche-img">
+                        <div class="info-coche">
+                            <div class="nombre-coche">Fiat 500</div>
+                            <div class="precio-coche">30€ / día</div>
+                            <input type="radio" name="coche" class="radio-seleccion" value="30" data-modelo="Fiat 500"
+                                data-precio="30">
+                        </div>
+                    </label>
 
 
-                <label class="tarjeta-coche">
-                    <img src="images/nissan.jpg" alt="Nissan Qashqai" class="coche-img">
-                    <div class="info-coche">
-                        <div class="nombre-coche">Nissan Qashqai</div>
-                        <div class="precio-coche">80€ / día</div>
-                        <input type="radio" name="coche" class="radio-seleccion" value="80" data-modelo="Nissan Qashqai"
-                            data-precio="80">
-                    </div>
-                </label>
+                    <label class="tarjeta-coche">
+                        <img src="images/corolla.jpg" alt="Toyota Corolla" class="coche-img">
+                        <div class="info-coche">
+                            <div class="nombre-coche">Toyota Corolla</div>
+                            <div class="precio-coche">55€ / día</div>
+                            <input type="radio" name="coche" class="radio-seleccion" value="55"
+                                data-modelo="Toyota Corolla" data-precio="55">
+                        </div>
+                    </label>
 
 
-                <label class="tarjeta-coche">
-                    <img src="images/mustang.jpeg" alt="Ford Mustang" class="coche-img">
-                    <div class="info-coche">
-                        <div class="nombre-coche">Ford Mustang</div>
-                        <div class="precio-coche">150€ / día</div>
-                        <input type="radio" name="coche" class="radio-seleccion" value="150" data-modelo="Ford Mustang"
-                            data-precio="150">
-                    </div>
-                </label>
-            </div>
+                    <label class="tarjeta-coche">
+                        <img src="images/nissan.jpg" alt="Nissan Qashqai" class="coche-img">
+                        <div class="info-coche">
+                            <div class="nombre-coche">Nissan Qashqai</div>
+                            <div class="precio-coche">80€ / día</div>
+                            <input type="radio" name="coche" class="radio-seleccion" value="80"
+                                data-modelo="Nissan Qashqai" data-precio="80">
+                        </div>
+                    </label>
 
-            <p class="subtitulo-paso">2. Datos de la reserva</p>
 
-            <div class="campo-form">
-                <label for="ciudad-recogida">Ciudad de recogida</label>
-                <select id="ciudad-recogida" required>
-                    <option value="" disabled selected>Selecciona una ciudad</option>
-                    <option value="Madrid">Madrid, España</option>
-                    <option value="Barcelona">Barcelona, España</option>
-                    <option value="Paris">París, Francia</option>
-                    <option value="Londres">Londres, Reino Unido</option>
-                    <option value="Roma">Roma, Italia</option>
-                    <option value="Berlin">Berlín, Alemania</option>
-                    <option value="Tokyo">Tokyo, Japón</option>
-                    <option value="Nueva York">Nueva York, EEUU</option>
-                    <option value="Sydney">Sydney, Australia</option>
-                    <option value="Buenos Aires">Buenos Aires, Argentina</option>
-                </select>
-            </div>
+                    <label class="tarjeta-coche">
+                        <img src="images/mustang.jpeg" alt="Ford Mustang" class="coche-img">
+                        <div class="info-coche">
+                            <div class="nombre-coche">Ford Mustang</div>
+                            <div class="precio-coche">150€ / día</div>
+                            <input type="radio" name="coche" class="radio-seleccion" value="150"
+                                data-modelo="Ford Mustang" data-precio="150">
+                        </div>
+                    </label>
+                </div>
+            </section>
 
-            <div class="campo-form">
-                <label for="dias-alquiler">¿Cuántos días?</label>
-                <input type="number" id="dias-alquiler" min="1" placeholder="Ej: 3" required>
-            </div>
+            <!-- Paso 2: Datos -->
+            <section class="seccion-paso">
+                <p class="subtitulo-paso">2. Datos de la reserva</p>
 
-            <div class="campo-form">
-                <label for="fecha-alquiler">Fecha de recogida</label>
-                <input type="date" id="fecha-alquiler" required>
-            </div>
+                <div class="campo-form">
+                    <label for="ciudad-recogida">Ciudad de recogida</label>
+                    <select id="ciudad-recogida" required>
+                        <option value="" disabled selected>Selecciona una ciudad</option>
+                        <option value="Madrid">Madrid, España</option>
+                        <option value="Barcelona">Barcelona, España</option>
+                        <option value="Paris">París, Francia</option>
+                        <option value="Londres">Londres, Reino Unido</option>
+                        <option value="Roma">Roma, Italia</option>
+                        <option value="Berlin">Berlín, Alemania</option>
+                        <option value="Tokyo">Tokyo, Japón</option>
+                        <option value="Nueva York">Nueva York, EEUU</option>
+                        <option value="Sydney">Sydney, Australia</option>
+                        <option value="Buenos Aires">Buenos Aires, Argentina</option>
+                    </select>
+                </div>
 
-            <div class="campo-form">
-                <label for="rango-edad">Edad del conductor</label>
-                <select id="rango-edad" required>
-                    <option value="25" selected>25 años o más</option>
-                    <option value="18">Menor de 25 años (+10€/día)</option>
-                </select>
-            </div>
+                <div class="campo-form">
+                    <label for="dias-alquiler">¿Cuántos días?</label>
+                    <input type="number" id="dias-alquiler" min="1" placeholder="Ej: 3" required>
+                </div>
 
-            <p class="subtitulo-paso margen-top">3. Selecciona tu cobertura</p>
+                <div class="campo-form">
+                    <label for="fecha-alquiler">Fecha de recogida</label>
+                    <input type="date" id="fecha-alquiler" required>
+                </div>
 
-            <div class="grid-cobertura">
-                <label class="tarjeta-cobertura">
-                    <input type="radio" name="cobertura" value="0" checked>
-                    <div class="texto-negrita">Básica</div>
-                    <div>Incluido en el precio</div>
-                </label>
-                <label class="tarjeta-cobertura">
-                    <input type="radio" name="cobertura" value="15">
-                    <div class="texto-negrita">Completa (+15€/día)</div>
-                    <div>Sin franquicia</div>
-                </label>
-            </div>
+                <div class="campo-form">
+                    <label for="rango-edad">Edad del conductor</label>
+                    <select id="rango-edad" required>
+                        <option value="25" selected>25 años o más</option>
+                        <option value="18">Menor de 25 años (+10€/día)</option>
+                    </select>
+                </div>
+            </section>
 
-            <!-- Precio -->
-            <div id="contenedor-precio-total" class="precio-total-box">
-                Total estimado: <span id="precio-total-valor">0</span>€
-            </div>
+            <!-- Paso 3: Cobertura y Final -->
+            <section class="seccion-paso">
+                <p class="subtitulo-paso margen-top">3. Selecciona tu cobertura</p>
 
-            <!-- Aviso -->
-            <div class="aviso-legal">
-                <p>⚠️ <strong>IMPORTANTE:</strong> Al retirar el vehículo será obligatorio presentar:</p>
-                <ul>
-                    <li>DNI / Pasaporte original en vigor.</li>
-                    <li>Permiso de conducir válido del conductor principal.</li>
-                </ul>
-            </div>
+                <div class="grid-cobertura">
+                    <label class="tarjeta-cobertura">
+                        <input type="radio" name="cobertura" value="0" checked>
+                        <div class="texto-negrita">Básica</div>
+                        <div>Incluido en el precio</div>
+                    </label>
+                    <label class="tarjeta-cobertura">
+                        <input type="radio" name="cobertura" value="15">
+                        <div class="texto-negrita">Completa (+15€/día)</div>
+                        <div>Sin franquicia</div>
+                    </label>
+                </div>
+
+                <!-- Precio -->
+                <div id="contenedor-precio-total" class="precio-total-box">
+                    Total estimado: <span id="precio-total-valor">0</span>€
+                </div>
+
+                <!-- Aviso -->
+                <section class="aviso-legal">
+                    <p>⚠️ <strong>IMPORTANTE:</strong> Al retirar el vehículo será obligatorio presentar:</p>
+                    <ul>
+                        <li>DNI / Pasaporte original en vigor.</li>
+                        <li>Permiso de conducir válido del conductor principal.</li>
+                    </ul>
+                </section>
+            </section>
 
             <button type="submit" class="btn-reservar">Confirmar Reserva (Pago presencial)</button>
 
