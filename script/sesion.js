@@ -19,7 +19,7 @@ function iniciarSesion(e) {
 
   // Buscar usuario por correo
   const usuarioEncontrado = Object.values(usuarios).find(
-    u => u.correo === mail
+    (u) => u.correo === mail
   );
 
   if (!usuarioEncontrado) {
@@ -32,8 +32,15 @@ function iniciarSesion(e) {
     return;
   }
 
-  // Guardar sesión
-  localStorage.setItem("sesion", JSON.stringify({ login: usuarioEncontrado.login }));
+  // Guardar datos de sesión
+  localStorage.setItem(
+    "sesion",
+    JSON.stringify({ login: usuarioEncontrado.login })
+  );
+
+  // Marcar sesión como activa
+  //localStorage.setItem("sesionActiva", "true");
+
   window.location.href = "pagina_principal.html";
 }
 
