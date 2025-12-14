@@ -5,17 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PackUrBag</title>
-    <script src="script/carrusel.js"></script>
-    <script src="script/busqueda.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/theme.css">
     <link rel="stylesheet" href="style/currency-ui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="icon" href="/images/logo_recortado.PNG">
     <script src="script/currency.js" defer></script>
     <script src="script/theme.js" defer></script>
+    <script src="script/busqueda.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
+    <script type="module" src="script/script_principal.js" defer></script>
+    <script src="script/carrusel.js" defer></script>
+    <script src="script/viajes_click.js" defer></script>
+    <script src="script/compra_destino.js" defer></script>
 </head>
 
 <body>
@@ -25,20 +27,20 @@
             <img class="img-logo" src="images/logo_recortado.PNG" alt="Logo de la web">
         </div>
         <div class="enlaces-header">
-            <a>Otros rincones</a>
-            <a>Sobre nosotros</a>
-            <a>Newsletter</a>
+            <a href="#scroll-rincones">Otros rincones</a>
+            <a href="#scroll-sobre-nosotros">Sobre nosotros</a>
+            <a href="formulario_sesion.html">Newsletter</a>
         </div>
         <div class="opciones-header">
             <select id="currency-select" class="btn-seleccionar-moneda">
 
-                    <option value="EUR">EUR (€)</option>
+                <option value="EUR">EUR (€)</option>
 
-                    <option value="USD">USD ($)</option>
+                <option value="USD">USD ($)</option>
 
-                    <option value="GBP">GBP (£)</option>
+                <option value="GBP">GBP (£)</option>
 
-                  </select>
+            </select>
             <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
             <button class="btn-seleccionar-idioma">
                 <img src="images/spain-flag-circular.png">
@@ -57,13 +59,11 @@
                 <div class="apartado-busqueda">
                     <input type="text" id="destino" name="destino" placeholder="¿Adónde vas?" list="destinos">
                     <datalist id="destinos">
+                        <option value="Tokyo">
                         <option value="Madrid">
-                        <option value="Barcelona">
-                        <option value="Valencia">
-                        <option value="Sevilla">
-                        <option value="Bilbao">
-                        <option value="Lisboa">
                         <option value="París">
+                        <option value="Londres">
+                        <option value="Nueva York">
                     </datalist>
                 </div>
                 <div class="apartado-busqueda busqueda-fecha">
@@ -81,9 +81,9 @@
                         <option value="5">5+</option>
                     </select>
                 </div>
-                <button type="submit" class="apartado-busqueda busqueda-lupa" aria-label="Buscar destino">
+                <a href="formulario_sesion.html" class="apartado-busqueda busqueda-lupa" aria-label="Buscar destino">
                     <img src="images/lupa.png" class="img-busqueda" alt="Ícono de Lupa">
-                </button>
+                </a>
             </div>
         </div>
 
@@ -125,7 +125,7 @@
                 </div>
             </div>
         </div>
-        <div class="caja-otros-rincones">
+        <div class="caja-otros-rincones" id="scroll-rincones">
             <p class="fuente-encabezado-1">También te ayudamos a decidirte con otros rincones</p>
             <div class="caja-display-continentes">
 
@@ -171,184 +171,260 @@
 
                     </div>
                     <div class="caja-viajes-premium">
-                        <div class="viaje-premium" id="Viena">
+                        <div class="viaje-premium" id="Viena" data-destino="Viena, Austria" data-precio="260">
                             <div class="imagen-viaje-premium imagen-viena">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Viena, Austria</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="260"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Ciudad imperial con museos y música clásica a cada paso. El
                                 Palacio de Schönbrunn y la Ringstrasse condensan el barroco y el historicismo, mientras
                                 cafés como Demel mantienen la tradición pastelera. Ideal para caminar entre parques y
                                 teatros de ópera</p>
                         </div>
-                        <div class="viaje-premium" id="Brujas">
+                        <div class="viaje-premium" id="Brujas" data-destino="Brujas, Bélgica" data-precio="220">
                             <div class="imagen-viaje-premium imagen-brujas">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Brujas, Bélgica</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="220"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Centro medieval perfectamente conservado, canales bordeados
                                 de árboles y plazas adoquinadas como el Markt. Campanarios, casas gremiales y
                                 chocolaterías crean un ambiente de cuento que invita a perderse sin prisa</p>
                         </div>
-                        <div class="viaje-premium" id="Copenhague">
+                        <div class="viaje-premium" id="Copenhague" data-destino="Copenhague, Dinamarca"
+                            data-precio="310">
                             <div class="imagen-viaje-premium imagen-copenhague">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Copenhague, Dinamarca</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="310"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Equilibrio entre diseño contemporáneo y tradición nórdica.
                                 Nyhavn, Tívoli y barrios ciclistas muestran una ciudad humana y acogedora; gastronomía
                                 de vanguardia y respeto por el espacio público</p>
                         </div>
-                        <div class="viaje-premium" id="Liubliana">
+                        <div class="viaje-premium" id="Liubliana" data-destino="Liubliana, Eslovenia" data-precio="180">
                             <div class="imagen-viaje-premium imagen-liubliana">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Liubliana, Eslovenia</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="180"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Capital pequeña y escénica, con casco peatonal, cafés junto
                                 al río y el castillo en lo alto. Base ideal para excursiones al lago Bled y los Alpes
                                 Julianos</p>
                         </div>
-                        <div class="viaje-premium" id="Barcelona">
+                        <div class="viaje-premium" id="Barcelona" data-destino="Barcelona, España" data-precio="220">
                             <div class="imagen-viaje-premium imagen-barcelona">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Barcelona, España</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="220"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Modernismo de Gaudí, mar y montaña en un mismo plano. La
                                 Sagrada Familia, Park Güell y la vida de barrio conviven con mercados y museos; paseos
                                 desde Montjuïc a las playas</p>
                         </div>
-                        <div class="viaje-premium" id="Sevilla">
+                        <div class="viaje-premium" id="Sevilla" data-destino="Sevilla, España" data-precio="190">
                             <div class="imagen-viaje-premium imagen-sevilla">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Sevilla, España</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="190"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Casco histórico monumental, patios y azulejos. El Alcázar,
                                 la Catedral y el barrio de Santa Cruz se suman a una potente cultura de tapas y al
                                 flamenco</p>
                         </div>
-                        <div class="viaje-premium" id="Tallin">
+                        <div class="viaje-premium" id="Tallin" data-destino="Tallin, Estonia" data-precio="250">
                             <div class="imagen-viaje-premium imagen-tallin">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Tallin, Estonia</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="250"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Ciudad vieja medieval amurallada, torres y tejados de
                                 colores con vistas al Báltico. Invierno frío, pero fotogénico desde Toompea</p>
                         </div>
-                        <div class="viaje-premium" id="Paris">
+                        <div class="viaje-premium" id="Paris" data-destino="París, Francia" data-precio="320">
                             <div class="imagen-viaje-premium imagen-paris">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">París, Francia</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="320"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Romance urbano: Sena, bulevares y museos icónicos. Barrios
                                 con identidad propia y cafés a pie de calle; Notre Dame, Sacré-Coeur y la Torre Eiffel
                                 como hitos imprescindibles</p>
                         </div>
-                        <div class="viaje-premium" id="Budapest">
+                        <div class="viaje-premium" id="Budapest" data-destino="Budapest, Hungría" data-precio="230">
                             <div class="imagen-viaje-premium imagen-budapest">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Budapest, Hungría</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="230"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Arquitectura Art Nouveau, baños termales y paseos nocturnos
                                 sobre el Danubio. El Parlamento brilla al caer la tarde desde el Puente de las Cadenas
                             </p>
                         </div>
-                        <div class="viaje-premium" id="Florencia">
+                        <div class="viaje-premium" id="Florencia" data-destino="Florencia, Italia" data-precio="270">
                             <div class="imagen-viaje-premium imagen-florencia">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Florencia, Italia</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="270"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Cuna del Renacimiento: Duomo, Uffizi y artesanías en el
                                 Oltrarno. Una ciudad-museo viva donde cada calle guarda esculturas, palacios y talleres
                             </p>
                         </div>
-                        <div class="viaje-premium" id="Roma">
+                        <div class="viaje-premium" id="Roma" data-destino="Roma, Italia" data-precio="280">
                             <div class="imagen-viaje-premium imagen-roma">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Roma, Italia</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="280"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">La “Ciudad Eterna” combina ruinas clásicas, plazas barrocas
                                 y vida de barrio. Del Panteón a la Fontana di Trevi, la historia convive con trattorias
                                 y terrazas</p>
                         </div>
-                        <div class="viaje-premium" id="Venecia">
+                        <div class="viaje-premium" id="Venecia" data-destino="Venecia, Italia" data-precio="290">
                             <div class="imagen-viaje-premium imagen-venecia">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Venecia, Italia</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="290"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Sin coches y con un trazado acuático único. Canales,
                                 palacios y puentes conectan islas; desde San Marcos a los barrios más tranquilos, es
                                 pura contemplación</p>
                         </div>
-                        <div class="viaje-premium" id="LaValeta">
+                        <div class="viaje-premium" id="LaValeta" data-destino="La Valeta, Malta" data-precio="240">
                             <div class="imagen-viaje-premium imagen-lavaleta">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">La Valeta, Malta</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="240"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Fortificada y barroca, con miradores al Gran Puerto.
                                 Palacios, iglesias y museos concentrados en un casco compacto y caminable</p>
                         </div>
-                        <div class="viaje-premium" id="Bergen">
+                        <div class="viaje-premium" id="Bergen" data-destino="Bergen, Noruega" data-precio="340">
                             <div class="imagen-viaje-premium imagen-bergen">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Bergen, Noruega</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="340"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Casas de madera en Bryggen, puerto vivo y montañas que caen
                                 a fiordos. Punto de partida perfecto para rutas escénicas</p>
                         </div>
-                        <div class="viaje-premium" id="Amsterdam">
+                        <div class="viaje-premium" id="Amsterdam" data-destino="Ámsterdam, Países Bajos"
+                            data-precio="300">
                             <div class="imagen-viaje-premium imagen-amsterdam">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Ámsterdam, Países Bajos</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="300"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Canales Patrimonio de la UNESCO, gables estrechos y cultura
                                 ciclista. Museos de primer nivel y barrios verdes conectados por puentes</p>
                         </div>
-                        <div class="viaje-premium" id="Oporto">
+                        <div class="viaje-premium" id="Oporto" data-destino="Oporto, Portugal" data-precio="200">
                             <div class="imagen-viaje-premium imagen-oporto">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Oporto, Portugal</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="200"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Azulejos, puentes sobre el Duero y bodegas de vino de
                                 Oporto. Librería Lello y piscinas de Leça como iconos contemporáneos</p>
                         </div>
-                        <div class="viaje-premium" id="Londres">
+                        <div class="viaje-premium" id="Londres" data-destino="Londres, Reino Unido" data-precio="350">
                             <div class="imagen-viaje-premium imagen-londres">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Londres, Reino Unido</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="350"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Historia y vanguardia a orillas del Támesis. Museos
                                 gratuitos, parques inmensos y una escena cultural y gastronómica inagotable</p>
                         </div>
-                        <div class="viaje-premium" id="Edimburgo">
+                        <div class="viaje-premium" id="Edimburgo" data-destino="Edimburgo, Reino Unido"
+                            data-precio="320">
                             <div class="imagen-viaje-premium imagen-edimburgo">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Edimburgo, Reino Unido</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="320"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Royal Mile, castillo y colinas verdes. La roca volcánica de
                                 Arthur’s Seat regala una panorámica excepcional sobre la ciudad de piedra</p>
                         </div>
-                        <div class="viaje-premium" id="Praga">
+                        <div class="viaje-premium" id="Praga" data-destino="Praga, República Checa" data-precio="240">
                             <div class="imagen-viaje-premium imagen-praga">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Praga, República Checa</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="240"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Cúpulas y torres góticas sobre un casco antiguo fotogénico.
                                 Puente de Carlos al amanecer y cafés históricos con música y literatura</p>
                         </div>
-                        <div class="viaje-premium" id="Lucerna">
+                        <div class="viaje-premium" id="Lucerna" data-destino="Lucerna, Suiza" data-precio="330">
                             <div class="imagen-viaje-premium imagen-lucerna">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Lucerna, Suiza</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="330"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Lago, montes cercanos y el Kapellbrücke como postal.
                                 Tejados medievales y aire alpino a pocos minutos de rutas de montaña</p>
                         </div>
-                        <div class="viaje-premium" id="Zurich">
+                        <div class="viaje-premium" id="Zurich" data-destino="Zúrich, Suiza" data-precio="360">
                             <div class="imagen-viaje-premium imagen-zurich">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Zúrich, Suiza</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="360"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Casco antiguo elegante junto al lago, museos, galerías y
                                 vida junto al agua. Veranos vibrantes y eficiencia suiza en cada detalle</p>
                         </div>
-                        <div class="viaje-premium" id="Reikiavik">
+                        <div class="viaje-premium" id="Reikiavik" data-destino="Reikiavik, Islandia" data-precio="420">
                             <div class="imagen-viaje-premium imagen-reikiavik">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Reikiavik, Islandia</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="420"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Arquitectura moderna como Harpa y Hallgrímskirkja entre
                                 paisajes volcánicos. Base para auroras y baños termales cercanos</p>
                         </div>
-                        <div class="viaje-premium" id="Santorini">
+                        <div class="viaje-premium" id="Santorini" data-destino="Santorini, Grecia" data-precio="310">
                             <div class="imagen-viaje-premium imagen-santorini">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Santorini, Grecia</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="310"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Islas blancas con cúpulas azules sobre el mar Egeo.
                                 Atardeceres únicos, calderas volcánicas y playas de arena negra que crean un paisaje de
                                 postal</p>
                         </div>
-                        <div class="viaje-premium" id="Monaco">
+                        <div class="viaje-premium" id="Monaco" data-destino="Ciudad de Monáco, Monáco"
+                            data-precio="450">
                             <div class="imagen-viaje-premium imagen-monaco">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Ciudad de Monáco, Monáco</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="450"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Lujo mediterráneo: yates en el puerto, casinos históricos y
                                 palacios reales. Una vida cosmopolita que mezcla glamour y tradición</p>
                         </div>
@@ -397,88 +473,126 @@
 
                     </div>
                     <div class="caja-viajes-premium">
-                        <div class="viaje-premium" id="Beijing">
+                        <div class="viaje-premium" id="Beijing" data-destino="Beijing, China" data-precio="780">
                             <div class="imagen-viaje-premium imagen-beijing">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Beijing, China</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="780"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Capital imperial con la Ciudad Prohibida, hutongs y
                                 avenidas amplias. Puerta a tramos cercanos de la Gran Muralla y a una cocina regional
                                 riquísima</p>
                         </div>
-                        <div class="viaje-premium" id="HongKong">
+                        <div class="viaje-premium" id="HongKong" data-destino="Hong Kong, China" data-precio="820">
                             <div class="imagen-viaje-premium imagen-hongkong">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Hong Kong, China</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="820"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Horizonte denso en torno a un puerto lleno de ferris.
                                 Montañas, islas y reservas naturales a minutos del centro financiero</p>
                         </div>
-                        <div class="viaje-premium" id="Seul">
+                        <div class="viaje-premium" id="Seul" data-destino="Seúl, Corea del Sur" data-precio="760">
                             <div class="imagen-viaje-premium imagen-seul">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Seúl, Corea del Sur</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="760"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Rascacielos y palacios, mercados nocturnos y una red de
                                 metro impecable. Distritos como Bukchon y Myeongdong muestran tradición y moda</p>
                         </div>
-                        <div class="viaje-premium" id="Jaipur">
+                        <div class="viaje-premium" id="Jaipur" data-destino="Jaipur, India" data-precio="640">
                             <div class="imagen-viaje-premium imagen-jaipur">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Jaipur, India</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="640"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">La “Ciudad Rosa”: Hawa Mahal, fuertes y bazares color
                                 salmón. Artesanías, joyería y gastronomía del Rajastán en palacios y calles</p>
                         </div>
-                        <div class="viaje-premium" id="Kioto">
+                        <div class="viaje-premium" id="Kioto" data-destino="Kioto, Japón" data-precio="850">
                             <div class="imagen-viaje-premium imagen-kioto">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Kioto, Japón</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="850"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Templos, santuarios y jardines clásicos. Hanami en
                                 primavera, rutas arboladas y posibilidad de cruzarse con geishas en Gion</p>
                         </div>
-                        <div class="viaje-premium" id="LuangPrabang">
+                        <div class="viaje-premium" id="LuangPrabang" data-destino="Luang Prabang, Laos"
+                            data-precio="620">
                             <div class="imagen-viaje-premium imagen-luangprabang">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Luang Prabang, Laos</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="620"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Patrimonio UNESCO junto a la confluencia de ríos.
                                 Procesiones de monjes al amanecer, cascadas cercanas y arquitectura colonial-budista</p>
                         </div>
-                        <div class="viaje-premium" id="Beirut">
+                        <div class="viaje-premium" id="Beirut" data-destino="Beirut, Líbano" data-precio="520">
                             <div class="imagen-viaje-premium imagen-beirut">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Beirut, Líbano</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="520"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Playas, clubes y azoteas frente a mezquitas y zocos
                                 históricos. Gastronomía y vida nocturna con aire mediterráneo y levantino</p>
                         </div>
-                        <div class="viaje-premium" id="Mascate">
+                        <div class="viaje-premium" id="Mascate" data-destino="Mascate, Omán" data-precio="530">
                             <div class="imagen-viaje-premium imagen-mascate">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Mascate, Omán</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="530"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Bahías y montañas enmarcando mezquitas, zocos y fuertes
                                 portugueses. Paseos costeros y arquitectura blanca junto al Golfo de Omán</p>
                         </div>
-                        <div class="viaje-premium" id="Doha">
+                        <div class="viaje-premium" id="Doha" data-destino="Doha, Qatar" data-precio="540">
                             <div class="imagen-viaje-premium imagen-doha">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Doha, Qatar</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="540"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Corniche con skyline futurista, Souq Waqif y el Museo de
                                 Arte Islámico de I. M. Pei. Mezcla de tradición y nuevas áreas culturales</p>
                         </div>
-                        <div class="viaje-premium" id="ChiangMai">
+                        <div class="viaje-premium" id="ChiangMai" data-destino="Chiang Mai, Tailandia"
+                            data-precio="580">
                             <div class="imagen-viaje-premium imagen-chiangmai">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Chiang Mai, Tailandia</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="580"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Templos en la ladera, cafés y mercados creativos. Punto de
                                 partida para naturaleza del norte y experiencias culinarias intensas</p>
                         </div>
-                        <div class="viaje-premium" id="Hanoi">
+                        <div class="viaje-premium" id="Hanoi" data-destino="Hanoi, Tailandia" data-precio="560">
                             <div class="imagen-viaje-premium imagen-hanoi">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Hanoi, Tailandia</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="560"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Lagos, templos y barrio francés con aire romántico. Calles
                                 angostas con cafés tradicionales y mercados vibrantes</p>
                         </div>
-                        <div class="viaje-premium" id="Singapur">
+                        <div class="viaje-premium" id="Singapur" data-destino="Singapur, Singapur" data-precio="880">
                             <div class="imagen-viaje-premium imagen-singapur">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Singapur, Singapur</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="880"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Ciudad-jardín con selva urbana, Jardín Botánico y Gardens
                                 by the Bay. Templos, casas patrimoniales y una logística impecable para moverse</p>
                         </div>
@@ -527,45 +641,66 @@
 
                     </div>
                     <div class="caja-viajes-premium">
-                        <div class="viaje-premium" id="Chefchaouen">
+                        <div class="viaje-premium" id="Chefchaouen" data-destino="Chefchaouen, Marruecos"
+                            data-precio="180">
                             <div class="imagen-viaje-premium imagen-chefchaouen">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Chefchaouen, Marruecos</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="180"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Medina azul entre montañas del Rif. Callejuelas pintadas,
                                 puertas artesanales y miradores cercanos para ver el conjunto desde arriba</p>
                         </div>
-                        <div class="viaje-premium" id="CiudadDelCabo">
+                        <div class="viaje-premium" id="CiudadDelCabo" data-destino="Ciudad del Cabo, Sudáfrica"
+                            data-precio="690">
                             <div class="imagen-viaje-premium imagen-ciudaddelcabo">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Ciudad del Cabo, Sudáfrica</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="690"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Table Mountain, playas con pingüinos y barrios coloridos
                                 como Bo-Kaap. Jardines, viñedos cercanos y rutas panorámicas costeras</p>
                         </div>
-                        <div class="viaje-premium" id="ElCairo">
+                        <div class="viaje-premium" id="ElCairo" data-destino="El Cairo, Egipto" data-precio="410">
                             <div class="imagen-viaje-premium imagen-elcairo">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">El Cairo, Egipto</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="410"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Ciudad vibrante junto al Nilo, donde lo antiguo y lo
                                 moderno coexisten. Una mezcla de historia, bullicio urbano y cultura milenaria</p>
                         </div>
-                        <div class="viaje-premium" id="ElSerengueti">
+                        <div class="viaje-premium" id="ElSerengueti" data-destino="El Serengueti, Tanzania"
+                            data-precio="950">
                             <div class="imagen-viaje-premium imagen-elserengueti">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">El Serengueti, Tanzania</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="950"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Sabana infinita y vida salvaje en estado puro. Safaris
                                 fotográficos permiten sentir la inmensidad y el ritmo natural de África oriental</p>
                         </div>
-                        <div class="viaje-premium" id="Zanzibar">
+                        <div class="viaje-premium" id="Zanzibar" data-destino="Zanzíbar, Tanzania" data-precio="840">
                             <div class="imagen-viaje-premium imagen-zanzibar">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Zanzíbar, Tanzania</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="840"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Playas de arena blanca y aguas turquesa y palacios de
                                 especias. Una isla de historia, cultura y relax, con atardeceres de postal</p>
                         </div>
-                        <div class="viaje-premium" id="Nairobi">
+                        <div class="viaje-premium" id="Nairobi" data-destino="Nairobi, Kenya" data-precio="720">
                             <div class="imagen-viaje-premium imagen-nairobi">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Nairobi, Kenya</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="720"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Capital vibrante entre rascacielos y naturaleza salvaje.
                                 Safaris cercanos, combinando vida moderna con fauna africana única</p>
                         </div>
@@ -614,45 +749,65 @@
 
                     </div>
                     <div class="caja-viajes-premium">
-                        <div class="viaje-premium" id="Sidney">
+                        <div class="viaje-premium" id="Sidney" data-destino="Sídney, Australia" data-precio="1050">
                             <div class="imagen-viaje-premium imagen-sidney">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Sídney, Australia</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="1050"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Ópera icónica, bahía navegable y playas urbanas como Bondi.
                                 Ferris cotidianos y parques frente al agua</p>
                         </div>
-                        <div class="viaje-premium" id="Queenstown">
+                        <div class="viaje-premium" id="Queenstown" data-destino="Queenstown, Nueva Zelanda"
+                            data-precio="980">
                             <div class="imagen-viaje-premium imagen-queenstown">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Queenstown, Nueva Zelanda</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="980"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Capital de la adrenalina entre lago y montañas. Miradores
                                 naturales, aventuras y paisajes cinematográficos</p>
                         </div>
-                        <div class="viaje-premium" id="TarawaSur">
+                        <div class="viaje-premium" id="TarawaSur" data-destino="Tarawa Sur, Kiribati"
+                            data-precio="1150">
                             <div class="imagen-viaje-premium imagen-tarawasur">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Tarawa Sur, Kiribati</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="1150"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Corazón de Kiribati, con playas de arena blanca y lagunas
                                 turquesa. Ideal para quienes buscan cultura insular y paisajes marítimos vírgenes</p>
                         </div>
-                        <div class="viaje-premium" id="PortVila">
+                        <div class="viaje-premium" id="PortVila" data-destino="Port Vila, Vanuatu" data-precio="980">
                             <div class="imagen-viaje-premium imagen-portvila">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Port Vila, Vanuatu</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="980"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Capital de Vanuatu entre lagunas y colinas verdes. Ideal
                                 para explorar arrecifes de coral, gastronomía tropical y cultura insular</p>
                         </div>
-                        <div class="viaje-premium" id="Yaren">
+                        <div class="viaje-premium" id="Yaren" data-destino="Yaren, Nauru" data-precio="900">
                             <div class="imagen-viaje-premium imagen-yaren">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Yaren, Nauru</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="900"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Capital con playas tranquilas y paisajes coralinos. Un
                                 destino íntimo y poco explorado donde la vida isleña se percibe en calma</p>
                         </div>
-                        <div class="viaje-premium" id="Samoia">
+                        <div class="viaje-premium" id="Samoia" data-destino="Samoia, Apia" data-precio="860">
                             <div class="imagen-viaje-premium imagen-samoia">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Samoia, Apia</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="860"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Puerto rodeado de playas de arena blanca y palmeras.
                                 Templos históricos y cascadas cercanas crean un ambiente tropical y relajante</p>
                         </div>
@@ -701,45 +856,68 @@
 
                     </div>
                     <div class="caja-viajes-premium">
-                        <div class="viaje-premium" id="CiudadDeQuebec">
+                        <div class="viaje-premium" id="CiudadDeQuebec" data-destino="Ciudad de Quebec, Canadá"
+                            data-precio="490">
                             <div class="imagen-viaje-premium imagen-ciudaddequebec">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Ciudad de Quebec, Canadá</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="490"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Casco amurallado en altura con vistas al San Lorenzo.
                                 Ambiente europeo, tejados empinados y puestas de sol rosadas</p>
                         </div>
-                        <div class="viaje-premium" id="LaHabana">
+                        <div class="viaje-premium" id="LaHabana" data-destino="La Habana, Cuba" data-precio="520">
                             <div class="imagen-viaje-premium imagen-lahabana">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">La Habana, Cuba</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="520"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Arquitectura colonial de tonos pastel, música en cada
                                 esquina y paseos marítimos. La Habana Vieja y el Malecón marcan el ritmo</p>
                         </div>
-                        <div class="viaje-premium" id="SanMiguelDeAllende">
+                        <div class="viaje-premium" id="SanMiguelDeAllende" data-destino="San Miguel de Allende, México"
+                            data-precio="360">
                             <div class="imagen-viaje-premium imagen-sanmigueldeallende">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">San Miguel de Allende, México</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="360"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Centro colonial con parroquia neogótica rosada. Calles
                                 adoquinadas, patios y arte en galerías y talleres</p>
                         </div>
-                        <div class="viaje-premium" id="NuevaYork">
+                        <div class="viaje-premium" id="NuevaYork" data-destino="Nueva York, Estados Unidos"
+                            data-precio="730">
                             <div class="imagen-viaje-premium imagen-nuevayork">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Nueva York, Estados Unidos</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="730"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Arquitectura icónica, parques como Central Park y una
                                 escena artística incomparable. Energía urbana que no se apaga</p>
                         </div>
-                        <div class="viaje-premium" id="SanFrancisco">
+                        <div class="viaje-premium" id="SanFrancisco" data-destino="San Francisco, Estados Unidos"
+                            data-precio="760">
                             <div class="imagen-viaje-premium imagen-sanfrancisco">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">San Francisco, Estados Unidos</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="760"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Puente Golden Gate, colinas y casas victorianas. Museos de
                                 talla mundial y barrios con carácter propio</p>
                         </div>
-                        <div class="viaje-premium" id="Chicago">
+                        <div class="viaje-premium" id="Chicago" data-destino="Chicago, Estados Unidos"
+                            data-precio="620">
                             <div class="imagen-viaje-premium imagen-chicago">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Chicago, Estados Unidos</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="620"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Ciudad de rascacielos icónicos y arquitectura
                                 impresionante. Los atardeceres sobre el lago Michigan son inolvidables</p>
                         </div>
@@ -788,46 +966,66 @@
 
                     </div>
                     <div class="caja-viajes-premium">
-                        <div class="viaje-premium" id="BuenosAires">
+                        <div class="viaje-premium" id="BuenosAires" data-destino="Buenos Aires, Argentina"
+                            data-precio="520">
                             <div class="imagen-viaje-premium imagen-buenosaires">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Buenos Aires, Argentina</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="520"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Barrios con identidad (Recoleta, San Telmo, La Boca),
                                 arquitectura variada y vida cultural intensa. Tango, parrillas y librerías en edificios
                                 emblemáticos</p>
                         </div>
-                        <div class="viaje-premium" id="RioDeJaneiro">
+                        <div class="viaje-premium" id="RioDeJaneiro" data-destino="Río de Janeiro, Brasil"
+                            data-precio="540">
                             <div class="imagen-viaje-premium imagen-riodejaneiro">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Río de Janeiro, Brasil</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="540"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Playas míticas, selva urbana y el Cristo Redentor vigilando
                                 bahías y morros. Ritmo de samba en calles y plazas</p>
                         </div>
-                        <div class="viaje-premium" id="Cartagena">
+                        <div class="viaje-premium" id="Cartagena" data-destino="Cartagena, Colombia" data-precio="430">
                             <div class="imagen-viaje-premium imagen-cartagena">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Cartagena, Colombia</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="430"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Murallas, plazas y casonas coloniales cubiertas de
                                 buganvillas. Getsemaní y Bocagrande muestran sus caras creativa y moderna</p>
                         </div>
-                        <div class="viaje-premium" id="Quito">
+                        <div class="viaje-premium" id="Quito" data-destino="Quito, Ecuador" data-precio="400">
                             <div class="imagen-viaje-premium imagen-quito">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Quito, Ecuador</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="400"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Casco histórico dorado bajo volcanes andinos. Vistas desde
                                 la Basílica del Voto Nacional y mercados tradicionales</p>
                         </div>
-                        <div class="viaje-premium" id="Cuzco">
+                        <div class="viaje-premium" id="Cuzco" data-destino="Cuzco, Perú" data-precio="380">
                             <div class="imagen-viaje-premium imagen-cuzco">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Cuzco, Perú</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="380"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Antigua capital inca con plazas, conventos y calles
                                 empedradas. Punto de partida a Machu Picchu y miradores como el Cristo Blanco</p>
                         </div>
-                        <div class="viaje-premium" id="Patagonia">
+                        <div class="viaje-premium" id="Patagonia" data-destino="Patagonia, Chile" data-precio="820">
                             <div class="imagen-viaje-premium imagen-patagonia">
                             </div>
                             <p class="titulo-parrafo-viaje-premium">Patagonia, Chile</p>
+                            <p class="precio-viaje">
+                                Desde <span class="precio-destacado js-price" data-eur="820"></span>
+                            </p>
                             <p class="parrafo-viaje-premium">Paisajes extremos de montañas, glaciares y lagos turquesa.
                                 Naturaleza salvaje y silenciosa que ofrece aventuras únicas y vistas sobrecogedoras</p>
                         </div>
@@ -839,7 +1037,7 @@
 
 
         <!-- PARTE DEL CÓDIGO QUE MODELA SOBRE NOSOTROS -->
-        <div class="caja-sobre-nosotros">
+        <div class="caja-sobre-nosotros" id="scroll-sobre-nosotros">
             <p class=fuente-encabezado-1>Sobre nosotros</p>
             <p>PackUrBag nació en 2021 con una idea sencilla: hacer que viajar sea más fácil, accesible y emocionante
                 para todos. Lo que comenzó como un proyecto entre amantes de los viajes, se ha convertido en una
