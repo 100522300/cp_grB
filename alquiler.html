@@ -16,6 +16,7 @@
     <script src="script/currency.js" defer></script>
     <script src="script/theme.js" defer></script>
     <script src="script/logout.js" defer></script>
+    <script type="module" src="script/script_principal.js" defer></script>
     <script type="module" src="script/alquiler.js" defer></script>
 </head>
 
@@ -28,33 +29,37 @@
                 <img class="img-logo" src="images/logo_recortado.PNG" alt="Logo de la web">
             </a>
         </div>
+        <button class="hamburger" id="hamburger-menu" aria-label="Abrir menú de navegación">
+            &#9776;
+        </button>
+        <nav class="menu-colapsable" id="menu-colapsable">
+            <div class="enlaces-header">
+                <a href="pagina_principal.html">Inicio</a>
+                <a href="alquiler.html" class="enlace-activo">Alquiler de Coches</a>
+                <a href="newlester.html">Newsletter</a>
+            </div>
 
-        <div class="enlaces-header">
-            <a href="pagina_principal.html">Inicio</a>
-            <a href="alquiler.html" class="enlace-activo">Alquiler de Coches</a>
-            <a href="newlester.html">Newsletter</a>
-        </div>
+            <div class="opciones-header">
+                <select id="currency-select" class="btn-seleccionar-moneda">
+                    <option value="EUR">EUR (€)</option>
+                    <option value="USD">USD ($)</option>
+                    <option value="GBP">GBP (£)</option>
+                </select>
+                <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
 
-        <div class="opciones-header">
-            <select id="currency-select" class="btn-seleccionar-moneda">
-                <option value="EUR">EUR (€)</option>
-                <option value="USD">USD ($)</option>
-                <option value="GBP">GBP (£)</option>
-            </select>
-            <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
-
-            <button class="btn-seleccionar-idioma">
-                <img src="images/spain-flag-circular.png" alt="Idioma">
-            </button>
+                <button class="btn-seleccionar-idioma">
+                    <img src="images/spain-flag-circular.png" alt="Idioma">
+                </button>
 
 
 
 
-            <button type="button" class="btn-faq boton-perfil" onclick="window.location.href='perfil.html'">
-                <img class="imagen-perfil-usuario" src="images/hustle_hard_persona_2.jpg" alt="Usuario">
+                <button type="button" class="btn-faq boton-perfil" onclick="window.location.href='perfil.html'">
+                    <img class="imagen-perfil-usuario" src="images/hustle_hard_persona_2.jpg" alt="Usuario">
 
-            </button>
-        </div>
+                </button>
+            </div>
+        </nav>
     </header>
 
     <main class="main-alquiler">
