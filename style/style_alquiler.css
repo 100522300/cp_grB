@@ -1,201 +1,202 @@
 /* Estilos para la página de alquiler de coches (VERSIÓN SIMPLE/NOOB) */
 
 .main-alquiler {
-    margin: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .titulo-alquiler {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 650;
 }
 
 /* Helper para enlace activo en header */
 .enlace-activo {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 /* Titulos de pasos (1, 2, 3...) */
 .subtitulo-paso {
-    text-align: center;
-    font-size: 1.2rem;
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 .margen-top {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 /* Rejilla de coches */
 .grid-coches {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .tarjeta-coche {
-    background-color: white;
-    border: 1px solid black;
-    padding: 1rem;
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
+  background-color: white;
+  border: 1px solid black;
+  padding: 1rem;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
 }
 
 .tarjeta-coche:hover {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 .tarjeta-coche.seleccionado {
-    border: 4px solid blue;
-    background-color: #e0e0ff;
+  border: 4px solid blue;
+  background-color: #e0e0ff;
 }
 
 .tarjeta-coche input[type="radio"] {
-    display: none;
+  display: none;
 }
 
 /* IMAGENES DE COCHES (NUEVO) */
 .coche-img {
-    width: 100%;
-    height: 150px;
-    /* Altura fija para uniformidad */
-    object-fit: cover;
-    /* Recortar si sobra pa que no se deforme */
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
+  width: 100%;
+  height: 150px;
+  /* Altura fija para uniformidad */
+  object-fit: cover;
+  /* Recortar si sobra pa que no se deforme */
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
 }
 
 .info-coche {
-    text-align: center;
+  text-align: center;
 }
 
 .nombre-coche {
-    font-size: 1.2rem;
-    font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .precio-coche {
-    color: red;
+  color: rgb(88, 88, 88);
 }
 
 /* Formulario */
 .form-reserva {
-    background-color: white;
-    border: 1px solid black;
-    padding: 2rem;
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+  background-color: white;
+  border: 1px solid black;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .campo-form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .campo-form label {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .campo-form input,
 .campo-form select {
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 1px solid grey;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid grey;
 }
 
 /* Cobertura */
 .grid-cobertura {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
 .tarjeta-cobertura {
-    border: 1px solid grey;
-    padding: 1rem;
-    text-align: center;
-    cursor: pointer;
-    flex: 1;
+  border: 1px solid grey;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  flex: 1;
 }
 
 .texto-negrita {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 /* Caja Precio */
 .precio-total-box {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border: 2px solid black;
-    padding: 1rem;
-    margin-top: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 2px solid black;
+  padding: 1rem;
+  margin-top: 1rem;
 }
 
 #precio-total-valor {
-    color: red;
+  color: rgb(88, 88, 88);
 }
 
 /* Aviso Legal */
 .aviso-legal {
-    background-color: yellow;
-    color: black;
-    border: 1px solid black;
-    padding: 1rem;
-    margin-top: 1rem;
+  background-color: rgb(156, 156, 156);
+  color: black;
+  border: 1px solid black;
+  padding: 1rem;
+  margin-top: 1rem;
 }
 
 .aviso-legal p {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 /* Botón */
 .btn-reservar {
-    background-color: black;
-    color: white;
-    padding: 1rem;
-    font-size: 1.2rem;
-    border: none;
-    cursor: pointer;
-    margin-top: 1rem;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
 }
 
 .btn-reservar:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 /* Modo oscuro simple */
 .theme-dark .tarjeta-coche,
 .theme-dark .form-reserva,
 .theme-dark .tarjeta-cobertura {
-    background-color: #333;
-    color: white;
-    border-color: white;
+  background-color: #333;
+  color: white;
+  border-color: white;
 }
 
 .theme-dark .campo-form input,
 .theme-dark .campo-form select {
-    background-color: #444;
-    color: white;
-    border: 1px solid #777;
+  background-color: #444;
+  color: white;
+  border: 1px solid #777;
 }
 
 .theme-dark .campo-form select option {
-    background-color: #333;
-    color: white;
+  background-color: #333;
+  color: white;
 }
