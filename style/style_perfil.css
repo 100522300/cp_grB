@@ -50,14 +50,6 @@ header {
   text-decoration: none;
 }
 
-.opciones-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex: 3;
-  gap: 0.5rem;
-}
-
 .btn-seleccionar-idioma {
   display: flex;
   height: 3rem;
