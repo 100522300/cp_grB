@@ -17,34 +17,34 @@ document.addEventListener("DOMContentLoaded", () => {
   // Opiniones base por destino
   const opinionesBasePorDestino = {
     tokyo: [
-      { nombre: "Jackie Chan", avatar: "images/avatar_default.png", texto: "Me encantó Tokyo, repetiría sin dudar" },
-      { nombre: "Yao Ming", avatar: "images/avatar_default.png", texto: "Todo muy bien organizado, 10/10" },
-      { nombre: "Mahatma Gandhi", avatar: "images/avatar_default.png", texto: "El hotel y el vuelo fueron perfectos" },
-      { nombre: "Bruce Lee", avatar: "images/avatar_default.png", texto: "Muy buen servicio y atención" }
+      { nombre: "Jackie Chan", avatar: "images/jackie-chan.jpeg", texto: "Me encantó Tokyo, repetiría sin dudar" },
+      { nombre: "Yao Ming", avatar: "images/yao-ming.png", texto: "Todo muy bien organizado, 10/10" },
+      { nombre: "Mahatma Gandhi", avatar: "images/mahatma-gandhi.jpg", texto: "El hotel y el vuelo fueron perfectos" },
+      { nombre: "Bruce Lee", avatar: "images/bruce-lee.jpg", texto: "Muy buen servicio y atención" }
     ],
     madrid: [
-      { nombre: "Rafael Nadal", avatar: "images/avatar_default.png", texto: "Madrid es preciosa, me encantó la comida y el arte" },
-      { nombre: "Andrés Iniesta", avatar: "images/avatar_default.png", texto: "Muy buena organización y guías amables" },
-      { nombre: "Fernando Alonso", avatar: "images/avatar_default.png", texto: "Hotel céntrico y cómodo" },
-      { nombre: "Pau Gasol", avatar: "images/avatar_default.png", texto: "Excelente viaje, repetiría sin dudas" }
+      { nombre: "Rafael Nadal", avatar: "images/rafa-nadal.png", texto: "Madrid es preciosa, me encantó la comida y el arte" },
+      { nombre: "Andrés Iniesta", avatar: "images/iniesta.png", texto: "Muy buena organización y guías amables" },
+      { nombre: "Fernando Alonso", avatar: "images/fernando-alonso.jpg", texto: "Hotel céntrico y cómodo" },
+      { nombre: "Pau Gasol", avatar: "images/pau-gasol.png", texto: "Excelente viaje, repetiría sin dudas" }
     ],
     paris: [
-      { nombre: "Kylian Mbappé", avatar: "images/avatar_default.png", texto: "La Torre Eiffel es increíble, Paris me fascinó" },
-      { nombre: "Zinedine Zidane", avatar: "images/avatar_default.png", texto: "Buen viaje, muy romántico" },
-      { nombre: "Paul Pogba", avatar: "images/avatar_default.png", texto: "Repetiría sin dudas" },
-      { nombre: "Thierry Henry", avatar: "images/avatar_default.png", texto: "Muy buena organización y guías amables" }
+      { nombre: "Kylian Mbappé", avatar: "images/mbappe.png", texto: "La Torre Eiffel es increíble, Paris me fascinó" },
+      { nombre: "Zinedine Zidane", avatar: "images/zidane.jpg", texto: "Buen viaje, muy romántico" },
+      { nombre: "Paul Pogba", avatar: "images/pogba.png", texto: "Repetiría sin dudas" },
+      { nombre: "Thierry Henry", avatar: "images/henry.jpg", texto: "Muy buena organización y guías amables" }
     ],
     londres: [
-      { nombre: "David Beckham", avatar: "images/avatar_default.png", texto: "Londres tiene mucho que ofrecer, excelente viaje" },
-      { nombre: "Alan Turing", avatar: "images/avatar_default.png", texto: "Disfruté los museos y los paseos por el Támesis" },
-      { nombre: "Dua Lipa", avatar: "images/avatar_default.png", texto: "Hotel cómodo y céntrico" },
-      { nombre: "Phil Collins", avatar: "images/avatar_default.png", texto: "Muy buen servicio y atención" }
+      { nombre: "David Beckham", avatar: "images/beckham.jpg", texto: "Londres tiene mucho que ofrecer, excelente viaje" },
+      { nombre: "Alan Turing", avatar: "images/turing.jpg", texto: "Disfruté los museos y los paseos por el Támesis" },
+      { nombre: "Dua Lipa", avatar: "images/dua-lipa.jpg", texto: "Hotel cómodo y céntrico" },
+      { nombre: "Phil Collins", avatar: "images/phil-collins.avif", texto: "Muy buen servicio y atención" }
     ],
     "nueva-york": [
-      { nombre: "The Rock", avatar: "images/avatar_default.png", texto: "NYC es impresionante, me encantó Times Square y Central Park" },
-      { nombre: "Taylor Swift", avatar: "images/avatar_default.png", texto: "Excelente viaje, repetiría sin dudas" },
-      { nombre: "Mr Beast", avatar: "images/avatar_default.png", texto: "El hotel y las excursiones perfectas" },
-      { nombre: "Al Pacino", avatar: "images/avatar_default.png", texto: "Todo muy bien organizado, 10/10" }
+      { nombre: "The Rock", avatar: "images/rock.avif", texto: "NYC es impresionante, me encantó Times Square y Central Park" },
+      { nombre: "Taylor Swift", avatar: "images/swift.jpg", texto: "Excelente viaje, repetiría sin dudas" },
+      { nombre: "Mr Beast", avatar: "images/mrbeast.webp", texto: "El hotel y las excursiones perfectas" },
+      { nombre: "Al Pacino", avatar: "images/al pacino.jpg", texto: "Todo muy bien organizado, 10/10" }
     ]
   };
 
