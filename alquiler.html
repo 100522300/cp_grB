@@ -21,23 +21,21 @@
 </head>
 
 <body>
-    <header>
+        <header>
         <div class="caja-logo">
-            <a href="pagina_principal.html"
-                style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: inherit;">
+            <a href="pagina_principal.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: inherit;">
                 <p class="logo-titulo">PackUrBag</p>
                 <img class="img-logo" src="images/logo_recortado.PNG" alt="Logo de la web">
             </a>
         </div>
-        <button class="hamburger" id="hamburger-menu" aria-label="Abrir menÃº de navegaciÃ³n">
-            &#9776;
-        </button>
+        <button class="hamburger" id="hamburger-menu" aria-label="Abrir menú de navegación">&#9776;</button>
         <nav class="menu-colapsable" id="menu-colapsable">
             <div class="enlaces-header">
                 <a href="pagina_principal.html">Inicio</a>
                 <a href="alquiler.html" class="enlace-activo">Alquiler de Coches</a>
                 <a href="newlester.html">Newsletter</a>
             </div>
+<<<<<<< HEAD
 
             <button class="hamburger" id="hamburger-menu" aria-label="Abrir menu de navegacion">
                 &#9776;
@@ -74,6 +72,27 @@
                     </button>
                 </div>
             </nav>
+=======
+            <div class="opciones-header">
+                <select id="currency-select" class="btn-seleccionar-moneda">
+                    <option value="EUR">EUR (€)</option>
+                    <option value="USD">USD ($)</option>
+                    <option value="GBP">GBP (£)</option>
+                </select>
+                <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
+                <div id="google_translate_element"></div>
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({ pageLanguage: "es", layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, "google_translate_element");
+                    }
+                </script>
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <button type="button" class="btn-faq boton-perfil" onclick="window.location.href='perfil.html'">
+                    <img class="imagen-perfil-usuario" src="images/hustle_hard_persona_2.jpg" alt="Usuario">
+                </button>
+            </div>
+        </nav>
+>>>>>>> 2df9217587789de74b0e90aefb47818f6b607bfc
     </header>
 
     <main class="main-alquiler">
