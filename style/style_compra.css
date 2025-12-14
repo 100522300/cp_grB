@@ -49,13 +49,6 @@ body {
   color: #111;
   font-weight: 500;
 }
-
-.opciones-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
 .btn-seleccionar-idioma {
   display: flex;
   height: 3rem;
