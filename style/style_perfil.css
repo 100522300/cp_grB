@@ -24,26 +24,6 @@ header {
   margin-right: 4rem;
 }
 
-@media (max-width: 1024px) {
-  header {
-    margin-left: 3rem;
-    margin-right: 3rem;
-    gap: 1.25rem;
-  }
-
-  .logo-titulo {
-    font-size: 1.6rem;
-  }
-
-  .img-logo {
-    height: 5.5rem;
-  }
-
-  .opciones-header {
-    gap: 0.35rem;
-  }
-}
-
 .caja-logo {
   display: flex;
   align-items: center;

@@ -14,7 +14,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
   margin-top: 3rem;
   margin-left: 4rem;
   margin-right: 4rem;
@@ -40,6 +40,7 @@ header {
   align-items: center;
   justify-content: space-evenly;
   flex: 4;
+  gap: 0.5rem;
 }
 
 .enlaces-header a {
@@ -51,7 +52,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  flex: 3;
+  flex: 6;
   gap: 0.5rem;
 }
 
@@ -64,6 +65,7 @@ header {
 .btn-seleccionar-moneda {
   font-weight: 550;
   font-size: 2rem;
+  width: auto;
 }
 
 .btn-faq {
@@ -110,6 +112,8 @@ header {
 
 .iniciar-sesion {
   text-decoration: none;
+  text-align: center;
+  padding: 0.7rem;
 }
 
 .caja-busqueda {
@@ -253,11 +257,10 @@ select {
 
 .caja-viajes-premium {
   display: flex;
-  gap: 10rem;
+  gap: 5rem;
 }
 
 .viaje-premium {
-  width: 20rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -277,7 +280,7 @@ select {
 }
 
 .imagen-viaje-premium {
-  width: 20rem;
+  width: 100%;
   aspect-ratio: 1/1;
 
   border-radius: 1rem;
@@ -817,4 +820,150 @@ footer {
 .theme-dark .parrafo-viajar-esta-vez,
 .theme-dark .parrafo-viaje-premium {
   color: var(--text);
+}
+
+/* Diseño responsive */
+@media (max-width: 1150px) {
+  .enlaces-header {
+    flex-direction: column;
+    gap: 1rem;
+    flex: 2;
+    text-align: center;
+  }
+
+  .img-logo {
+    height: 4rem;
+  }
+
+  .opciones-header {
+    display: grid;
+    gap: 0.2rem;
+    justify-items: center;
+    align-items: center;
+    /* definimos 3 columnas */
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Primer elemento ocupa columna 1 por ejemplo */
+  .opciones-header div:nth-child(1) {
+    grid-column: 1;
+  }
+  .opciones-header div:nth-child(2) {
+    grid-column: 2;
+  }
+  .opciones-header div:nth-child(3) {
+    grid-column: 3;
+  }
+
+  /* Segunda fila, solo 2 elementos */
+  .opciones-header div:nth-child(4) {
+    grid-column: 1;
+  }
+  .opciones-header div:nth-child(5) {
+    grid-column: 2;
+  }
+
+  .opciones-header button {
+    margin-right: 0;
+  }
+
+  .iniciar-sesion {
+    text-align: center;
+  }
+
+  .fuente-encabezado-1 {
+    font-size: 2.4rem;
+  }
+
+  .fuente-titulo {
+    font-size: 2.6rem;
+  }
+
+  .parrafo-viajar-esta-vez {
+    font-size: medium;
+  }
+
+  .titulo-parrafo-viaje-premium {
+  }
+
+  .parrafo-viaje-premium {
+    font-size: small;
+  }
+}
+
+.hamburger {
+  display: none; /* Ocultar el botón de hamburguesa en escritorio */
+  background: none;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  color: inherit; /* O el color que desees */
+}
+
+/* El menú colapsable y sus contenidos se muestran en escritorio */
+.menu-colapsable {
+  display: flex; /* Mantener la estructura original para escritorio */
+  /* ... otros estilos de alineación para la barra principal ... */
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1; /* Para que ocupe el espacio restante */
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    /* Asegúrate de que los elementos se posicionen correctamente */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Ajusta el padding de la cabecera */
+    position: relative; /* Importante para el posicionamiento absoluto del menú */
+  }
+
+  .hamburger {
+    display: block; /* Mostrar el botón de hamburguesa */
+    order: 2; /* Colocarlo después del logo si quieres que esté a la derecha */
+  }
+
+  /* Ocultar el menú colapsable por defecto */
+  .menu-colapsable {
+    display: none; /* Oculto inicialmente */
+    flex-direction: column; /* Apilar elementos verticalmente */
+    position: absolute; /* Colocar el menú debajo de la cabecera */
+    top: 100%; /* Justo debajo del header */
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Fondo para el menú (ajusta a tu diseño) */
+    border-top: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    z-index: 10;
+
+    /* Asegúrate de que los contenidos del menú también se apilen */
+    align-items: center;
+  }
+
+  /* Mostrar el menú cuando tenga la clase 'active' */
+  .menu-colapsable.active {
+    display: flex;
+  }
+
+  /* Estilos para los contenidos dentro del menú colapsable en móvil */
+  .enlaces-header,
+  .opciones-header {
+    flex-direction: column; /* Apilar enlaces y opciones */
+    width: 90%;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee; /* Separador */
+  }
+
+  .opciones-header {
+    border-bottom: none; /* Quitar el separador del último grupo */
+  }
+
+  /* Ajuste para que los elementos dentro de opciones-header se centren o se comporten bien */
+  .opciones-header > * {
+    margin: 5px 0;
+  }
 }
