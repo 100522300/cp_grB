@@ -3,7 +3,7 @@ import { obtenerReservas, obtenerReservasCoches, eliminarReservaCoche } from "./
 /* Funcion para pintar las reservas de viajes */
 export function pintarReservas() {
   var gridActuales = document.querySelector(".reservas-section .grid-reservas");
-  var gridPasadas = document.querySelector(".reservas-section .grid-pasadas");
+
 
   if (!gridActuales) {
     return;
@@ -13,9 +13,6 @@ export function pintarReservas() {
 
   /* Limpiamos lo que habia antes */
   gridActuales.innerHTML = "";
-  if (gridPasadas) {
-    gridPasadas.innerHTML = "";
-  }
 
   if (reservas.length === 0) {
     var parrafo = document.createElement("p");
