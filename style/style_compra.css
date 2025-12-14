@@ -12,86 +12,6 @@ body {
   background: #fff;
 }
 
-/* Cabecera */
-.cabecera-compra {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 3rem 6rem 0 4rem;
-  gap: 8%;
-}
-
-.caja-logo {
-  display: flex;
-  align-items: center;
-  flex: 2.5;
-}
-
-.img-logo {
-  height: 6.7rem;
-}
-
-.logo-titulo {
-  font-weight: 650;
-  font-size: xx-large;
-}
-
-.enlaces-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex: 4;
-  gap: 1.5rem;
-}
-
-.enlaces-header a {
-  text-decoration: none;
-  color: #111;
-  font-weight: 500;
-}
-.btn-seleccionar-idioma {
-  display: flex;
-  height: 3rem;
-  aspect-ratio: 1/1;
-}
-
-.btn-seleccionar-moneda {
-  font-weight: 550;
-  font-size: 2rem;
-}
-
-.btn-faq {
-  display: flex;
-  height: 3rem;
-  aspect-ratio: 1/1;
-}
-
-.btn {
-  background-color: black;
-  color: white;
-  padding: 0.8rem;
-  border-radius: 0.5rem;
-  font-weight: bold;
-}
-
-button {
-  background-color: transparent;
-  border: none;
-}
-
-/*Menu de tres rayas*/
-.menu-icon {
-  display: none;
-  padding: 0.25rem;
-}
-
-.icono-menu-img {
-  display: block;
-  width: 1.75rem;
-  height: 1.75rem;
-  object-fit: contain;
-}
-
 /* Contenido principal */
 .compra-main {
   margin: 2.5rem auto 4rem;
@@ -332,10 +252,6 @@ footer {
   .cabecera-compra {
     margin: 1.5rem 1.5rem 0 1.5rem;
     gap: 1rem;
-  }
-
-  .enlaces-header {
-    display: none;
   }
 
   .opciones-header {
