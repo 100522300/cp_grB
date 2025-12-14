@@ -15,6 +15,7 @@
   <script src="script/logout.js" defer></script>
   <script src="script/theme.js" defer></script>
   <script src="script/recent.js" defer></script>
+  <script src="script/newsletter.js" defer></script>
   <script type="module" src="script/script_perfil.js" defer></script>
   <script type="module" src="script/reservas_view.js" defer></script>
 </head>
@@ -29,7 +30,7 @@
     <div class="enlaces-header">
       <a>Otros rincones</a>
       <a>Sobre nosotros</a>
-      <a>Newsletter</a>
+      <a href="newlester.html">Newsletter</a>
     </div>
 
     <div class="opciones-header">
@@ -49,7 +50,6 @@
         <img src="images/question-mark.png" alt="FAQ" />
       </button>
 
-      <!-- IMPORTANTE: data-logout + class CerrarSesion para que el JS lo encuentre sí o sí -->
       <button class="btn iniciar-sesion CerrarSesion" type="button" data-logout>
         Cerrar sesión
       </button>
@@ -73,6 +73,10 @@
       <div class="perfil-foto-contenedor">
         <div class="perfil-foto" role="img" aria-label="Foto de perfil"></div>
         <p class="estado-suscripcion">Suscripción a newsletter inactiva</p>
+
+        <button id="btn-gestionar-newsletter" class="btn btn-gestionar-newsletter oculto" type="button">
+          Gestionar suscripción
+        </button>
       </div>
     </section>
 
@@ -80,15 +84,13 @@
       <div class="favoritos">
         <h2 class="subtitulo">Mis favoritos</h2>
         <ul class="lista-favoritos">
-          <!-- Placeholder (favorites.js la reemplaza en runtime) -->
           <li class="fav-placeholder">Aún no tienes favoritos</li>
         </ul>
       </div>
 
       <div class="vistos">
         <h2 class="subtitulo">Vistos recientemente</h2>
-        <div class="caja-vistos">
-        </div>
+        <div class="caja-vistos"></div>
       </div>
     </section>
 
@@ -151,7 +153,16 @@
     </section>
   </main>
 
-  <!-- MODAL LOGOUT (limpio, sin basura `n`) -->
+  <dialog id="newsletter-ventana" class="modal-logout" aria-labelledby="newsletter-titulo">
+    <h2 id="newsletter-titulo" class="modal-logout__title">¿Quieres darte de baja?</h2>
+    <p class="modal-logout__text">Dejarás de recibir nuestra newsletter.</p>
+
+    <div class="modal-logout__actions">
+      <button type="button" id="newsletter-cancel" class="modal-btn modal-btn--ghost">Cancelar</button>
+      <button type="button" id="newsletter-confirm" class="modal-btn modal-btn--danger">Darme de baja</button>
+    </div>
+  </dialog>
+
   <dialog id="cerrar-sesion-ventana" class="modal-logout" aria-labelledby="cerrar-sesion-titulo">
     <h2 id="cerrar-sesion-titulo" class="modal-logout__title">¿Quieres cerrar sesión?</h2>
     <p class="modal-logout__text">Perderás el acceso a tu perfil hasta que vuelvas a iniciar sesión.</p>
