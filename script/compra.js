@@ -215,6 +215,19 @@ function validar_formulario_compra(e) {
     precio: precioReserva,
   });
 
+  /* GUARDAR FECHA PARA EL CONTADOR (SIMPLE) */
+  try {
+    var sesion_actual = JSON.parse(localStorage.getItem("sesion"));
+    if (sesion_actual && sesion_actual.login) {
+      // Guardamos la fecha con la clave personalizada del usuario
+      var clave = "proxima_reserva_" + sesion_actual.login;
+      // Guardamos la fecha de salida que puso en el formulario
+      localStorage.setItem(clave, fechaSalida.value);
+    }
+  } catch (error) {
+    // Si falla no pasa nada
+  }
+
   alert("Compra realizada correctamente.");
   window.location.href = "pagina_principal.html";
   botonesMascota.forEach((btn) => btn.classList.remove("activo"));

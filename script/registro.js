@@ -58,7 +58,7 @@ function validarFormulario(e) {
 
   if (!validar_password(pass1)) {
     alert(
-      "La contraseña debe tener 8 caracteres, al menos 2 números, 1 mayúscula, 1 minúscula y 1 símbolo."
+      "La contraseña debe tener al menos 8 caracteres, 1 mayúscula, 1 número y 1 carácter especial."
     );
     return;
   }

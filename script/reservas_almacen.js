@@ -70,7 +70,7 @@ export function obtenerReservas() {
 export function guardarReservaCoche(reserva) {
   var sesion = obtenerSesion();
   if (!sesion.login) {
-    return;
+    return false;
   }
 
   var usuarios = obtenerUsuarios();
@@ -81,8 +81,14 @@ export function guardarReservaCoche(reserva) {
     miUsuario.reservasCoches = [];
   }
 
+  /* RESTRICCION: Maximo 2 coches */
+  if (miUsuario.reservasCoches.length >= 2) {
+    return false;
+  }
+
   miUsuario.reservasCoches.push(reserva);
   guardarUsuarios(usuarios);
+  return true;
 }
 
 export function obtenerReservasCoches() {

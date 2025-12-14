@@ -3,6 +3,25 @@ import { guardarReservaCoche } from "./reservas_almacen.js";
 
 document.addEventListener("DOMContentLoaded", function () {
 
+  // Cargar imagen de perfil
+  const sesion = JSON.parse(localStorage.getItem("sesion"));
+  if (sesion && sesion.imagen) {
+    const imgPerfil = document.querySelector(".imagen-perfil-usuario");
+    if (imgPerfil) {
+      imgPerfil.src = sesion.imagen;
+    }
+  } else if (sesion && sesion.login) {
+    // Fallback si no hay imagen en sesion pero si login (buscar en usuarios)
+    const usuarios = JSON.parse(localStorage.getItem("usuarios") || "{}");
+    const usuario = usuarios[sesion.login];
+    if (usuario && usuario.imagen) {
+      const imgPerfil = document.querySelector(".imagen-perfil-usuario");
+      if (imgPerfil) {
+        imgPerfil.src = usuario.imagen;
+      }
+    }
+  }
+
   /* Configurar la fecha mínima (mañana) */
   var input_fecha = document.getElementById("fecha-alquiler");
 
@@ -146,7 +165,17 @@ document.addEventListener("DOMContentLoaded", function () {
         precioTotal: total,
         cobertura: nombre_cobertura
       };
-      guardarReservaCoche(reservaObj);
+
+      /* Intentamos guardar */
+      /* Si devuelve false y estamos logueados, es por el limite */
+      var sesion_activa = localStorage.getItem("sesion");
+      if (sesion_activa) {
+        var resultado = guardarReservaCoche(reservaObj);
+        if (resultado === false) {
+          alert("¡Ya tienes 2 coches reservados! No puedes reservar más por ahora.");
+          return; /* Paramos aqui, no mostramos resumen ni reseteamos */
+        }
+      }
 
       alert(mensaje);
 
