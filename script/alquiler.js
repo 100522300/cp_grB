@@ -3,6 +3,25 @@ import { guardarReservaCoche } from "./reservas_almacen.js";
 
 document.addEventListener("DOMContentLoaded", function () {
 
+  // Cargar imagen de perfil
+  const sesion = JSON.parse(localStorage.getItem("sesion"));
+  if (sesion && sesion.imagen) {
+    const imgPerfil = document.querySelector(".imagen-perfil-usuario");
+    if (imgPerfil) {
+      imgPerfil.src = sesion.imagen;
+    }
+  } else if (sesion && sesion.login) {
+    // Fallback si no hay imagen en sesion pero si login (buscar en usuarios)
+    const usuarios = JSON.parse(localStorage.getItem("usuarios") || "{}");
+    const usuario = usuarios[sesion.login];
+    if (usuario && usuario.imagen) {
+      const imgPerfil = document.querySelector(".imagen-perfil-usuario");
+      if (imgPerfil) {
+        imgPerfil.src = usuario.imagen;
+      }
+    }
+  }
+
   /* Configurar la fecha mínima (mañana) */
   var input_fecha = document.getElementById("fecha-alquiler");
 
