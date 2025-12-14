@@ -81,6 +81,10 @@ footer {
   margin-bottom: 2rem;
 }
 
+.flechas-resultados {
+  margin-bottom: 2rem;
+}
+
 .btn {
   background-color: black;
   color: white;
@@ -337,7 +341,6 @@ button:hover {
   color: #828282;
 }
 
-
 /* Carrusel de opiniones */
 
 .opinion-form button {
@@ -441,13 +444,38 @@ button:hover {
 
 @media (max-width: 1200px) {
   .opinion-card {
-    flex: 0 0 calc((100% - 40px)/3);
+    flex: 0 0 calc((100% - 40px) / 3);
+  }
+
+  .opiniones-usuarios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2rem;
+    padding-left: 2rem;
   }
 }
 
 @media (max-width: 900px) {
   .opinion-card {
-    flex: 0 0 calc((100% - 20px)/2);
+    flex: 0 0 calc((100% - 20px) / 2);
+  }
+  .mas-resultados-ejemplos {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .resultado-card {
+    width: 70%;
+  }
+
+  .titulo-opiniones {
+    font-size: 1.8rem;
   }
 }
 
