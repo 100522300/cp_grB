@@ -5,44 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PackUrBag | Newsletter</title>
   <link rel="stylesheet" href="style/style_new.css">
-    <link rel="stylesheet" href="style/theme.css">
+  <link rel="stylesheet" href="style/theme.css">
   <link rel="icon" href="images/logo_recortado.PNG">
   <link rel="stylesheet" href="style/currency-ui.css">
   <script src="script/currency.js" defer></script>
-    <script src="script/theme.js" defer></script>
-  <script type="module" src="script/script_newsletter.js" defer></script>
+  <script src="script/theme.js" defer></script>
+  <script src="script/newsletter.js" defer></script>
 </head>
+
 <body class="newsletter-body">
   <header class="cabecera-newsletter">
     <div class="bloque-marca">
       <p class="nombre-marca">PackUrBag</p>
       <img class="logo-marca" src="images/logo_recortado_blanco.PNG" alt="Logo PackUrBag">
     </div>
+
     <select id="currency-select" class="btn-seleccionar-moneda">
+      <option value="EUR">EUR (‚Ç¨)</option>
+      <option value="USD">USD ($)</option>
+      <option value="GBP">GBP (¬£)</option>
+    </select>
 
-            <option value="EUR">EUR (Ä)</option>
+    <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
 
-            <option value="USD">USD ($)</option>
-
-            <option value="GBP">GBP (£)</option>
-
-          </select>
-            <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
-    <a class="boton-enlace" href="pagina_principal.html">Pagina principal</a>
+    <a class="boton-enlace" href="pagina_principal.html">P√°gina principal</a>
   </header>
 
   <main class="cuerpo-newsletter">
     <section class="texto-newsletter">
-      <h1 class="titulo-newsletter">SuscrÌbete a nuestra<br>newsletter</h1>
+      <h1 class="titulo-newsletter">Suscr√≠bete a nuestra<br>newsletter</h1>
       <p class="subtitulo-newsletter">
-        SuscrÌbete y recibe una vez al mes en tu correo electrÛnico todas las novedades,
-        informaciÛn sobre destinos, ofertas de viaje y mucho m·s
+        Suscr√≠bete y recibe una vez al mes en tu correo electr√≥nico todas las novedades,
+        informaci√≥n sobre destinos, ofertas de viaje y mucho m√°s
       </p>
     </section>
 
     <form class="form-newsletter" novalidate>
       <div class="campo-newsletter">
-        <label for="correo">DirecciÛn de correo electrÛnico</label>
+        <label for="correo">Direcci√≥n de correo electr√≥nico</label>
         <input type="email" id="correo" name="correo" placeholder="email@dominioejemplo.com">
       </div>
 
@@ -52,25 +52,26 @@
       </label>
 
       <p class="texto-legal-newsletter">
-        PACKURBAG S.L. tratar· sus datos personales para gestionar la relaciÛn con Usted y para remitirle nuestra
-        newsletter con las novedades, encuestas, concursos, promociones y noticias sobre la web packurbag.com. Ud.
-        podr· darse de baja en cualquier momento. Asimismo, cuando lo considere oportuno, podr· presentar una
-        reclamaciÛn ante la Agencia EspaÒola de ProtecciÛn de Datos. Podr· ponerse en contacto con nuestro Delegado de
-        ProtecciÛn de Datos mediante escrito dirigido a packurbag@atencion.com
+        PACKURBAG S.L. tratar√° sus datos personales para gestionar la relaci√≥n con usted y para remitirle nuestra
+        newsletter con las novedades, encuestas, concursos, promociones y noticias sobre la web packurbag.com. Usted
+        podr√° darse de baja en cualquier momento. Asimismo, cuando lo considere oportuno, podr√° presentar una
+        reclamaci√≥n ante la Agencia Espa√±ola de Protecci√≥n de Datos. Podr√° ponerse en contacto con nuestro Delegado de
+        Protecci√≥n de Datos mediante escrito dirigido a packurbag@atencion.com
       </p>
 
       <button type="submit" class="boton-principal-form">Suscribirse</button>
     </form>
   </main>
+
   <div class="modal-confirmacion modal-newsletter">
     <div class="contenido">
-      <h1>? SuscripciÛn activa ?</h1>
-      <p>Este ser· el contenido que recibir·s en nuestra newsletter:</p>
+      <h1>Suscripci√≥n activa</h1>
+      <p>Este ser√° el contenido que recibir√°s en nuestra newsletter:</p>
       <ul>
-        <li>?? InspiraciÛn para prÛximos viajes</li>
-        <li>?? Recomendaciones de destinos seg˙n temporada</li>
-        <li>?? Consejos para viajar mejor y ahorrar</li>
-        <li>?? InformaciÛn sobre nuevas ofertas exclusivas</li>
+        <li>Inspiraci√≥n para pr√≥ximos viajes</li>
+        <li>Recomendaciones de destinos seg√∫n temporada</li>
+        <li>Consejos para viajar mejor y ahorrar</li>
+        <li>Informaci√≥n sobre nuevas ofertas exclusivas</li>
       </ul>
       <button class="btn-confirmar btn-cerrar-newsletter">Cerrar</button>
     </div>

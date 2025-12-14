@@ -520,9 +520,7 @@ footer {
   }
 }
 
-
-/*Cerrar sesion */
-
+/* modal */
 .modal-logout{
   position: fixed;
   top: 50%;
@@ -536,13 +534,10 @@ footer {
   background: white;
 }
 
-
-/* Fondo oscuro detrás */
 .modal-logout::backdrop{
   background: rgba(0,0,0,0.5);
 }
 
-/* Título y texto */
 .modal-logout__title{
   margin: 0 0 10px 0;
   font-size: 18px;
@@ -554,14 +549,12 @@ footer {
   font-size: 14px;
 }
 
-/* Botones en fila */
 .modal-logout__actions{
   display: flex;
   justify-content: flex-end;
   gap: 10px;
 }
 
-/* Botones */
 .modal-btn{
   padding: 8px 12px;
   border-radius: 6px;
@@ -569,14 +562,22 @@ footer {
   cursor: pointer;
 }
 
-/* Cancelar */
 .modal-btn--ghost{
   background: #eee;
 }
 
-/* Confirmar */
 .modal-btn--danger{
   background: #ff4d4d;
   border-color: #ff4d4d;
   color: white;
+}
+
+/* boton gestionar newsletter */
+.btn-gestionar-newsletter{
+  padding: 0.55rem 0.85rem;
+  font-size: 0.95rem;
+}
+
+.oculto{
+  display: none;
 }
