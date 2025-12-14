@@ -212,3 +212,15 @@
     transform: translateY(0);
   }
 }
+
+/* Ajustes modo oscuro */
+.theme-dark .newsletter-body {
+  color: #fff;
+}
+
+.theme-dark .subtitulo-newsletter,
+.theme-dark .campo-newsletter label,
+.theme-dark .checkbox-politica,
+.theme-dark .texto-legal-newsletter {
+  color: #f2f2f2;
+}
