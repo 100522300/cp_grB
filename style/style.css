@@ -89,14 +89,15 @@ header {
 
 /* Avatar usuario en cabecera */
 .imagen-perfil-usuario {
-  width: 3rem;
-  height: 3rem;
+  aspect-ratio: 1/1;
+  width: 100%;
   border-radius: 50%;
   object-fit: cover;
   cursor: pointer;
 }
 
 .boton-perfil {
+  width: 5rem;
   padding: 0;
   background: transparent;
   border: none;
