@@ -373,13 +373,6 @@ footer {
     gap: 1rem;
   }
 
-  .enlaces-header,
-  .btn-seleccionar-moneda,
-  .btn-seleccionar-idioma,
-  .btn-faq {
-    display: none;
-  }
-
   .menu-icon {
     display: block;
   }
