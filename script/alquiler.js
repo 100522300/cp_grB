@@ -1,5 +1,5 @@
 /* Lógica para la página de alquiler - ACTUALIZADA CON PRECIO EN VIVO */
-import { guardarReservaCoche } from "./reservas_storage.js";
+import { guardarReservaCoche } from "./reservas_almacen.js";
 
 document.addEventListener("DOMContentLoaded", function () {
 

@@ -1,8 +1,8 @@
 "use strict";
 
-import { 
-  guardarReserva 
-} from "./reservas_storage.js";
+import {
+  guardarReserva
+} from "./reservas_almacen.js";
 
 /* ---- Datos desde la URL ---- */
 const params = new URLSearchParams(window.location.search);
@@ -108,7 +108,8 @@ function inicializarDestino() {
   if (destinoURL) {
     localStorage.setItem("destinoSeleccionado", destinoURL);
   }
-  if (Number.isFinite(precioURL)) {
+  // Solo guardamos si hay un precio válido en la URL (evitar sobrescribir con 0 al recargar)
+  if (Number.isFinite(precioURL) && precioURL > 0) {
     localStorage.setItem("precioSeleccionado", String(precioURL));
   }
 }
@@ -223,14 +224,37 @@ function validar_formulario_compra(e) {
 /* ---- Acciones ---- */
 inicializarDestino();
 
-if (btnAcompanante) {
-  btnAcompanante.addEventListener("click", crearAcompanante);
+/* ---- Precio Total ---- */
+function actualizarPrecioTotal() {
+  const precioBase = Number(localStorage.getItem("precioSeleccionado")) || 0;
+  const totalPersonas = 1 + contadorAcompanantes;
+  const total = precioBase * totalPersonas;
+
+  const spanPrecio = document.getElementById("precio-total-valor");
+  if (spanPrecio) {
+    spanPrecio.dataset.eur = total;
+    // Forzar actualización de moneda
+    const currencySelect = document.getElementById("currency-select");
+    if (currencySelect) currencySelect.dispatchEvent(new Event("change"));
+  }
 }
+
+/* inicializar */
+actualizarPrecioTotal();
+
+if (btnAcompanante) {
+  btnAcompanante.addEventListener("click", () => {
+    crearAcompanante();
+    actualizarPrecioTotal();
+  });
+}
+
 if (botonesMascota.length) {
   botonesMascota.forEach((btn) => {
     btn.addEventListener("click", () => toggleMascota(btn));
   });
 }
+
 if (form) {
   setMinFecha(fechaSalida);
   setMinFecha(fechaRegreso);
