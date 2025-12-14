@@ -26,7 +26,7 @@ function iniciarCarrusel() {
         moverDerechaOceania();
         moverDerechaAmericaDelNorte();
         moverDerechaAmericaDelSur();
-    }, 3500);
+    }, 30000);
 
     /* Llamamos a distintas funciones en función del botón pulsado para Europa */
     document.getElementById("flechaIzquierdaEuropa").addEventListener("click", moverIzquierdaEuropa);
@@ -136,7 +136,7 @@ function moverIzquierdaEuropa() {
         moverDerechaOceania();
         moverDerechaAmericaDelNorte();
         moverDerechaAmericaDelSur();
-    }, 3500);
+    }, 30000);
 }
 
 
@@ -154,7 +154,7 @@ function moverDerechaEuropa() {
         moverDerechaOceania();
         moverDerechaAmericaDelNorte();
         moverDerechaAmericaDelSur();
-    }, 3500);
+    }, 30000);
 }
 
 
@@ -213,7 +213,7 @@ function moverIzquierdaAsia() {
         moverDerechaOceania();
         moverDerechaAmericaDelNorte();
         moverDerechaAmericaDelSur();
-    }, 3500);
+    }, 30000);
 }
 
 
@@ -231,7 +231,7 @@ function moverDerechaAsia() {
         moverDerechaOceania();
         moverDerechaAmericaDelNorte();
         moverDerechaAmericaDelSur();
-    }, 3500);
+    }, 30000);
 }
 
 
@@ -276,7 +276,7 @@ function moverIzquierdaAfrica() {
         moverDerechaOceania();
         moverDerechaAmericaDelNorte();
         moverDerechaAmericaDelSur();
-    }, 3500);
+    }, 30000);
 }
 
 
@@ -294,7 +294,7 @@ function moverDerechaAfrica() {
         moverDerechaOceania();
         moverDerechaAmericaDelNorte();
         moverDerechaAmericaDelSur();
-    }, 3500);
+    }, 30000);
 }
 
 
@@ -339,7 +339,7 @@ function moverIzquierdaOceania() {
         moverDerechaOceania();
         moverDerechaAmericaDelNorte();
         moverDerechaAmericaDelSur();
-    }, 3500);
+    }, 30000);
 }
 
 
@@ -357,7 +357,7 @@ function moverDerechaOceania() {
         moverDerechaOceania();
         moverDerechaAmericaDelNorte();
         moverDerechaAmericaDelSur();
-    }, 3500);
+    }, 30000);
 }
 
 
@@ -402,7 +402,7 @@ function moverIzquierdaAmericaDelNorte() {
         moverDerechaOceania();
         moverDerechaAmericaDelNorte();
         moverDerechaAmericaDelSur();
-    }, 3500);
+    }, 30000);
 }
 
 
@@ -420,7 +420,7 @@ function moverDerechaAmericaDelNorte() {
         moverDerechaOceania();
         moverDerechaAmericaDelNorte();
         moverDerechaAmericaDelSur();
-    }, 3500);
+    }, 30000);
 }
 
 
@@ -465,7 +465,7 @@ function moverIzquierdaAmericaDelSur() {
         moverDerechaOceania();
         moverDerechaAmericaDelNorte();
         moverDerechaAmericaDelSur();
-    }, 3500);
+    }, 30000);
 }
 
 
@@ -483,5 +483,5 @@ function moverDerechaAmericaDelSur() {
         moverDerechaOceania();
         moverDerechaAmericaDelNorte();
         moverDerechaAmericaDelSur();
-    }, 3500);
+    }, 30000);
 }
