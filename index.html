@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -14,12 +14,12 @@
     <script src="script/theme.js" defer></script>
     <script src="script/busqueda.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
-    <script type="module" src="script/script_principal.js" defer></script>
+    <script type="module" src="script/script_principal.js"></script>
     <script src="script/carrusel_automatico.js" defer></script>
     <script src="script/carrusel.js" defer></script>
-    <script type="module" src="script/viajes_click.js" defer></script>
+    <script type="module" src="script/viajes_click.js"></script>
     <script src="script/compra_destino.js" defer></script>
-    <script type="module" src="script/redirigir.js" defer></script>
+    <script type="module" src="script/redirigir.js"></script>
 </head>
 
 <body>
@@ -57,13 +57,12 @@
                     <img src="images/idioma.jpg" alt="Idioma" class="icono-bandera">
                     <div id="google_translate_element"></div>
                 </div>
-                <script type="text/javascript">
+                <script>
                     function googleTranslateElementInit() {
                         new google.translate.TranslateElement({ pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
                     }
                 </script>
-                <script type="text/javascript"
-                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
                 <a href="formulario_sesion.html" class="btn iniciar-sesion">Iniciar sesión</a>
             </div>
@@ -71,7 +70,7 @@
     </header>
 
     <main>
-        <section class="caja-busqueda">
+        <div class="caja-busqueda">
             <p class="fuente-encabezado-1">Encuentra el destino con el que siempre has soñado</p>
             <div class="barra-busqueda">
                 <div class="apartado-busqueda">
@@ -88,7 +87,8 @@
                 <div class="apartado-busqueda busqueda-fecha">
                     <!-- Label oculto para lectores de pantalla -->
                     <label for="fecha" class="sr-only">Fecha de salida</label>
-                    <input type="text" id="fecha" placeholder="Fecha de salida" class="flatpickr-input" readonly="readonly">
+                    <input type="text" id="fecha" placeholder="Fecha de salida" class="flatpickr-input"
+                        readonly="readonly">
                     <img src="images/calendario.png" class="img-busqueda" alt="Ícono de calendario">
                 </div>
 
@@ -97,18 +97,18 @@
                 </button>
 
             </div>
-        </section>
+        </div>
 
-        <section class="caja-viajar-esta-vez">
+        <div class="caja-viajar-esta-vez">
             <p class="fuente-titulo titulo-viajar-esta-vez">¿A dónde vas a viajar esta vez?
             </p>
             <p class="parrafo-viajar-esta-vez">Queremos ofrecerte nuestras mejores experiencias, porque sabemos que los
                 mejores recuerdos se consiguen
                 explorando sin preocupaciones. Echa un vistazo a nuestros entrañables paisajes.</p>
             <div class="imagen-viajar-esta-vez"></div>
-        </section>
+        </div>
 
-        <section class="caja-mas-premium">
+        <div class="caja-mas-premium">
             <p class="fuente-encabezado-1 titulo-viajes-premium">O date un capricho con nuestros viajes más premium</p>
             <div class="caja-viajes-premium">
                 <div class="viaje-premium">
@@ -136,8 +136,8 @@
                         todas las comodidades.</p>
                 </div>
             </div>
-        </section>
-        <section class="caja-otros-rincones" id="scroll-rincones">
+        </div>
+        <div class="caja-otros-rincones" id="scroll-rincones">
             <p class="fuente-encabezado-1">También te ayudamos a decidirte con otros rincones</p>
             <div class="caja-display-continentes">
 
@@ -150,22 +150,31 @@
                         <div class="caja-flechas">
                             <!-- Botones de flecha con aria-label descriptivo -->
                             <button class="btn-flecha-izq" id="flechaIzquierdaEuropa" aria-label="Ir a la izquierda">
-                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6" stroke="#bfbfbf" stroke-width="1"></rect>
-                                <g transform="translate(15, 15)">
-                                    <path d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5" stroke="#BFBFBF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </g>
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6"
+                                        stroke="#bfbfbf" stroke-width="1"></rect>
+                                    <g transform="translate(15, 15)">
+                                        <path
+                                            d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                            stroke="#BFBFBF" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </g>
                                 </svg>
                             </button>
 
                             <button class="btn-flecha-der" id="flechaDerechaEuropa" aria-label="Ir a la derecha">
-                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9"></rect>
-                                <g transform="translate(15, 15)">
-                                    <g transform="rotate(180, 10, 10)">
-                                    <path d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5" stroke="#1E1E1E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9"></rect>
+                                    <g transform="translate(15, 15)">
+                                        <g transform="rotate(180, 10, 10)">
+                                            <path
+                                                d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                                stroke="#1E1E1E" stroke-width="3" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                        </g>
                                     </g>
-                                </g>
                                 </svg>
                             </button>
                         </div>
@@ -441,22 +450,31 @@
                         <div class="caja-flechas">
                             <!-- Botones de flecha con aria-label descriptivo -->
                             <button class="btn-flecha-izq" id="flechaIzquierdaAsia" aria-label="Ir a la izquierda">
-                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6" stroke="#bfbfbf" stroke-width="1"></rect>
-                                <g transform="translate(15, 15)">
-                                    <path d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5" stroke="#BFBFBF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </g>
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6"
+                                        stroke="#bfbfbf" stroke-width="1"></rect>
+                                    <g transform="translate(15, 15)">
+                                        <path
+                                            d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                            stroke="#BFBFBF" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </g>
                                 </svg>
                             </button>
 
                             <button class="btn-flecha-der" id="flechaDerechaAsia" aria-label="Ir a la derecha">
-                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9"></rect>
-                                <g transform="translate(15, 15)">
-                                    <g transform="rotate(180, 10, 10)">
-                                    <path d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5" stroke="#1E1E1E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9"></rect>
+                                    <g transform="translate(15, 15)">
+                                        <g transform="rotate(180, 10, 10)">
+                                            <path
+                                                d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                                stroke="#1E1E1E" stroke-width="3" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                        </g>
                                     </g>
-                                </g>
                                 </svg>
                             </button>
                         </div>
@@ -598,22 +616,31 @@
                         <div class="caja-flechas">
                             <!-- Botones de flecha con aria-label descriptivo -->
                             <button class="btn-flecha-izq" id="flechaIzquierdaAfrica" aria-label="Ir a la izquierda">
-                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6" stroke="#bfbfbf" stroke-width="1"></rect>
-                                <g transform="translate(15, 15)">
-                                    <path d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5" stroke="#BFBFBF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </g>
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6"
+                                        stroke="#bfbfbf" stroke-width="1"></rect>
+                                    <g transform="translate(15, 15)">
+                                        <path
+                                            d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                            stroke="#BFBFBF" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </g>
                                 </svg>
                             </button>
 
                             <button class="btn-flecha-der" id="flechaDerechaAfrica" aria-label="Ir a la derecha">
-                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9"></rect>
-                                <g transform="translate(15, 15)">
-                                    <g transform="rotate(180, 10, 10)">
-                                    <path d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5" stroke="#1E1E1E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9"></rect>
+                                    <g transform="translate(15, 15)">
+                                        <g transform="rotate(180, 10, 10)">
+                                            <path
+                                                d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                                stroke="#1E1E1E" stroke-width="3" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                        </g>
                                     </g>
-                                </g>
                                 </svg>
                             </button>
                         </div>
@@ -695,22 +722,31 @@
                         <div class="caja-flechas">
                             <!-- Botones de flecha con aria-label descriptivo -->
                             <button class="btn-flecha-izq" id="flechaIzquierdaOceania" aria-label="Ir a la izquierda">
-                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6" stroke="#bfbfbf" stroke-width="1"></rect>
-                                <g transform="translate(15, 15)">
-                                    <path d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5" stroke="#BFBFBF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </g>
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6"
+                                        stroke="#bfbfbf" stroke-width="1"></rect>
+                                    <g transform="translate(15, 15)">
+                                        <path
+                                            d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                            stroke="#BFBFBF" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </g>
                                 </svg>
                             </button>
 
                             <button class="btn-flecha-der" id="flechaDerechaOceania" aria-label="Ir a la derecha">
-                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9"></rect>
-                                <g transform="translate(15, 15)">
-                                    <g transform="rotate(180, 10, 10)">
-                                    <path d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5" stroke="#1E1E1E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9"></rect>
+                                    <g transform="translate(15, 15)">
+                                        <g transform="rotate(180, 10, 10)">
+                                            <path
+                                                d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                                stroke="#1E1E1E" stroke-width="3" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                        </g>
                                     </g>
-                                </g>
                                 </svg>
                             </button>
                         </div>
@@ -790,23 +826,34 @@
                         <p class="fuente-encabezado-1">América del Norte</p>
                         <div class="caja-flechas">
                             <!-- Botones de flecha con aria-label descriptivo -->
-                            <button class="btn-flecha-izq" id="flechaIzquierdaAmericaDelNorte" aria-label="Ir a la izquierda">
-                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6" stroke="#bfbfbf" stroke-width="1"></rect>
-                                <g transform="translate(15, 15)">
-                                    <path d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5" stroke="#BFBFBF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </g>
+                            <button class="btn-flecha-izq" id="flechaIzquierdaAmericaDelNorte"
+                                aria-label="Ir a la izquierda">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6"
+                                        stroke="#bfbfbf" stroke-width="1"></rect>
+                                    <g transform="translate(15, 15)">
+                                        <path
+                                            d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                            stroke="#BFBFBF" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </g>
                                 </svg>
                             </button>
 
-                            <button class="btn-flecha-der" id="flechaDerechaAmericaDelNorte" aria-label="Ir a la derecha">
-                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9"></rect>
-                                <g transform="translate(15, 15)">
-                                    <g transform="rotate(180, 10, 10)">
-                                    <path d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5" stroke="#1E1E1E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <button class="btn-flecha-der" id="flechaDerechaAmericaDelNorte"
+                                aria-label="Ir a la derecha">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9"></rect>
+                                    <g transform="translate(15, 15)">
+                                        <g transform="rotate(180, 10, 10)">
+                                            <path
+                                                d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                                stroke="#1E1E1E" stroke-width="3" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                        </g>
                                     </g>
-                                </g>
                                 </svg>
                             </button>
                         </div>
@@ -889,23 +936,33 @@
                         <p class="fuente-encabezado-1">América del Sur</p>
                         <div class="caja-flechas">
                             <!-- Botones de flecha con aria-label descriptivo -->
-                            <button class="btn-flecha-izq" id="flechaIzquierdaAmericaDelSur" aria-label="Ir a la izquierda">
-                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6" stroke="#bfbfbf" stroke-width="1"></rect>
-                                <g transform="translate(15, 15)">
-                                    <path d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5" stroke="#BFBFBF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </g>
+                            <button class="btn-flecha-izq" id="flechaIzquierdaAmericaDelSur"
+                                aria-label="Ir a la izquierda">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6"
+                                        stroke="#bfbfbf" stroke-width="1"></rect>
+                                    <g transform="translate(15, 15)">
+                                        <path
+                                            d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                            stroke="#BFBFBF" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </g>
                                 </svg>
                             </button>
 
                             <button class="btn-flecha-der" id="flechaDerechaAmericaDelSur" aria-label="Ir a la derecha">
-                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9"></rect>
-                                <g transform="translate(15, 15)">
-                                    <g transform="rotate(180, 10, 10)">
-                                    <path d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5" stroke="#1E1E1E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9"></rect>
+                                    <g transform="translate(15, 15)">
+                                        <g transform="rotate(180, 10, 10)">
+                                            <path
+                                                d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
+                                                stroke="#1E1E1E" stroke-width="3" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                        </g>
                                     </g>
-                                </g>
                                 </svg>
                             </button>
                         </div>
@@ -978,12 +1035,12 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
 
 
         <!-- PARTE DEL CÓDIGO QUE MODELA SOBRE NOSOTROS -->
-        <section class="caja-sobre-nosotros" id="scroll-sobre-nosotros">
+        <div class="caja-sobre-nosotros" id="scroll-sobre-nosotros">
             <p class=fuente-encabezado-1>Sobre nosotros</p>
             <p>PackUrBag nació en 2021 con una idea sencilla: hacer que viajar sea más fácil, accesible y emocionante
                 para todos. Lo que comenzó como un proyecto entre amantes de los viajes, se ha convertido en una
@@ -1004,7 +1061,7 @@
                 que encuentres el destino perfecto. No importa si viajas solo, en pareja o con amigos, con PackUrBag tu
                 próxima aventura está a un clic de distancia.
             </p>
-        </section>
+        </div>
     </main>
 
     <footer>
@@ -1036,7 +1093,3 @@
 </body>
 
 </html>
-
-
-
-
