@@ -9,6 +9,57 @@
   font-weight: 400;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.theme-dark .resultados-body,
+.theme-dark .cuerpo-resultados,
+.theme-dark .mejor-valorado,
+.theme-dark .mas-resultados-contenedor,
+.theme-dark .opiniones-contenedor {
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+.theme-dark .informacion-destino,
+.theme-dark .no-reembolso,
+.theme-dark .tipo-hotel,
+.theme-dark .precio,
+.theme-dark .precio-mas {
+  color: var(--text);
+}
+
+.theme-dark .opinion-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.theme-dark .opinion-form textarea {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.theme-dark .resultado-card,
+.theme-dark .informacion-busqueda {
+  color: var(--text);
+}
+
+.theme-dark .titulo-perfil,
+.theme-dark .informacion-busqueda h2,
+.theme-dark .titulo-opiniones {
+  color: var(--text);
+}
+
 /* Cabecera styles removed - inherited from style.css */
 
 /*Decoración del footer*/

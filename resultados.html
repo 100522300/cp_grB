@@ -11,13 +11,12 @@
 
     <!-- Scripts -->
     <script src="script/currency.js" defer></script>
-    <script src="script/resultados_dinamico.js" defer></script>
+    <script src="script/destino.js" defer></script>
     <script src="script/favorites.js" defer></script>
     <script src="script/recent.js" defer></script>
     <script src="script/theme.js" defer></script>
-    <script src="script/destino.js" defer></script>
     <script src="script/opiniones.js" defer></script>
-    <script type="module" src="script/script_principal.js" defer></script>
+    <script type="module" src="script/script_principal.js"></script>
 </head>
 
 <body class="resultados-body">
@@ -58,13 +57,12 @@
                     <img src="images/idioma.jpg" alt="Idioma" class="icono-bandera">
                     <div id="google_translate_element"></div>
                 </div>
-                <script type="text/javascript">
+                <script>
                     function googleTranslateElementInit() {
                         new google.translate.TranslateElement({ pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
                     }
                 </script>
-                <script type="text/javascript"
-                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
                 <button class="boton-perfil" aria-label="Ir al perfil del usuario" onclick="window.location.href='perfil.html'">
                     <img class="imagen-perfil-usuario" src="images/hustle_hard_persona_2.jpg" alt="Usuario">
@@ -145,36 +143,41 @@
         </div>
 
         <!-- Más resultados -->
-        <h2 class="titulo-perfil">Más resultados</h2>
-        <section class="mas-resultados-ejemplos">
-            <article class="resultado-card">
-                <div class="imagen-comprar">
-                    <img class="imagen-1-busqueda" src="images/imagen1busqueda.jpg" alt="Vista del hotel en Tokyo">
-                    <button class="comprar-mas-resultados btn" onclick="location.href='compra.html'" aria-label="Comprar hotel en Tokyo">Comprar</button>
-                </div>
-                <h3>Tokyo</h3>
-                <p class="precio-mas"><span class="js-price" data-eur="1850"></span></p>
-                <p class="tipo-hotel">Hotel 7 noches</p>
-            </article>
-            <article class="resultado-card">
-                <div class="imagen-comprar">
-                    <img class="imagen-1-busqueda" src="images/imagen2busqueda.jpg" alt="Vista del hotel con visita guiada en Tokyo">
-                    <button class="comprar-mas-resultados btn" onclick="location.href='compra.html'" aria-label="Comprar hotel con visita guiada en Tokyo">Comprar</button>
-                </div>
-                <h3>Tokyo</h3>
-                <p class="precio-mas"><span class="js-price" data-eur="590"></span></p>
-                <p class="tipo-hotel">Hotel más visita guiada</p>
-            </article>
-            <article class="resultado-card">
-                <div class="imagen-comprar">
-                    <img class="imagen-1-busqueda" src="images/imagen3busqueda.jpg" alt="Hotel de lujo con vuelo y tour en Tokyo">
-                    <button class="comprar-mas-resultados btn" onclick="location.href='compra.html'" aria-label="Comprar hotel de lujo con vuelo y tour en Tokyo">Comprar</button>
-                </div>
-                <h3>Tokyo</h3>
-                <p class="precio-mas"><span class="js-price" data-eur="3400"></span></p>
-                <p class="tipo-hotel">Hotel lujo + vuelo + tour</p>
-            </article>
-        </section>
+        <div class="mas-resultados-contenedor">
+            <p class="titulo-perfil">Más resultados</p>
+            <section class="mas-resultados-ejemplos">
+                <article class="resultado-card">
+                    <div class="imagen-comprar">
+                        <img class="imagen-1-busqueda" src="images/imagen1busqueda.jpg">
+                        <button class="comprar-mas-resultados btn"
+                            onclick="location.href='compra.html'">Comprar</button>
+                    </div>
+                    <h3>Tokyo</h3>
+                    <p class="precio-mas"><span class="js-price" data-eur="1850"></span></p>
+                    <p class="tipo-hotel">Hotel 7 noches</p>
+                </article>
+                <article class="resultado-card">
+                    <div class="imagen-comprar">
+                        <img class="imagen-1-busqueda" src="images/imagen2busqueda.jpg">
+                        <button class="comprar-mas-resultados btn"
+                            onclick="location.href='compra.html'">Comprar</button>
+                    </div>
+                    <h3>Tokyo</h3>
+                    <p class="precio-mas"><span class="js-price" data-eur="590"></span></p>
+                    <p class="tipo-hotel">Hotel más visita guiada</p>
+                </article>
+                <article class="resultado-card">
+                    <div class="imagen-comprar">
+                        <img class="imagen-1-busqueda" src="images/imagen3busqueda.jpg">
+                        <button class="comprar-mas-resultados btn"
+                            onclick="location.href='compra.html'">Comprar</button>
+                    </div>
+                    <h3>Tokyo</h3>
+                    <p class="precio-mas"><span class="js-price" data-eur="3400"></span></p>
+                    <p class="tipo-hotel">Hotel lujo + vuelo + tour</p>
+                </article>
+            </section>
+        </div>
     </main>
 
     <footer>
