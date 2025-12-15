@@ -282,3 +282,27 @@ button:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* Accesibilidad: texto invisible visualmente pero leído por lectores de pantalla */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Para que el nuevo botón "Examinar..." no herede el hover de button (y no cambie el look) */
+.boton-subir:hover {
+  transform: none;
+  opacity: 1;
+}
+
+/* Fix contraste en modo oscuro para el enlace inferior */
+.theme-dark .enlace-sesion {
+  color: #4da3ff;
+}
