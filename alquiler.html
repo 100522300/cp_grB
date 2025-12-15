@@ -12,11 +12,11 @@
     <link rel="icon" href="/images/logo_recortado.PNG">
 
     <!-- Scripts -->
-    <script type="module" src="script/script_principal.js" defer></script>
+    <script type="module" src="script/script_principal.js"></script>
     <script src="script/currency.js" defer></script>
     <script src="script/theme.js" defer></script>
     <script src="script/logout.js" defer></script>
-    <script type="module" src="script/alquiler.js" defer></script>
+    <script type="module" src="script/alquiler.js"></script>
 </head>
 
 <body>
@@ -52,13 +52,12 @@
                     <img src="images/idioma.jpg" alt="Idioma" class="icono-bandera">
                     <div id="google_translate_element"></div>
                 </div>
-                <script type="text/javascript">
+                <script>
                     function googleTranslateElementInit() {
                         new google.translate.TranslateElement({ pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
                     }
                 </script>
-                <script type="text/javascript"
-                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
                 <button class="boton-perfil" onclick="window.location.href='perfil.html'">
                     <img class="imagen-perfil-usuario" src="images/hustle_hard_persona_2.jpg" alt="Usuario">
@@ -73,58 +72,73 @@
         <form id="form-alquiler" class="form-reserva">
 
             <!-- Paso 1: Coches -->
-            <section class="seccion-paso">
+            <div class="seccion-paso">
                 <p class="subtitulo-paso">1. Elige tu modelo favorito</p>
 
                 <div class="grid-coches">
 
-                    <label class="tarjeta-coche">
-                        <img src="images/fiat_500.jpg" alt="Fiat 500" class="coche-img">
+                    <div class="tarjeta-coche">
+                        <input type="radio" name="coche" id="coche-fiat-500" class="radio-seleccion" value="30"
+                            data-modelo="Fiat 500" data-precio="30">
+
+                        <label for="coche-fiat-500">
+                            <img src="images/fiat_500.jpg" alt="Fiat 500" class="coche-img">
+                        </label>
+
                         <div class="info-coche">
                             <div class="nombre-coche">Fiat 500</div>
                             <div class="precio-coche">30€ / día</div>
-                            <input type="radio" name="coche" class="radio-seleccion" value="30" data-modelo="Fiat 500"
-                                data-precio="30">
                         </div>
-                    </label>
+                    </div>
 
+                    <div class="tarjeta-coche">
+                        <input type="radio" name="coche" id="coche-corolla" class="radio-seleccion" value="55"
+                            data-modelo="Toyota Corolla" data-precio="55">
 
-                    <label class="tarjeta-coche">
-                        <img src="images/corolla.jpg" alt="Toyota Corolla" class="coche-img">
+                        <label for="coche-corolla">
+                            <img src="images/corolla.jpg" alt="Toyota Corolla" class="coche-img">
+                        </label>
+
                         <div class="info-coche">
                             <div class="nombre-coche">Toyota Corolla</div>
                             <div class="precio-coche">55€ / día</div>
-                            <input type="radio" name="coche" class="radio-seleccion" value="55"
-                                data-modelo="Toyota Corolla" data-precio="55">
                         </div>
-                    </label>
+                    </div>
 
+                    <div class="tarjeta-coche">
+                        <input type="radio" name="coche" id="coche-qashqai" class="radio-seleccion" value="80"
+                            data-modelo="Nissan Qashqai" data-precio="80">
 
-                    <label class="tarjeta-coche">
-                        <img src="images/nissan.jpg" alt="Nissan Qashqai" class="coche-img">
+                        <label for="coche-qashqai">
+                            <img src="images/nissan.jpg" alt="Nissan Qashqai" class="coche-img">
+                        </label>
+
                         <div class="info-coche">
                             <div class="nombre-coche">Nissan Qashqai</div>
                             <div class="precio-coche">80€ / día</div>
-                            <input type="radio" name="coche" class="radio-seleccion" value="80"
-                                data-modelo="Nissan Qashqai" data-precio="80">
                         </div>
-                    </label>
+                    </div>
 
+                    <div class="tarjeta-coche">
+                        <input type="radio" name="coche" id="coche-mustang" class="radio-seleccion" value="150"
+                            data-modelo="Ford Mustang" data-precio="150">
 
-                    <label class="tarjeta-coche">
-                        <img src="images/mustang.jpeg" alt="Ford Mustang" class="coche-img">
+                        <label for="coche-mustang">
+                            <img src="images/mustang.jpeg" alt="Ford Mustang" class="coche-img">
+                        </label>
+
                         <div class="info-coche">
                             <div class="nombre-coche">Ford Mustang</div>
                             <div class="precio-coche">150€ / día</div>
-                            <input type="radio" name="coche" class="radio-seleccion" value="150"
-                                data-modelo="Ford Mustang" data-precio="150">
                         </div>
-                    </label>
+                    </div>
+
+
                 </div>
-            </section>
+            </div>
 
             <!-- Paso 2: Datos -->
-            <section class="seccion-paso">
+            <div class="seccion-paso">
                 <p class="subtitulo-paso">2. Datos de la reserva</p>
 
                 <div class="campo-form">
@@ -157,11 +171,13 @@
                 <div class="campo-form">
                     <label for="rango-edad">Edad del conductor</label>
                     <select id="rango-edad" required>
-                        <option value="25" selected>25 años o más</option>
+                        <option value="" selected disabled hidden>Selecciona tu edad</option>
+                        <option value="25">25 años o más</option>
                         <option value="18">Menor de 25 años (+10€/día)</option>
                     </select>
+
                 </div>
-            </section>
+            </div>
 
             <!-- Paso 3: Cobertura y Final -->
             <section class="seccion-paso">
