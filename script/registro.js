@@ -144,4 +144,11 @@ if (imagen) {
   });
 }
 
+const btnImagen = document.getElementById("btn-imagen");
+
+if (btnImagen && imagen) {
+  btnImagen.addEventListener("click", () => imagen.click());
+}
+
+
 form.addEventListener("submit", validarFormulario);
