@@ -1,5 +1,4 @@
 ﻿@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +6,6 @@
   /* Todos los paddings, margins... por defecto eliminados*/
 
   font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
   font-weight: normal;
   /* Use a value from 100 to 900 */
   font-style: normal;
@@ -1168,7 +1166,6 @@ body {
     max-width: 320px;
   }
 }
-
 
 .sr-only {
   position: absolute;
