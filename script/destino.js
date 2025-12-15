@@ -129,7 +129,9 @@ const DESTINOS = {
 };
 
 /* Elementos del DOM */
-const titulo = document.querySelector(".informacion-busqueda h3");
+const titulo =
+  document.querySelector(".informacion-busqueda h2") ||
+  document.querySelector(".informacion-busqueda h3");
 const descripcion = document.querySelector(".informacion-destino");
 const imagenPrincipal = document.querySelector(".imagen-tokyo");
 const precioPrincipal = document.querySelector(".precio .js-price");
@@ -139,40 +141,85 @@ const masResultados = document.querySelectorAll(".resultado-card");
 /* Funciones */
 function getDestinoFromURL() {
   const params = new URLSearchParams(window.location.search);
-  return params.get("destino") || "tokyo";
+  return (params.get("destino") || "tokyo").toLowerCase();
 }
 
 function cargarDestino(destinoKey) {
   const destino = DESTINOS[destinoKey];
   if (!destino) return;
 
-  // Título y texto
-  titulo.textContent = destino.nombre;
-  descripcion.textContent = destino.descripcion;
+  // T?tulo y texto
+  if (titulo) titulo.textContent = destino.nombre;
+  if (descripcion) descripcion.textContent = destino.descripcion;
 
   // Imagen principal
-  imagenPrincipal.src = destino.imagenPrincipal;
-  imagenPrincipal.alt = `Imagen de ${destino.nombre}`;
+  if (imagenPrincipal) {
+    imagenPrincipal.src = destino.imagenPrincipal;
+    imagenPrincipal.alt = `Imagen de ${destino.nombre}`;
+  }
 
-  // Precio
-  precioPrincipal.dataset.eur = destino.precioPrincipal;
+  // Precio principal
+  if (precioPrincipal) {
+    precioPrincipal.dataset.eur = destino.precioPrincipal;
+  }
+  const currencySelect = document.getElementById("currency-select");
+  if (currencySelect) {
+    currencySelect.dispatchEvent(new Event("change"));
+  }
 
   // Favoritos
-  btnFavoritos.dataset.favId = destino.favoritosId;
-  btnFavoritos.dataset.favTitle = destino.nombre;
+  if (btnFavoritos) {
+    btnFavoritos.dataset.favId = destino.favoritosId;
+    btnFavoritos.dataset.favTitle = destino.nombre;
+    btnFavoritos.dataset.favUrl = `resultados.html?destino=${encodeURIComponent(destinoKey)}`;
+    btnFavoritos.classList.remove("is-fav");
+    btnFavoritos.setAttribute("aria-pressed", "false");
+  }
 
-  // Más resultados
+  // Bot?n principal comprar
+  const btnComprarPrincipal = document.querySelector(
+    ".informacion-busqueda .comprar"
+  );
+  if (btnComprarPrincipal) {
+    btnComprarPrincipal.onclick = function () {
+      window.location.href = `compra.html?destino=${encodeURIComponent(
+        destino.nombre
+      )}&precio=${destino.precioPrincipal}`;
+    };
+  }
+
+  // M?s resultados
   destino.masResultados.forEach((res, index) => {
     const card = masResultados[index];
     if (!card) return;
 
-    card.querySelector("h3").textContent = destino.nombre;
-    card.querySelector("img").src = res.img;
-    card.querySelector(".js-price").dataset.eur = res.precio;
-    card.querySelector(".tipo-hotel").textContent = res.tipo;
+    const tituloCard = card.querySelector("h3");
+    if (tituloCard) tituloCard.textContent = destino.nombre;
+
+    const imgCard = card.querySelector("img");
+    if (imgCard) {
+      imgCard.src = res.img;
+      imgCard.alt = `Imagen de ${destino.nombre} ${index + 1}`;
+    }
+
+    const priceSpan = card.querySelector(".js-price");
+    if (priceSpan) {
+      priceSpan.dataset.eur = res.precio;
+    }
+
+    const tipoHotel = card.querySelector(".tipo-hotel");
+    if (tipoHotel) tipoHotel.textContent = res.tipo;
+
+    const btnCard = card.querySelector(".comprar-mas-resultados");
+    if (btnCard) {
+      btnCard.onclick = function () {
+        window.location.href = `compra.html?destino=${encodeURIComponent(
+          destino.nombre
+        )}&precio=${res.precio}`;
+      };
+    }
   });
 }
-
 /* Eventos */
 document.addEventListener("DOMContentLoaded", () => {
   const destino = getDestinoFromURL();
