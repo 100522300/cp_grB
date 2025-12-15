@@ -15,7 +15,7 @@
   <script src="script/currency.js" defer></script>
   <script src="script/theme.js" defer></script>
   <script src="script/newsletter.js" defer></script>
-  <script type="module" src="script/script_principal.js" defer></script>
+  <script type="module" src="script/script_principal.js"></script>
 </head>
 
 <body class="newsletter-body">
@@ -56,7 +56,7 @@
           <img src="images/idioma.jpg" alt="Idioma" class="icono-bandera">
           <div id="google_translate_element"></div>
         </div>
-        <script type="text/javascript">
+        <script>
           function googleTranslateElementInit() {
             new google.translate.TranslateElement({
               pageLanguage: 'es',
@@ -64,10 +64,9 @@
             }, 'google_translate_element');
           }
         </script>
-        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-        <button class="boton-perfil" aria-label="Ir al perfil del usuario"
-          onclick="window.location.href='perfil.html'">
+        <button class="boton-perfil" aria-label="Ir al perfil del usuario" onclick="window.location.href='perfil.html'">
           <img class="imagen-perfil-usuario" src="images/hustle_hard_persona_2.jpg" alt="Usuario">
         </button>
       </div>
@@ -83,7 +82,7 @@
       </p>
     </section>
 
-    <section>
+    <div>
       <form class="form-newsletter" novalidate>
         <div class="campo-newsletter">
           <label for="correo">Dirección de correo electrónico</label>
@@ -105,11 +104,11 @@
 
         <button type="submit" class="boton-principal-form">Suscribirse</button>
       </form>
-    </section>
+    </div>
   </main>
 
-  <div class="modal-confirmacion modal-newsletter" role="dialog" aria-labelledby="modal-newsletter-title" aria-modal="true"
-    hidden>
+  <div class="modal-confirmacion modal-newsletter" role="dialog" aria-labelledby="modal-newsletter-title"
+    aria-modal="true" hidden>
     <div class="contenido">
       <h2 id="modal-newsletter-title">Suscripción activa</h2>
       <p>Este será el contenido que recibirás en nuestra newsletter:</p>
