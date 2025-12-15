@@ -15,7 +15,6 @@
   <script src="script/currency.js" defer></script>
   <script src="script/theme.js" defer></script>
   <script src="script/newsletter.js" defer></script>
-  <!-- Hamburger Menu Logic -->
   <script type="module" src="script/script_principal.js" defer></script>
 </head>
 
@@ -29,38 +28,46 @@
       </a>
     </div>
 
-    <button class="hamburger" id="hamburger-menu" aria-label="Abrir menú de navegación">
-      &#9776;
-    </button>
+    <button class="hamburger" id="hamburger-menu" aria-label="Abrir menú de navegación">&#9776;</button>
+
     <nav class="menu-colapsable" id="menu-colapsable">
       <div class="enlaces-header">
         <a href="pagina_principal.html#scroll-rincones">Otros rincones</a>
         <a href="pagina_principal.html#scroll-sobre-nosotros">Sobre nosotros</a>
         <a href="alquiler.html">Alquiler de Coches</a>
-        <a href="newlester.html" class="enlace-activo">Newsletter</a>
+        <a href="newlester.html" class="enlace-activo" aria-current="page">Newsletter</a>
       </div>
 
       <div class="opciones-header">
+        <label for="currency-select" class="sr-only">Seleccionar moneda</label>
         <select id="currency-select" class="btn-seleccionar-moneda">
           <option value="EUR">EUR (€)</option>
           <option value="USD">USD ($)</option>
           <option value="GBP">GBP (£)</option>
         </select>
-        <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
 
-        <div class="contenedor-traductor" title="Seleccionar Idioma">
+        <button id="theme-toggle" class="btn-theme" type="button" aria-pressed="false"
+          aria-label="Activar o desactivar modo oscuro">
+          Modo oscuro
+        </button>
+
+        <!-- Google Translate -->
+        <div class="contenedor-traductor" role="region" aria-label="Seleccionar idioma">
           <img src="images/idioma.jpg" alt="Idioma" class="icono-bandera">
           <div id="google_translate_element"></div>
         </div>
         <script type="text/javascript">
           function googleTranslateElementInit() {
-            new google.translate.TranslateElement({ pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+            new google.translate.TranslateElement({
+              pageLanguage: 'es',
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
           }
         </script>
-        <script type="text/javascript"
-          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-        <button class="boton-perfil" onclick="window.location.href='perfil.html'">
+        <button class="boton-perfil" aria-label="Ir al perfil del usuario"
+          onclick="window.location.href='perfil.html'">
           <img class="imagen-perfil-usuario" src="images/hustle_hard_persona_2.jpg" alt="Usuario">
         </button>
       </div>
@@ -76,32 +83,35 @@
       </p>
     </section>
 
-    <form class="form-newsletter" novalidate>
-      <div class="campo-newsletter">
-        <label for="correo">Dirección de correo electrónico</label>
-        <input type="email" id="correo" name="correo" placeholder="email@dominioejemplo.com">
-      </div>
+    <section>
+      <form class="form-newsletter" novalidate>
+        <div class="campo-newsletter">
+          <label for="correo">Dirección de correo electrónico</label>
+          <input type="email" id="correo" name="correo" placeholder="email@dominioejemplo.com" required>
+        </div>
 
-      <label class="checkbox-politica" for="aceptar-politica">
-        <input type="checkbox" id="aceptar-politica" name="aceptar-politica">
-        Acepto las siguientes condiciones de privacidad
-      </label>
+        <div class="checkbox-politica">
+          <input type="checkbox" id="aceptar-politica" name="aceptar-politica" required>
+          <label for="aceptar-politica">Acepto las siguientes condiciones de privacidad</label>
+        </div>
 
-      <p class="texto-legal-newsletter">
-        PACKURBAG S.L. tratará sus datos personales para gestionar la relación con usted y para remitirle nuestra
-        newsletter con las novedades, encuestas, concursos, promociones y noticias sobre la web packurbag.com. Usted
-        podrá darse de baja en cualquier momento. Asimismo, cuando lo considere oportuno, podrá presentar una
-        reclamación ante la Agencia Española de Protección de Datos. Podrá ponerse en contacto con nuestro Delegado de
-        Protección de Datos mediante escrito dirigido a packurbag@atencion.com
-      </p>
+        <p class="texto-legal-newsletter">
+          PACKURBAG S.L. tratará sus datos personales para gestionar la relación con usted y para remitirle nuestra
+          newsletter con las novedades, encuestas, concursos, promociones y noticias sobre la web packurbag.com. Usted
+          podrá darse de baja en cualquier momento. Asimismo, cuando lo considere oportuno, podrá presentar una
+          reclamación ante la Agencia Española de Protección de Datos. Podrá ponerse en contacto con nuestro Delegado de
+          Protección de Datos mediante escrito dirigido a packurbag@atencion.com
+        </p>
 
-      <button type="submit" class="boton-principal-form">Suscribirse</button>
-    </form>
+        <button type="submit" class="boton-principal-form">Suscribirse</button>
+      </form>
+    </section>
   </main>
 
-  <div class="modal-confirmacion modal-newsletter">
+  <div class="modal-confirmacion modal-newsletter" role="dialog" aria-labelledby="modal-newsletter-title" aria-modal="true"
+    hidden>
     <div class="contenido">
-      <h1>Suscripción activa</h1>
+      <h2 id="modal-newsletter-title">Suscripción activa</h2>
       <p>Este será el contenido que recibirás en nuestra newsletter:</p>
       <ul>
         <li>Inspiración para próximos viajes</li>
@@ -112,7 +122,6 @@
       <button class="btn-confirmar btn-cerrar-newsletter">Cerrar</button>
     </div>
   </div>
-
 </body>
 
 </html>

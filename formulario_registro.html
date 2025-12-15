@@ -23,13 +23,9 @@
     </div>
     <div class="cabecera-derecha">
       <select id="currency-select" class="btn-seleccionar-moneda">
-
         <option value="EUR">EUR (€)</option>
-
         <option value="USD">USD ($)</option>
-
         <option value="GBP">GBP (£)</option>
-
       </select>
       <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
       <a href="index.html" class="boton-enlace">Pagina principal</a>
@@ -37,8 +33,8 @@
   </header>
 
   <main class="cuerpo-formulario">
-    <div class="contenedor-formulario">
-      <div class="caja-formulario">
+    <section class="contenedor-formulario">
+      <article class="caja-formulario">
         <h2 class="titulo-formulario">Registro</h2>
 
         <form class="form-registro" novalidate>
@@ -66,7 +62,7 @@
 
           <fieldset class="fila-doble">
             <div class="campo-form">
-              <label for="password">Contrasña</label>
+              <label for="password">Contraseña</label>
               <input type="password" id="password" name="password" placeholder="Contraseña">
             </div>
             <div class="campo-form">
@@ -86,14 +82,14 @@
             </div>
           </fieldset>
 
-          <div class="campo-form campo-archivo">
+          <fieldset class="campo-form campo-archivo">
             <label for="imagen">Subir foto perfil</label>
             <div style="display: flex; align-items: center; gap: 10px;">
               <label for="imagen" class="boton-subir">Examinar...</label>
               <span id="nombre-archivo" style="font-size: 0.9em; color: var(--text-color);"></span>
             </div>
             <input type="file" id="imagen" name="imagen" class="oculto">
-          </div>
+          </fieldset>
 
           <p class="texto-legal">
             Al iniciar sesión o al crear una cuenta, aceptas nuestros
@@ -104,8 +100,8 @@
           <button type="submit" class="boton-principal">Registrarse</button>
           <a href="formulario_sesion.html" class="enlace-sesion">¿Ya tienes una cuenta?</a>
         </form>
-      </div>
-    </div>
+      </article>
+    </section>
   </main>
 </body>
 

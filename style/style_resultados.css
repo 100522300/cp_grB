@@ -1,4 +1,4 @@
-/* Reset y tipografia base (alineado con style.css) */
+/* Reset y tipografía base (alineado con style.css) */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 * {
@@ -12,7 +12,6 @@
 /* Cabecera styles removed - inherited from style.css */
 
 /*Decoración del footer*/
-
 footer {
   background-color: #c4c4c4;
   color: rgb(0, 0, 0);
@@ -127,9 +126,31 @@ button:hover {
   letter-spacing: 1.2;
   padding: 1rem 2.3rem 0.2rem 2.3rem;
   color: #000;
-  /*Sombra del texto*/
   text-align: left;
   display: block;
+}
+
+/* Mejor contraste newsletter */
+.subtitulo-newsletter {
+  color: #1a1a1a;
+}
+
+.texto-legal-newsletter {
+  color: #1a1a1a;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+
+/* Mejor contraste botón modo oscuro */
+#theme-toggle {
+  color: #ffffff;
+  background-color: #000000;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+#theme-toggle:hover {
+  background-color: #333333;
 }
 
 .mejor-valorado {
@@ -156,16 +177,23 @@ button:hover {
   margin-bottom: 0.9rem;
 }
 
+/* Mejor contraste para botón "Añadir a favoritos" */
 .añadir-a-favoritos {
   font-size: 1.4rem;
   color: #ffd700;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
   cursor: pointer;
-  background: transparent;
+  background-color: rgba(0, 0, 0, 0.8);
   border: none;
   border-radius: 0.5rem;
   padding: 0.35rem 0.6rem;
   margin-top: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.añadir-a-favoritos:hover {
+  background-color: rgba(0, 0, 0, 1);
+  transform: translateY(-2px);
 }
 
 .añadir-a-favoritos.is-fav {
@@ -180,11 +208,9 @@ button:hover {
   0% {
     transform: scale(1);
   }
-
   50% {
     transform: scale(1.15);
   }
-
   100% {
     transform: scale(1);
   }
@@ -224,13 +250,13 @@ button:hover {
   margin-bottom: 0.75rem;
 }
 
+/* Mejor contraste para "No admite reembolsos" */
 .no-reembolso {
   font-size: 1.2rem;
-  color: #828282;
+  color: #1a1a1a;
 }
 
-/*Vamos con la parte de opiniones de otros usuarios*/
-
+/* Opiniones */
 .carrusel-flecha {
   background-color: #222;
   width: 3.5rem;
@@ -250,7 +276,6 @@ button:hover {
 }
 
 /* Parte de más resultados */
-
 .cuerpo-resultados h2 {
   text-align: center;
   font-size: 2.7rem;
@@ -305,7 +330,6 @@ button:hover {
   margin-bottom: 0.9rem;
 }
 
-/* botón flotando encima */
 .comprar-mas-resultados {
   position: absolute;
   bottom: 1rem;
@@ -316,6 +340,11 @@ button:hover {
   border-radius: 0.6rem;
   padding: 0.75rem 2.5rem 0.75rem 2.5rem;
   cursor: pointer;
+}
+
+/* Mejor contraste para tipos de hotel */
+.tipo-hotel {
+  color: #1a1a1a;
 }
 
 /* texto debajo */
@@ -337,12 +366,7 @@ button:hover {
   font-weight: 700;
 }
 
-.tipo-hotel {
-  color: #828282;
-}
-
 /* Carrusel de opiniones */
-
 .opinion-form button {
   width: fit-content;
 }
@@ -369,24 +393,6 @@ button:hover {
   gap: 1rem;
 }
 
-.carrusel-flecha {
-  background-color: #222;
-  width: 3.5rem;
-  height: 3.5rem;
-  font-size: 1.125rem;
-  background: rgba(17, 24, 39, 0.65);
-  color: white;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 5;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-  border-color: solid black;
-}
-
-.carrusel-flecha:hover {
-  background: rgba(17, 24, 39, 0.85);
-}
-
 .opiniones-usuarios {
   display: flex;
   flex-wrap: nowrap;
@@ -395,10 +401,8 @@ button:hover {
 
 .opinion-card {
   flex: 0 0 23%;
-  /* 4 tarjetas visibles */
   box-sizing: border-box;
   display: none;
-  /* Se muestran solo las visibles */
   border: 1.5px solid #d1d1d1;
   border-radius: 1rem;
   padding: 1.2rem;
