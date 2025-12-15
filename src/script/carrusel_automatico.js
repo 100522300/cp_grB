@@ -4,14 +4,14 @@ let contadorImagen = 0;
 let carruselAutomaticoImagen;
 
 const imagenesViajar = [
-    "../images/paisaje_hustle.jpeg",
-    "../images/paisaje-impresionante-1.jpeg",
-    "../images/paisaje-impresionante-2.jpeg",
-    "../images/paisaje-impresionante-3.jpeg",
-    "../images/paisaje-impresionante-4.jpeg",
-    "../images/paisaje-impresionante-5.jpg",
-    "../images/paisaje-impresionante-6.jpg",
-    "../images/paisaje-impresionante-7.jpeg"
+    "images/paisaje_hustle.jpeg",
+    "images/paisaje-impresionante-1.jpeg",
+    "images/paisaje-impresionante-2.jpeg",
+    "images/paisaje-impresionante-3.jpeg",
+    "images/paisaje-impresionante-4.jpeg",
+    "images/paisaje-impresionante-5.jpg",
+    "images/paisaje-impresionante-6.jpg",
+    "images/paisaje-impresionante-7.jpeg"
 ];
 
 // Inicializar al cargar la página
