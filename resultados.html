@@ -17,7 +17,7 @@
     <script src="script/theme.js" defer></script>
     <script src="script/destino.js" defer></script>
     <script src="script/opiniones.js" defer></script>
-    <script type="module" src="script/script_principal.js" defer></script>
+    <script type="module" src="script/script_principal.js"></script>
 </head>
 
 <body class="resultados-body">
@@ -54,13 +54,12 @@
                     <img src="images/idioma.jpg" alt="Idioma" class="icono-bandera">
                     <div id="google_translate_element"></div>
                 </div>
-                <script type="text/javascript">
+                <script>
                     function googleTranslateElementInit() {
                         new google.translate.TranslateElement({ pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
                     }
                 </script>
-                <script type="text/javascript"
-                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
                 <button class="boton-perfil" onclick="window.location.href='perfil.html'">
                     <img class="imagen-perfil-usuario" src="images/hustle_hard_persona_2.jpg" alt="Usuario">
@@ -148,9 +147,10 @@
         <div class="mas-resultados-contenedor">
             <p class="titulo-perfil">Más resultados</p>
             <section class="mas-resultados-ejemplos">
+                <h2 class="sr-only">Mas resultados</h2>
                 <article class="resultado-card">
                     <div class="imagen-comprar">
-                        <img class="imagen-1-busqueda" src="images/imagen1busqueda.jpg">
+                        <img class="imagen-1-busqueda" src="images/imagen1busqueda.jpg" alt="Destino destacado 1">
                         <button class="comprar-mas-resultados btn"
                             onclick="location.href='compra.html'">Comprar</button>
                     </div>
@@ -160,7 +160,7 @@
                 </article>
                 <article class="resultado-card">
                     <div class="imagen-comprar">
-                        <img class="imagen-1-busqueda" src="images/imagen2busqueda.jpg">
+                        <img class="imagen-1-busqueda" src="images/imagen2busqueda.jpg" alt="Destino destacado 2">
                         <button class="comprar-mas-resultados btn"
                             onclick="location.href='compra.html'">Comprar</button>
                     </div>
@@ -170,7 +170,7 @@
                 </article>
                 <article class="resultado-card">
                     <div class="imagen-comprar">
-                        <img class="imagen-1-busqueda" src="images/imagen3busqueda.jpg">
+                        <img class="imagen-1-busqueda" src="images/imagen3busqueda.jpg" alt="Destino destacado 3">
                         <button class="comprar-mas-resultados btn"
                             onclick="location.href='compra.html'">Comprar</button>
                     </div>
