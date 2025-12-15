@@ -60,6 +60,13 @@
   color: var(--text);
 }
 
+.informacion-busqueda h2,
+.titulo-perfil,
+.titulo-opiniones {
+  font-family: "Inter", sans-serif;
+  font-weight: 750;
+}
+
 /* Cabecera styles removed - inherited from style.css */
 
 /*Decoración del footer*/
