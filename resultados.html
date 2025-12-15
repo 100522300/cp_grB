@@ -43,14 +43,18 @@
                 <a href="newlester.html">Newsletter</a>
             </div>
             <div class="opciones-header">
+                <label for="currency-select" class="sr-only">Seleccionar moneda</label>
                 <select id="currency-select" class="btn-seleccionar-moneda">
                     <option value="EUR">EUR (€)</option>
                     <option value="USD">USD ($)</option>
                     <option value="GBP">GBP (£)</option>
                 </select>
-                <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
 
-                <div class="contenedor-traductor" title="Seleccionar Idioma">
+                <button id="theme-toggle" class="btn-theme" type="button" aria-label="Activar o desactivar modo oscuro">
+                    Modo oscuro
+                </button>
+
+                <div class="contenedor-traductor" role="region" aria-label="Seleccionar idioma">
                     <img src="images/idioma.jpg" alt="Idioma" class="icono-bandera">
                     <div id="google_translate_element"></div>
                 </div>
@@ -61,7 +65,7 @@
                 </script>
                 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-                <button class="boton-perfil" onclick="window.location.href='perfil.html'">
+                <button class="boton-perfil" aria-label="Ir al perfil del usuario" onclick="window.location.href='perfil.html'">
                     <img class="imagen-perfil-usuario" src="images/hustle_hard_persona_2.jpg" alt="Usuario">
                 </button>
             </div>
@@ -71,19 +75,19 @@
     <main class="cuerpo-resultados">
 
         <!-- Mejor valorado -->
-        <p class="titulo-perfil">Mejor valorado</p>
+        <h1 class="titulo-perfil">Mejor valorado</h1>
         <div class="mejor-valorado">
             <div class="imagen-favoritos">
-                <img class="imagen-tokyo" src="images/tokyo.jpg" alt="Imagen de tokyo">
+                <img class="imagen-tokyo" src="images/tokyo.jpg" alt="Imagen de Tokyo">
                 <button class="añadir-a-favoritos" type="button" data-fav-id="tokyo" data-fav-title="Tokyo"
-                    data-fav-url="resultados.html" aria-pressed="false">⭐ Añadir a favoritos</button>
+                    data-fav-url="resultados.html" aria-pressed="false" aria-label="Añadir Tokyo a favoritos">⭐ Añadir a favoritos</button>
             </div>
             <div class="informacion-busqueda">
-                <h3>Tokyo</h3>
+                <h2>Tokyo</h2>
                 <p class="informacion-destino">Vuelo y hotel incluidos para la ciudad más avanzada del mundo.</p>
                 <p class="precio"><span class="js-price" data-eur="2150"></span></p>
                 <button class="comprar btn" type="button" data-recent-id="tokyo" data-recent-title="Tokyo"
-                    data-recent-url="compra.html">Comprar</button>
+                    data-recent-url="compra.html" aria-label="Comprar viaje a Tokyo">Comprar</button>
                 <p class="no-reembolso">La web no admite reembolsos</p>
             </div>
         </div>
@@ -91,25 +95,21 @@
         <!-- Carrusel de opiniones -->
         <div class="opiniones-contenedor">
             <div class="opiniones-flechas">
-                <p class="titulo-perfil titulo-opiniones">Opiniones de otros usuarios</p>
+                <h2 class="titulo-perfil titulo-opiniones">Opiniones de otros usuarios</h2>
                 <div class="flechas flechas-resultados">
-                    <button class="btn-flecha-izq" id="flechaIzquierdaEuropa">
+                    <button class="btn-flecha-izq" id="flechaIzquierdaEuropa" aria-label="Desplazar opiniones a la izquierda">
                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#f6f6f6" stroke="#bfbfbf"
                                 stroke-width="1" />
-
-                            <!-- Flecha centrada -->
                             <g transform="translate(15, 15)">
                                 <path d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
                                     stroke="#BFBFBF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                             </g>
                         </svg>
                     </button>
-                    <button class="btn-flecha-der" id="flechaDerechaEuropa">
+                    <button class="btn-flecha-der" id="flechaDerechaEuropa" aria-label="Desplazar opiniones a la derecha">
                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="2.5" y="2.5" width="45" height="45" rx="22.5" fill="#D9D9D9" />
-
-                            <!-- Flecha centrada -->
                             <g transform="translate(15, 15)">
                                 <g transform="rotate(180, 10, 10)">
                                     <path d="M20.1667 10.8333H1.5M1.5 10.8333L10.8333 20.1667M1.5 10.8333L10.8333 1.5"
@@ -122,14 +122,14 @@
                 </div>
             </div>
 
-
             <div class="opiniones-usuarios" id="contenedor-opiniones">
                 <!-- Opiniones dinámicas se insertan aquí -->
             </div>
 
             <div class="opinion-form">
+                <label for="opinion-text" class="sr-only">Escribe tu opinión</label>
                 <textarea id="opinion-text" placeholder="Escribe tu opinión..." maxlength="200"></textarea>
-                <button id="enviar-opinion" class="btn">Publicar opinión</button>
+                <button id="enviar-opinion" class="btn" aria-label="Publicar opinión">Publicar opinión</button>
             </div>
 
             <template id="opinion-template">
@@ -147,10 +147,9 @@
         <div class="mas-resultados-contenedor">
             <p class="titulo-perfil">Más resultados</p>
             <section class="mas-resultados-ejemplos">
-                <h2 class="sr-only">Mas resultados</h2>
                 <article class="resultado-card">
                     <div class="imagen-comprar">
-                        <img class="imagen-1-busqueda" src="images/imagen1busqueda.jpg" alt="Destino destacado 1">
+                        <img class="imagen-1-busqueda" src="images/imagen1busqueda.jpg">
                         <button class="comprar-mas-resultados btn"
                             onclick="location.href='compra.html'">Comprar</button>
                     </div>
@@ -160,7 +159,7 @@
                 </article>
                 <article class="resultado-card">
                     <div class="imagen-comprar">
-                        <img class="imagen-1-busqueda" src="images/imagen2busqueda.jpg" alt="Destino destacado 2">
+                        <img class="imagen-1-busqueda" src="images/imagen2busqueda.jpg">
                         <button class="comprar-mas-resultados btn"
                             onclick="location.href='compra.html'">Comprar</button>
                     </div>
@@ -170,7 +169,7 @@
                 </article>
                 <article class="resultado-card">
                     <div class="imagen-comprar">
-                        <img class="imagen-1-busqueda" src="images/imagen3busqueda.jpg" alt="Destino destacado 3">
+                        <img class="imagen-1-busqueda" src="images/imagen3busqueda.jpg">
                         <button class="comprar-mas-resultados btn"
                             onclick="location.href='compra.html'">Comprar</button>
                     </div>

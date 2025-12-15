@@ -62,13 +62,11 @@
   display: none;
 }
 
-/* IMAGENES DE COCHES (NUEVO) */
+/* IMAGENES DE COCHES */
 .coche-img {
   width: 100%;
   height: 150px;
-  /* Altura fija para uniformidad */
   object-fit: cover;
-  /* Recortar si sobra pa que no se deforme */
   border-radius: 0.5rem;
   margin-bottom: 1rem;
   border: 1px solid #ddd;
@@ -105,8 +103,10 @@
   gap: 0.5rem;
 }
 
+/* ---- CONTRASTE LABELS ---- */
 .campo-form label {
   font-weight: bold;
+  color: #111; /* texto oscuro para buen contraste */
 }
 
 .campo-form input,
@@ -114,6 +114,18 @@
   padding: 0.5rem;
   font-size: 1rem;
   border: 1px solid grey;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  color: #111;
+}
+
+.campo-form input::placeholder {
+  color: #666;
+}
+
+.campo-form select option {
+  color: #111;
+  background-color: #fff;
 }
 
 /* Cobertura */
@@ -180,7 +192,9 @@
   opacity: 0.8;
 }
 
-/* Modo oscuro simple */
+/* ======================
+   Modo oscuro simple
+   ====================== */
 .theme-dark .tarjeta-coche,
 .theme-dark .form-reserva,
 .theme-dark .tarjeta-cobertura {
@@ -199,4 +213,8 @@
 .theme-dark .campo-form select option {
   background-color: #333;
   color: white;
+}
+
+.theme-dark .campo-form label {
+  color: #fff;
 }

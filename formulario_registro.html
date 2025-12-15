@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PackUrBag | Registro</title>
-
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="style/style_registro.css">
   <link rel="stylesheet" href="style/theme.css">
   <link rel="icon" type="image/png" href="images/logo_recortado_blanco.PNG">
   <link rel="stylesheet" href="style/currency-ui.css">
-
   <script src="script/currency.js" defer></script>
   <script src="script/theme.js" defer></script>
   <script type="module" src="script/registro.js" defer></script>
@@ -22,16 +21,16 @@
       <h1 class="titulo-marca">PackUrBag</h1>
       <img src="images/logo_recortado_blanco.PNG" alt="Logo PackUrBag" class="logo-marca">
     </div>
-
     <div class="cabecera-derecha">
-      <!-- Label accesible para el select (no cambia el diseño si usas .sr-only) -->
-      <label for="currency-select" class="sr-only">Seleccionar moneda</label>
       <select id="currency-select" class="btn-seleccionar-moneda">
-        <option value="EUR">EUR (€)</option>
-        <option value="USD">USD ($)</option>
-        <option value="GBP">GBP (£)</option>
-      </select>
 
+        <option value="EUR">EUR (€)</option>
+
+        <option value="USD">USD ($)</option>
+
+        <option value="GBP">GBP (£)</option>
+
+      </select>
       <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
       <a href="index.html" class="boton-enlace">Pagina principal</a>
     </div>
@@ -44,7 +43,6 @@
 
         <form class="form-registro" novalidate>
           <fieldset class="fila-doble">
-            <legend class="sr-only">Datos personales</legend>
             <div class="campo-form">
               <label for="nombre">Nombre</label>
               <input type="text" id="nombre" name="nombre" placeholder="Nombre">
@@ -56,7 +54,6 @@
           </fieldset>
 
           <fieldset class="bloque-vertical">
-            <legend class="sr-only">Correo electrónico</legend>
             <div class="campo-form">
               <label for="correo">Dirección de correo electrónico</label>
               <input type="email" id="correo" name="correo" placeholder="email@janesfakedomain.net">
@@ -68,9 +65,8 @@
           </fieldset>
 
           <fieldset class="fila-doble">
-            <legend class="sr-only">Contraseñas</legend>
             <div class="campo-form">
-              <label for="password">Contraseña</label>
+              <label for="password">Contrasña</label>
               <input type="password" id="password" name="password" placeholder="Contraseña">
             </div>
             <div class="campo-form">
@@ -80,7 +76,6 @@
           </fieldset>
 
           <fieldset class="fila-doble">
-            <legend class="sr-only">Datos de cuenta</legend>
             <div class="campo-form">
               <label for="fecha">Fecha de nacimiento</label>
               <input type="date" id="fecha" name="fecha" placeholder="dd/mm/yyyy">
@@ -93,23 +88,11 @@
 
           <div class="campo-form campo-archivo">
             <label for="imagen">Subir foto perfil</label>
-
             <div style="display: flex; align-items: center; gap: 10px;">
-              <!-- Antes era un label duplicado (for="imagen"). Ahora es un botón visual igual -->
-              <button type="button" class="boton-subir" id="btn-imagen">Examinar...</button>
-
-              <!-- aria-live para que lectores de pantalla anuncien el nombre del archivo -->
-              <span id="nombre-archivo"
-                    style="font-size: 0.9em; color: var(--text-color);"
-                    aria-live="polite"></span>
+              <label for="imagen" class="boton-subir">Examinar...</label>
+              <span id="nombre-archivo" style="font-size: 0.9em; color: var(--text-color);"></span>
             </div>
-
-            <input type="file"
-                   id="imagen"
-                   name="imagen"
-                   class="oculto"
-                   accept="image/png, image/jpeg, image/webp"
-                   aria-describedby="nombre-archivo">
+            <input type="file" id="imagen" name="imagen" class="oculto">
           </div>
 
           <p class="texto-legal">
@@ -125,4 +108,5 @@
     </div>
   </main>
 </body>
+
 </html>

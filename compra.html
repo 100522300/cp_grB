@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="style/theme.css">
   <link rel="stylesheet" href="style/currency-ui.css">
   <link rel="icon" href="/images/logo_recortado.PNG">
+
+  <!-- Scripts -->
   <script src="script/currency.js" defer></script>
   <script type="module" src="script/script_principal.js" defer></script>
   <script src="script/logout.js" defer></script>
@@ -21,16 +23,13 @@
 <body>
   <header>
     <div class="caja-logo">
-      <a href="pagina_principal.html"
-        style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: inherit;">
+      <a href="pagina_principal.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: inherit;">
         <p class="logo-titulo">PackUrBag</p>
         <img class="img-logo" src="images/logo_recortado.PNG" alt="Logo de la web">
       </a>
     </div>
 
-    <button class="hamburger" id="hamburger-menu" aria-label="Abrir menú de navegación">
-      &#9776;
-    </button>
+    <button class="hamburger" id="hamburger-menu" aria-label="Abrir menú de navegación">&#9776;</button>
     <nav class="menu-colapsable" id="menu-colapsable">
       <div class="enlaces-header">
         <a href="pagina_principal.html#scroll-rincones">Otros rincones</a>
@@ -40,33 +39,35 @@
       </div>
 
       <div class="opciones-header">
+        <label for="currency-select" class="sr-only">Seleccionar moneda</label>
         <select id="currency-select" class="btn-seleccionar-moneda">
-
           <option value="EUR">EUR (€)</option>
-
           <option value="USD">USD ($)</option>
-
           <option value="GBP">GBP (£)</option>
-
         </select>
-        <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
 
-        <div class="contenedor-traductor" title="Seleccionar Idioma">
+        <button id="theme-toggle" class="btn-theme" type="button" aria-label="Activar o desactivar modo oscuro">
+          Modo oscuro
+        </button>
+
+        <!-- Traductor normal -->
+        <div class="contenedor-traductor" role="region" aria-label="Seleccionar idioma">
           <img src="images/idioma.jpg" alt="Idioma" class="icono-bandera">
           <div id="google_translate_element"></div>
         </div>
         <script type="text/javascript">
           function googleTranslateElementInit() {
-            new google.translate.TranslateElement({ pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+            new google.translate.TranslateElement({
+              pageLanguage: 'es',
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
           }
         </script>
-        <script type="text/javascript"
-          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
         <button class="btn iniciar-sesion CerrarSesion" type="button" data-logout>
           Cerrar sesión
         </button>
-
       </div>
     </nav>
   </header>
@@ -104,20 +105,20 @@
       <div id="contenedor-acompanantes"></div>
 
       <div class="campo-compra campo-mascota">
-        <label>Mascota</label>
+        <p>Mascota</p>
         <div class="fila-botones-mascota">
-          <button type="button" class="boton-opcion activo">Si</button>
-          <button type="button" class="boton-opcion">No</button>
+          <button type="button" class="boton-opcion activo" aria-pressed="true">Sí</button>
+          <button type="button" class="boton-opcion" aria-pressed="false">No</button>
         </div>
       </div>
 
       <div class="fila-doble">
         <div class="campo-compra">
-          <label for="tipo-mascota" class="label-espaciador"></label>
+          <label for="tipo-mascota">Tipo de mascota</label>
           <input type="text" id="tipo-mascota" name="tipo-mascota" placeholder="Tipo de mascota">
         </div>
         <div class="campo-compra">
-          <label for="tamano-mascota" class="label-espaciador"></label>
+          <label for="tamano-mascota">Tamaño de mascota</label>
           <input type="text" id="tamano-mascota" name="tamano-mascota" placeholder="Tamaño">
         </div>
       </div>
@@ -129,25 +130,30 @@
 
       <div class="campo-compra">
         <label for="metodo-pago">Método de pago</label>
+        <select id="metodo-pago" name="metodo-pago">
+          <option value="">Selecciona método de pago</option>
+          <option value="tarjeta">Tarjeta</option>
+          <option value="paypal">PayPal</option>
+        </select>
       </div>
 
       <div class="campo-compra">
-        <label for="titular" class="label-espaciador"></label>
+        <label for="titular">Titular</label>
         <input type="text" id="titular" name="titular" placeholder="Titular">
       </div>
 
       <div class="campo-compra">
-        <label for="numero-tarjeta" class="label-espaciador"></label>
+        <label for="numero-tarjeta">Número de tarjeta</label>
         <input type="text" id="numero-tarjeta" name="numero-tarjeta" placeholder="Número de tarjeta">
       </div>
 
       <div class="fila-doble">
         <div class="campo-compra">
-          <label for="caducidad" class="label-espaciador">Caducidad</label>
+          <label for="caducidad">Caducidad</label>
           <input type="month" id="caducidad" name="caducidad">
         </div>
         <div class="campo-compra">
-          <label for="cvv" class="label-espaciador"></label>
+          <label for="cvv">CVV</label>
           <input type="text" id="cvv" name="cvv" placeholder="CVV">
         </div>
       </div>

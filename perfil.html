@@ -26,16 +26,14 @@
 <body>
   <header>
     <div class="caja-logo">
-      <a href="pagina_principal.html"
-        style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: inherit;">
+      <a href="pagina_principal.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: inherit;">
         <p class="logo-titulo">PackUrBag</p>
         <img class="img-logo" src="images/logo_recortado.PNG" alt="Logo de la web">
       </a>
     </div>
 
-    <button class="hamburger" id="hamburger-menu" aria-label="Abrir menú de navegación">
-      &#9776;
-    </button>
+    <button class="hamburger" id="hamburger-menu" aria-label="Abrir menú de navegación">&#9776;</button>
+
     <nav class="menu-colapsable" id="menu-colapsable">
       <div class="enlaces-header">
         <a href="pagina_principal.html#scroll-rincones">Otros rincones</a>
@@ -46,7 +44,6 @@
 
       <div class="opciones-header">
         <select id="currency-select" class="btn-seleccionar-moneda">
-
           <option value="EUR">EUR (€)</option>
           <option value="USD">USD ($)</option>
           <option value="GBP">GBP (£)</option>
@@ -61,14 +58,14 @@
             new google.translate.TranslateElement({ pageLanguage: 'es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
           }
         </script>
+<<<<<<< HEAD
         <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+=======
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+>>>>>>> 53c6ff66fe1bc228a43d0d581d9178a3928a41fd
 
         <button id="theme-toggle" class="btn-theme" type="button">Modo oscuro</button>
-
-        <button class="btn iniciar-sesion CerrarSesion" type="button" data-logout>
-          Cerrar sesión
-        </button>
-
+        <button class="btn iniciar-sesion CerrarSesion" type="button" data-logout>Cerrar sesión</button>
       </div>
     </nav>
   </header>
@@ -86,7 +83,6 @@
       <div class="perfil-foto-contenedor">
         <div class="perfil-foto" role="img" aria-label="Foto de perfil"></div>
         <p class="estado-suscripcion">Suscripción a newsletter inactiva</p>
-
         <button id="btn-gestionar-newsletter" class="btn btn-gestionar-newsletter oculto" type="button">
           Gestionar suscripción
         </button>
@@ -94,21 +90,21 @@
     </section>
 
     <section class="perfil-listas">
-      <div class="favoritos">
+      <article class="favoritos">
         <h2 class="subtitulo">Mis favoritos</h2>
         <ul class="lista-favoritos">
           <li class="fav-placeholder">Aún no tienes favoritos</li>
         </ul>
-      </div>
+      </article>
 
-      <div class="vistos">
+      <article class="vistos">
         <h2 class="subtitulo">Vistos recientemente</h2>
         <div class="caja-vistos"></div>
-      </div>
+      </article>
     </section>
 
     <section class="reservas-section">
-      <div class="encabezado-reservas">
+      <header class="encabezado-reservas">
         <h2 class="subtitulo">Mis reservas</h2>
         <div class="controles-reservas">
           <button id="btn-anterior-reservas" class="btn-circulo" type="button" aria-label="Anterior">
@@ -133,38 +129,33 @@
             </svg>
           </button>
         </div>
-      </div>
+      </header>
 
       <div id="contenedor-mis-reservas" class="grid-reservas"></div>
     </section>
 
-
-
-    <!-- Sección Coches Reservados -->
     <section class="reservas-section">
-      <div class="encabezado-reservas">
+      <header class="encabezado-reservas">
         <h2 class="subtitulo">Mis Coches Reservados</h2>
-      </div>
+      </header>
       <div class="grid-reservas grid-coches-reservados">
         <!-- Se rellena con JS -->
       </div>
     </section>
   </main>
 
-  <dialog id="newsletter-ventana" class="modal-logout" aria-labelledby="newsletter-titulo">
-    <h2 id="newsletter-titulo" class="modal-logout__title">¿Quieres darte de baja?</h2>
+  <dialog id="newsletter-ventana" class="modal-logout">
+    <h2 class="modal-logout__title">¿Quieres darte de baja?</h2>
     <p class="modal-logout__text">Dejarás de recibir nuestra newsletter.</p>
-
     <div class="modal-logout__actions">
       <button type="button" id="newsletter-cancel" class="modal-btn modal-btn--ghost">Cancelar</button>
       <button type="button" id="newsletter-confirm" class="modal-btn modal-btn--danger">Darme de baja</button>
     </div>
   </dialog>
 
-  <dialog id="cerrar-sesion-ventana" class="modal-logout" aria-labelledby="cerrar-sesion-titulo">
-    <h2 id="cerrar-sesion-titulo" class="modal-logout__title">¿Quieres cerrar sesión?</h2>
+  <dialog id="cerrar-sesion-ventana" class="modal-logout">
+    <h2 class="modal-logout__title">¿Quieres cerrar sesión?</h2>
     <p class="modal-logout__text">Perderás el acceso a tu perfil hasta que vuelvas a iniciar sesión.</p>
-
     <div class="modal-logout__actions">
       <button type="button" id="cerrar-cancel" class="modal-btn modal-btn--ghost">Cancelar</button>
       <button type="button" id="cerrar-confirm" class="modal-btn modal-btn--danger">Cerrar sesión</button>
@@ -172,12 +163,12 @@
   </dialog>
 
   <footer>
-    <div class="footer-izquierda">
+    <section class="footer-izquierda">
       <p class="footer-copyright">© 2025 PackUrBag. Todos los derechos reservados.</p>
-      <img class="img-logo-footer" src="images/logo_recortado.PNG" alt="Logo de la web">
-    </div>
+      <img class="img-logo-footer" src="images/logo_recortado.PNG" alt="Logo de la web" />
+    </section>
 
-    <div class="footer-derecha">
+    <section class="footer-derecha">
       <p class="footer-texto">¡Síguenos!</p>
       <div class="logos_redes_sociales">
         <a href="#"><img src="images/logo_facebook.png" alt="Facebook"></a>
@@ -185,7 +176,7 @@
         <a href="#"><img src="images/logo_youtube.png" alt="YouTube"></a>
         <a href="#"><img src="images/logo_instagram.webp" alt="Instagram"></a>
       </div>
-    </div>
+    </section>
   </footer>
 </body>
 
