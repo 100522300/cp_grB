@@ -102,9 +102,9 @@ export function pintarReservasCoches() {
     /* Estilos directos simples */
     botonCancelar.style.marginTop = "1rem";
     botonCancelar.style.padding = "0.5rem";
-    botonCancelar.style.backgroundColor = "red";
-    botonCancelar.style.color = "white";
-    botonCancelar.style.border = "none";
+    botonCancelar.style.backgroundColor = "#bfbfbf";
+    botonCancelar.style.color = "#111";
+    botonCancelar.style.border = "1px solid #999";
     botonCancelar.style.cursor = "pointer";
 
     /* El truco para el boton y el indice */
