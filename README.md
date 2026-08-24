@@ -4,11 +4,11 @@ Proyecto grupal de desarrollo frontend para la asignatura de **Creación y Progr
 
 ---
 
-## 📌 Descripción del Proyecto
+## Descripción del Proyecto
 
 Plataforma web completa de reservas turísticas que integra búsqueda de alojamientos, alquiler de vehículos y gestión de perfiles de usuario.
 
-### ✨ Funcionalidades:
+### Funcionalidades:
 * **Diseño Totalmente Responsive:** Adaptación completa a pantallas móviles, tablets y monitores de alta resolución.
 * **Internacionalización (i18n):** Selector de idiomas y widget de traducción dinámica.
 * **Componentes Interactivos:** Carruseles de imágenes, menús desplegables y modales de inicio de sesión.
@@ -17,7 +17,7 @@ Plataforma web completa de reservas turísticas que integra búsqueda de alojami
 
 ---
 
-## 🛠️ Tecnologías
+## Tecnologías
 
 * **Frontend:** HTML5, CSS3, JavaScript.
 * **Herramientas:** W3C Validator, Git.
